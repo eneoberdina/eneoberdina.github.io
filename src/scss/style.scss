@@ -2,12 +2,23 @@
 @import 'layout/footer.scss';
 
 html,
-body { 
+body,
+header,
+footer  { 
 
+	box-sizing: border-box;
+	outline: 0;
 	margin: 0;
 	padding: 0;
 
 	a { text-decoration:  none; }
+}
+
+body {
+
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 main { padding: 40px 0; }
