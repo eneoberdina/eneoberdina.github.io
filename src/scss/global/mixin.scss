@@ -1,4 +1,4 @@
-@mixin font($font-family: PTSans, $color: $color-white, $size: 18px) {
+@mixin font($font-family: PTSans, $color: $color-white, $size: 16px) {
 
 	font-family: $font-family;
 	color: $color;
@@ -6,3 +6,9 @@
 	font-weight: 400;
 
 }
+
+ @mixin size($size: 1060px) {
+
+ 	width: $size;
+    margin: 50px auto;
+ }

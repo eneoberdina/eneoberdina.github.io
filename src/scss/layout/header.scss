@@ -8,10 +8,9 @@
  .wrapper-header { 
 
  	display: flex;
- 	width: 1060px;
  	flex-wrap: wrap;
- 	margin: 0 auto;
-
+ 	@include size;
+ 	
  }
 
 .header-body {
