@@ -1,0 +1,46 @@
+@import 'global/vars.scss';
+
+.search-form {
+
+    display: flex;
+	width: 290px;
+	flex-wrap: wrap;
+
+    .search-input {
+   
+	    display: inline-block;
+	    width: calc(100% - 55px);
+	    height: 36px;
+	    font-size: 14px;
+	    padding-left: 10px;
+	    border: 1px solid #eff8fd;
+	    background-color: #eff8fd;
+	    border-radius: 0;
+	    color: #1c1c1c;
+	    margin: 0;
+}
+
+> button {
+   
+	    display: inline-block;
+	    width: 40px;
+	    height: 40px;
+	    vertical-align: top;
+	    border: 1px solid #eff8fd;
+	    border-radius: 0;
+	    background-color: $color-blue;
+	    background-image: url(/images/control/icon_search.svg);
+	    background-size: 21px;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    cursor: pointer;
+
+	}
+
+	.sign-search {
+
+		@include font($size: 12px);
+ 		padding-top: 5px;
+	}
+
+}
