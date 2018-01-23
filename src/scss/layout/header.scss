@@ -3,7 +3,13 @@
 @import 'global/global.scss';
 @import 'search.scss';
 
- header {background-color: $color-header; }
+ header {
+
+ 	background-color: $color-header; 
+ 	@include background-image (url(../images/background/image_heder.jpg), $size: cover);
+
+
+ }
 
  .wrapper-header { 
 
@@ -22,15 +28,9 @@
 	justify-content: space-between;
 	padding: 37px 0;
 
-	.title { margin: 0; }
+	.menu-header-top { display: flex;
 
-	.menu-header { display: flex;
-
-		ul {
-
-			list-style: none;
-			padding: 0 20px;
-			margin: 0;
+		ul.menu-top { padding: 0 20px;
 
 			a {
 			
@@ -66,40 +66,62 @@
 	}
 }
 
-.main-menu {
+.main-navigation {
 
 	width: 100%;
 	background-color: #338ec7;
 
-	ul {
+	ul.menu {
 
 		display: flex;
 		width: 1060px; 
-		list-style:  none;
-		padding: 0;
 		margin: 0 auto;
 
-		li:after {
+		 li.menu-item { 
 
-			content: '•';
-			display: inline-block;
-			vertical-align: middle;
-			@include font($size: 12px); 
-		}
+			transition:  all 0.3s;
+			position: relative;
+
+			&:hover .sub-menu { display: block; }
+		
+			 &:before {
+
+				content: '•';
+				display: inline-block;
+				vertical-align: middle;
+				@include font($size: 12px); 
+			}
+
+			
+			&:hover:before { color: transparent; }
+
+	        &:hover + li:before { color: transparent; }
+	        
+	        &:hover { background-color: $color-blue2; }
+
+	        &:first-of-type:before {content: none;} 
+
+	    }
 
 		a {
 
 			display: inline-block;
-			@include font($size: 16px); 
+			@include font($size: 16px);
 			padding: 18px 10px;
-			transition: .5s;
+		}
 
-			&:hover {
-
-				background-color: $color-blue;
-				color: #3890c4;
-			}
-
+		ul.sub-menu {
+			
+			display: none;
+			background-color: $color-blue2;
+			position: absolute;
+	    	top: 100%;
+	    	margin: 0;
+	    	z-index: 2;
+			
+			.menu-item:hover { background-color: $color-blue3; }
+			
+			.menu-item::before { font-size: 0; }
 		}
 
 	}

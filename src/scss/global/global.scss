@@ -1,24 +1,50 @@
 @import 'global/vars.scss';
 
-.logo-link {
-    
-    display: block;
-	@include font($size: 32px);
-    font-weight: 700;
-    position: relative;
+body,
+button,
+input, 
+select, 
+textarea {
 
-    &:before {
-
-    	content: "";
-    	width: 25px;
-    	border: 1px solid $color-white;
-    	display: inline-block;
-		position: absolute;
-		top: 36px;
-    }
-
-    .signature { @include font($size: 16px); }
-
-	p { margin:0; }
+	@include font($font-sans, $color-text, 1rem);
+	
 }
 
+.display-flex {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.logo-link {
+
+    width: 359px;
+    height: 76px;
+    @include background-image (url(../images/background/logo.png));
+
+    img {display: none; }
+    
+ }
+
+.meta {
+    
+    display: flex;
+    justify-content: space-around;
+    padding: 14px 0;
+    @include font($font-awesome, $color-blue, 14px); 
+
+    &.white { 
+
+    	color: $color-white; 
+    	justify-content: flex-start;
+
+    	.meta-messag { padding: 0 20px; }
+    }
+}
+.soclink  {
+    
+    @include font($font-awesome, $color-white, 16px); 
+    
+ }

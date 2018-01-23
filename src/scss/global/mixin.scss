@@ -1,10 +1,15 @@
-@mixin font($font-family: PTSans, $color: $color-white, $size: 16px) {
+@mixin font($font-family: $font-sans, $color: $color-white, $size: 16px) {
 
 	font-family: $font-family;
 	color: $color;
 	font-size: $size; 
-	font-weight: 400;
+}
 
+@mixin background-image($patch, $pos: center, $size: cover)  {
+
+    background-image: $patch;
+    background-position: $pos;
+    background-size: $size;
 }
 
  @mixin size($size: 1060px) {
@@ -12,3 +17,25 @@
  	width: $size;
     margin: 50px auto;
  }
+
+ @mixin pseudo($display: block, $content: '') {
+ 
+    content: $content;
+    display: $display;
+
+}
+
+@mixin title-items { 
+	
+	text-align: center;
+
+	&:after {
+
+		@include pseudo;
+		width: 20px;
+		border: 1px solid $color-white;
+		margin: 0 auto;
+		margin-top: 15px;
+		
+	}
+}

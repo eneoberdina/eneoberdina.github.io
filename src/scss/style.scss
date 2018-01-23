@@ -1,19 +1,6 @@
 @import 'layout/header.scss';
 @import 'layout/footer.scss';
 
-html,
-body,
-header,
-footer  { 
-
-	box-sizing: border-box;
-	outline: 0;
-	margin: 0;
-	padding: 0;
-
-	a { text-decoration:  none; }
-}
-
 body {
 
 	min-height: 100vh;

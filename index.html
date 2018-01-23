@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Document</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/fonts.css">
 		<link rel="stylesheet" href="css/style.min.css">
 		<link rel="stylesheet" href="css/main.min.css">
 	</head>
@@ -10,160 +12,190 @@
 		<header>
 			<div class="wrapper-header">
 				<div class="header-body">
-					<h1 class="title">
-						<a href="" class="logo-link">
-							<p class="picture-logo"></p>
-							ProGastroMed.ru
-							<p class="signature">все о пищеварении и болезнях ЖКТ</p>
-						</a>
-					</h1>
-					<div class="menu-header">
-						<ul>
-							<li><a href="">Запах изи рта</a></li>
-							<li><a href="">Изжога</a></li>
-							<li><a href="">Болезни и симптомы у детей</a></li>
+					<a href="" class="logo-link">
+						<img src="../images/background/logo.png" alt="logo">
+					</a>	
+					<div class="menu-header-top">
+						<ul class="menu-top">
+							<li class="menu-top-item"><a href="">Запах изи рта</a></li>
+							<li class="menu-top-item"><a href="">Изжога</a></li>
+							<li class="menu-top-item"><a href="">Болезни и симптомы у детей</a></li>
 						</ul>
-						<ul>
-							<li><a href="">Дизентерия</a></li>
-							<li><a href="">Болезни и симптомы</a></li>
-							<li><a href="">Вздутие живота</a></li>
+						<ul class="menu-top">
+							<li class="menu-top-item"><a href="">Дизентерия</a></li>
+							<li class="menu-top-item"><a href="">Болезни и симптомы</a></li>
+							<li class="menu-top-item"><a href="">Вздутие живота</a></li>
 						</ul>
 					</div>
 					<form class="search-form" id="form-search" method="GET" action="">
-		                    <input class="search-input" name="query" placeholder="Поиск" type="text">
-		                    <button></button>
+		                    <input class="searchstring" name="query" placeholder="Поиск" type="text">
+		                    <button class="searchsubmit">&#xf002;</button>
 		                    <div class="sign-search">
 		                    	Чтобы быстрее найти информацию <br /> воспользуйтесь поиском
 		                    </div>
 		             </form>	
 				</div>
 			</div>
-			<nav class="main-menu">
-					<ul>
-						<li><a href="">Болезни</a></li>
-						<li><a href="">Болезни у детей</a></li>
-						<li><a href="">Симптомы</a></li>
-						<li><a href="">Инфо</a></li>
+			<nav class="main-navigation">
+					<ul class="menu">
+						<li class="menu-item"><a href="">Болезни</a>
+							<ul class="sub-menu">
+								<li class="menu-item"><a href="">item</a></li>
+								<li class="menu-item"><a href="">Lorem dolorsitamet</a></li>
+								<li class="menu-item"><a href="">item</a></li>
+								<li class="menu-item"><a href="">item</a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href="">Болезни у детей</a>
+							<ul class="sub-menu">
+								<li class="menu-item"><a href="">item</a></li>
+								<li class="menu-item"><a href="">item</a></li>
+								<li class="menu-item"><a href="">item</a></li>
+								<li class="menu-item"><a href="">item</a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href="">Симптомы</a></li>
+						<li class="menu-item"><a href="">Инфо</a></li>
 					</ul>
 				</nav>
 		</header>
 		<main>
-			<h1 class="title-main">Популярные статьи</h1>
-			<section class="articles-popularin">
+			<p class="title-main">Популярные статьи</p>
+			<section class="articles-popularin display-flex">
 				<article class="items">
-					<a class="items-picture" href=""></a>
-					<h2 class="items-title">Питание</h2>
+					<a class="items-picture" href="">
+						<img src="../images/background/pop1.jpeg" alt="">
+					</a>
 					<div class="items-content">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid molestias dicta autem doloribus, minus ipsa amet reiciendis itaque 
-					</div>
-                    <div class="meta">
-                 		<p class="meta-views">
-                 			<span class="meta-views-picture"></span>
-                 			10000
-                 		</p>
-                 		<p class="meta-messag">
-                 			<span class="meta-messages-picture"></span>
-                 			10
-                 		</p>
-               	 	</div>
+						<p class="items-title">Питание</p>
+						<p class="items-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid molestias 	dicta autem doloribus, minus ipsa amet reiciendis itaque 
+						</p>
+						<div class="meta">
+	                 		<p class="meta-views"> 
+                 				<span class="meta-views-picture">&#xf06e;</span>
+                 			 10000
+                 			</p>
+	                 		<p class="meta-messag">
+	                 			<span class="meta-messages-picture">&#xf27a;</span>
+	                 		 10
+                 			</p>
+               	 		</div>
+					</div>       
        			 </article>
        			 <article class="items">
-					<a class="items-picture" href=""></a>
-					<h2 class="items-title">Питание</h2>
+					<a class="items-picture" href="">
+						<img src="../images/background/pop1.jpeg" alt="">
+					</a>
 					<div class="items-content">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid molestias dicta autem doloribus, minus ipsa amet reiciendis itaque 
+						<p class="items-title">Питание</p>
+						<p class="items-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid molestias 	dicta autem doloribus, minus ipsa amet reiciendis itaque 
+						</p>
+						<div class="meta">
+	                 		<p class="meta-views"> 
+                 				<span class="meta-views-picture">&#xf06e;</span>
+                 			 10000
+                 			</p>
+	                 		<p class="meta-messag">
+	                 			<span class="meta-messages-picture">&#xf27a;</span>
+	                 		 10
+                 			</p>
+               	 		</div>
 					</div>
-                    <div class="meta">
-                 		<p class="meta-views">
-                 			<span class="meta-views-picture"></span>
-                 			10000
-                 		</p>
-                 		<p class="meta-messag">
-                 			<span class="meta-messages-picture"></span>
-                 			10
-                 		</p>
-               	 	</div>
        			 </article>
        			 <article class="items">
-					<a class="items-picture" href=""></a>
-					<h2 class="items-title">Питание</h2>
+					<a class="items-picture" href="">
+						<img src="../images/background/pop1.jpeg" alt="">
+					</a>
 					<div class="items-content">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid molestias dicta autem doloribus, minus ipsa amet reiciendis itaque 
+						<p class="items-title">Питание</p>
+						<p class="items-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid molestias 	dicta autem doloribus, minus ipsa amet reiciendis itaque 
+						</p>
+						<div class="meta">
+	                 		<p class="meta-views"> 
+                 				<span class="meta-views-picture">&#xf06e;</span>
+                 				10000
+                 			</p>
+	                 		<p class="meta-messag">
+	                 			<span class="meta-messages-picture">&#xf27a;</span>
+	                 			10
+                 			</p>
+               	 		</div>
 					</div>
-                    <div class="meta">
-                 		<p class="meta-views">
-                 			<span class="meta-views-picture"></span>
-                 			10000
-                 		</p>
-                 		<p class="meta-messag">
-                 			<span class="meta-messages-picture"></span>
-                 			10
-                 		</p>
-               	 	</div>
        			 </article>
        			 <article class="items">
-					<a class="items-picture" href=""></a>
-					<h2 class="items-title">Питание</h2>
+					<a class="items-picture" href="">
+						<img src="../images/background/pop1.jpeg" alt="">
+					</a>
 					<div class="items-content">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid molestias dicta autem doloribus, minus ipsa amet reiciendis itaque 
+						<p class="items-title">Питание</p>
+						<p class="items-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid molestias 	dicta autem doloribus, minus ipsa amet reiciendis itaque 
+						</p>
+						<div class="meta">
+	                 		<p class="meta-views"> 
+	                 			<span class="meta-views-picture">&#xf06e;</span>
+	                 			10000
+	                 		</p>
+	                 		<p class="meta-messag">
+	                 			<span class="meta-messages-picture">&#xf27a;</span>
+	                 			10
+	                 		</p>
+               	 		</div>
 					</div>
-                    <div class="meta">
-                 		<p class="meta-views">
-                 			<span class="meta-views-picture"></span>
-                 			10000
-                 		</p>
-                 		<p class="meta-messag">
-                 			<span class="meta-messages-picture"></span>
-                 			10
-                 		</p>
-               	 	</div>
        			 </article>
     		</section>
 			<div class="wrapper-discusses">
 				<section class="articles-discusses">
-					<h1 class="articles-discusses-popular">Самое обсуждаемое</h1>
-					<div class="wrapper-articles">
+					<p class="articles-discusses-popular">Самое обсуждаемое</p>
+					<div class="wrapper-articles display-flex">
 						<article class="items">
-							<a class="items-picture" href=""></a>
-							<h2 class="items-title">Питание</h2>
+							<a class="items-link" href="">
+								Диета и праила питания при синдроме Жильбера
+							</a>
 							<div class="items-content">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid molestias dicta autem doloribus, minus ipsa amet reiciendis itaque 
-							</div>
-		                    <div class="meta">
-		                 		<p class="meta-views">
-		                 			<span class="meta-views-picture"></span>
+								<p class="items-title white">Болезни и симптомы</p>
+								<p class="items-text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid molestias dicta autem doloribus, minus 
+								</p>
+								<div class="meta white">
+			                 		<p class="meta-views"> 
+		                 				<span class="meta-views-picture">&#xf06e;</span>
 		                 			10000
-		                 		</p>
-		                 		<p class="meta-messag">
-		                 			<span class="meta-messages-picture"></span>
-		                 			10
-		                 		</p>
-		               	 	</div>
-	       				 </article>
+		                 			</p>
+			                 		<p class="meta-messag">
+			                 			<span class="meta-messages-picture">&#xf27a;</span>
+			                 		10
+		                 			</p>
+		               	 		</div>
+							</div>
+		            	</article>
 	       				 <article class="items">
-							<a class="items-link" href="">Диета и праила питания при синдроме Жильбера</a>
-							<h2 class="items-title">Болезни и симптомы</h2>
+							<a class="items-link" href="">
+								Диета и праила питания при синдроме Жильбера
+							</a>
 							<div class="items-content">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid molestias dicta autem doloribus, minus ipsa amet reiciendis itaque 
-							</div>
-		                    <div class="meta white">
-		                 		<p class="meta-views">
-		                 			<span class="meta-views-picture"></span>
+								<p class="items-title white">Болезни и симптомы</p>
+								<p class="items-text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aliquid molestias dicta autem doloribus, minus 
+								</p>
+								<div class="meta white">
+			                 		<p class="meta-views"> 
+		                 				<span class="meta-views-picture">&#xf06e;</span>
 		                 			10000
-		                 		</p>
-		                 		<p class="meta-messag">
-		                 			<span class="meta-messages-picture"></span>
-		                 			10
-		                 		</p>
-		               	 	</div>
-	       				 </article>
+		                 			</p>
+			                 		<p class="meta-messag">
+			                 			<span class="meta-messages-picture">&#xf27a;</span>
+			                 		10
+		                 			</p>
+		               	 		</div>
+							</div>
+		            	</article>
 	       			</div>
 				</section>
 			</div>
 			<section class="articles-headings">
 				<div class="columns-left">
-					<div class="columns-left-row">
-						<h2 class="title">Сейчас читают</h2>
+					<p class="title">Сейчас читают</p>
+					<div class="columns-left-row display-flex">
 						<div class="columns-left-row-item">
 							<div class="columns-left-row-item">
 								<div class="content">
@@ -193,8 +225,8 @@
 							</div>
 						</div>					
 					</div>
-					<div class="columns-left-row">
-						<h2 class="title">Свежие комментарии</h2>
+					<div class="columns-left-row display-flex">
+						<p class="title">Свежие комментарии</p>
 						<div class="columns-left-row-item">
 							<div class="columns-left-row-item">
 								<div class="content">
@@ -234,7 +266,7 @@
 					</div>
 				</div>
 				<div class="columns-right">
-					<h1 class="columns-right-title">Популярные рубрики</h1>
+					<p class="columns-right-title">Популярные рубрики</p>
 					<div class="columns-right-row">
 						<a class="columns-right-row-item" href="">
 							<p class="title">Симптомы</p>
@@ -254,8 +286,8 @@
 				</div>
 			</section>
 			<div class="wrapper-publications">
-				<section class="articles-publications">
-					<h1 class="title-main">Свежие публикации</h1>
+				<section class="articles-publications display-flex">
+					<p class="title-main">Свежие публикации</p>
 					<div class="articles-publications-column">
 						<article class="publication">
 							<div class="publication-picture"></div>
@@ -308,18 +340,18 @@
 						</div>
 						<div class="social-link">
 							
-		                    <a class="soclink soc-vk" href=""></a>   
-		                    <a class="soclink soc-twiter" href=""></a>
-		                    <a class="soclink soc-facebook" href=""></a>
-		                    <a class="soclink soc-ok" href=""></a>
-		                     <a class="soclink soc-google" href=""></a>
+		                    <a class="soclink soc-vk" href="">&#xf189;</a>   
+		                    <a class="soclink soc-twiter" href="">&#xf099;</a>
+		                    <a class="soclink soc-facebook" href="">&#xf09a;</a>
+		                    <a class="soclink soc-ok" href="">&#xf263;</a>
+		                     <a class="soclink soc-google" href="">&#xf0d5;</a>
 						</div>
 					</div>
 				</section>
 			</div>
 			<section class="question">
-				<div class="question-wrapper">
-					<h1 class="title-main">Популярные вопросы пользователей</h1>
+				<div class="question-wrapper  display-flex">
+					<p class="title-main">Популярные вопросы пользователей</p>
 					<ul>
 						<li>item</li>
 						<li>item</li>
@@ -368,9 +400,7 @@
 		<footer>
 			<div class="wrapper-footer">
 				<a href="" class="logo-link">
-					<p class="picture-logo"></p>
-					ProGastroMed.ru
-					<p class="signature">все о пищеварении и болезнях ЖКТ</p>
+					<img src="../images/background/logo.png" alt="logo-footer">
 				</a>
 				<div class="menu-footer">
 					<ul>

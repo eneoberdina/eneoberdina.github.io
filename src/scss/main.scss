@@ -5,15 +5,13 @@
 .title-main {
    	
 	@include font($size:24px, $color:$color-blue);
-    font-weight: 700; 
     text-align: center;
-    margin: 0;
     position: relative;
+    font-weight: 700;
 
     &:after {
-
-		content: "";
-		display: block;
+		
+		@include pseudo;
 		width: 200px;
 		height: 3px;
 		border-radius: 50%;
@@ -28,48 +26,90 @@
 
 }
 
-.articles-popularin {
-    
-    display: flex;
-    @include size;
-    justify-content: space-between;
+.items-content {
 
-    .items {
-    	flex-basis: calc(100%/4 - 20px);
-	}
+    text-align: center;
+    padding: 20px;
 
+    .items-title {
+
+    	@include font($color: $color-green2, $size: 14px);
+    	line-height: 16px;
+
+    	&.white { color: $color-white; 
+   
+    		&:after { margin: 20px 0; }
+
+    	}
+
+    	&:after {
+    		@include pseudo;
+    		width: 20px;
+    		height: 1px;
+    		background-color: $color-green2;
+    		margin: 10px auto;
+    	}
+    }
+}
+
+.articles-popularin { @include size;
+  
+ .items { 
+
+ 	flex-basis: calc(100%/4 - 20px); 
+ 	background-color: rgba(239, 248, 253, 0.9);
+ }
+
+}
+
+.wrapper-discusses {
+
+	background-image: url(../images/background/doctor.jpg);
+    background-position: 31% 89%;
+    background-size: cover;
 }
 
 .articles-discusses {
    
 	display: flex;
-    @include size;
+   	width: 880px;
+	margin: 0 auto;
+    padding: 40px 0;
 
 	    &-popular {
 	   
-	    flex-shrink: 0;
-	    width: 340px;
-	    min-height: 280px;
-	    background-color: $color-green;
-	    @include font($size: 24px);
-		font-weight: 700;
-		text-align: center;
-		margin: 0;
-		margin-right: 40px;
-		padding: 107px 70px;
-		box-sizing: border-box;
+		    flex-shrink: 0;
+		    width: 340px;
+		    height: 280px;
+		    background-color: $color-green;
+		    @include font($size: 24px);
+			text-align: center;
+			margin-right: 40px;
+			padding: 107px 70px;
+			font-weight: 700;
+		
+		}
+
+	.items { 
+
+		flex-basis: calc(100%/2 - 20px);
+		padding: 40px 0; 
+	} 
+
+	.items-link {
+
+		display: block;
+		@include font( $size: 18px);
+	  	font-weight: 700;
+	    line-height: 18px;
+	    padding-bottom: 20px;
 	}
 
-	.wrapper-articles {
-    	
-    	display: flex;
-    	justify-content: space-between;
+	.items-content { 
 
-    	.items {
-    		
-    		flex-basis: calc(100%/2 - 20px);
-		}
-	
+		text-align: left; 
+		color: $color-white;
+		padding: 0;
 	}
 
 }
@@ -83,19 +123,9 @@
    		 
    		 flex: 1 1 0;
 
-   		  &-row {
+   		  &-row {  .title { width: 100%; }
 
-		    display: flex;
-		    justify-content: center;
-		    flex-wrap: wrap;
-
-		    .title {
-    			width: 100%;
-			}
-
-			&-item {
-    			flex-basis: calc(100%/2 - 20px);
-			}
+			&-item { flex-basis: calc(100%/2 - 20px); }
 		}
 	}
 
@@ -108,19 +138,10 @@
 	    &-title {
 
 	    	@include font($size: 29px, $color: $color-text);
-		    font-weight: 700;
-		    line-height: 24px;
-		    padding-left: 78px;
+		    @include title-items;
+		     font-weight: 700;
 
-		    &:after {
-
-					content: "";
-					display: block;
-					width: 20px;
-					border: 1px solid $color-blue;
-					margin-top: 15px;
-				}
-
+			&:after { border-color:  $color-blue; }
 		}
 
 	    &-row {
@@ -140,35 +161,26 @@
 
 			    &:before {
 
-						content: "";
-						position: absolute;
-						top: 0;
-						bottom: 0;
-						left: 0;
-						right: 0;
-						background-color: rgba(255, 255, 255, 0.9);
-						border-radius: 50%;
-						margin: 20px;
+					@include pseudo;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					background-color: rgba(255, 255, 255, 0.9);
+					border-radius: 50%;
+					margin: 20px;
 				}
 
-			    	.title {
-					   
-					    display: inline-block;
-					    text-align: center;
-					    @include font($color: $color-text2);
-					    margin: 0;
-					    padding: 60px 50px 2px 40px;
-					    position: relative;
+		    	.title {
 
-					    &:after {
+				    display: inline-block;
+				    @include font($color: $color-text2);
+				    padding: 60px 50px 2px 40px;
+				    position: relative;
+					@include title-items;
 
-						content: "";
-						display: block;
-						width: 20px;
-						border: 1px solid $color-text2;
-						margin: 0 auto;
-						margin-top: 15px;
-					}
+				    &:after { border-color:  $color-text2; }
 				}
 			}
 		}
@@ -176,14 +188,14 @@
 }
 
 
-.wrapper-publications { @include size;
+.wrapper-publications { background-color: #f3fafe;
 
-	.articles-publications {
-		
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
 
+	.articles-publications { 
+
+		@include size;
+		padding: 55px 0;
+	
 		&-column {
 
    			 flex-basis: calc(100%/3 - 20px);
@@ -191,33 +203,14 @@
    			 &:last-child {
 
    			 	background-color: $color-green;
+   			 	box-sizing: border-box;
    			 	@include font;
    			 	padding: 50px;
 				text-align: center;
-				box-sizing: border-box;
 
-   			 	.title { 
-					
-					font-size: 20px;
-					font-weight: 700;
-					text-align: center;
-					margin:  0;
 
-					&:after {
-
-						content: "";
-						display: block;
-						width: 20px;
-						border: 1px solid $color-white;
-						margin: 0 auto;
-						margin-top: 25px;
-						
-					}
-
-					&-social-link { margin: 20px 0;}
-				}
-
-			 }
+				&-social-link { margin: 20px 0;}
+			}
 		}
 
 		 .title-main { 
@@ -228,18 +221,20 @@
 
 			&:after { content: none; }
 		}
-
 	}
 }
 
-.question { @include size;
+.question { 
+
+	@include size;
+	@include background-image(url(../images/background/fon_pop_vopros.jpg));
 	
 	&-wrapper {
-
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
 		
+		width: 880px;
+		margin: 0 auto;
+		padding: 50px 0;
+
 		.title-main {
 		
 			width: 100%;
@@ -261,9 +256,6 @@
 		ul {
 
 			flex-basis: calc(100%/5 - 20px);
-			list-style: none;
-			margin: 0;
-			padding: 0;
 
 			&:last-child { padding-right: 0; }
 
