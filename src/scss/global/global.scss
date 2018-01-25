@@ -6,7 +6,7 @@ input,
 select, 
 textarea {
 
-	@include font($font-sans, $color-text, 1rem);
+	@include font($font-sans, $color-text, 16px);
 	
 }
 
@@ -21,7 +21,7 @@ textarea {
 .logo-link {
 
     width: 359px;
-    height: 76px;
+    height: 82px;
     @include background-image (url(../images/background/logo.png));
 
     img {display: none; }
@@ -43,8 +43,25 @@ textarea {
     	.meta-messag { padding: 0 20px; }
     }
 }
+
 .soclink  {
     
     @include font($font-awesome, $color-white, 16px); 
     
  }
+
+.title-articl {
+
+	width: 100%;
+	@include font($font-serifbold, $size: 20px, $color: $color-text);
+    @include title-items; 
+
+    &.right { 
+
+    	display: inline-block;
+    	padding: 30px 0 0 70px ;
+    }
+	
+	&:after { border-color:  $color-blue; }
+
+}

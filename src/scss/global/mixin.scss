@@ -26,16 +26,14 @@
 }
 
 @mixin title-items { 
-	
-	text-align: center;
 
 	&:after {
 
 		@include pseudo;
 		width: 20px;
 		border: 1px solid $color-white;
-		margin: 0 auto;
-		margin-top: 15px;
+		margin-top: 16px;
+		margin-bottom: 16px;
 		
 	}
 }
