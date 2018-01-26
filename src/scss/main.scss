@@ -31,15 +31,13 @@
     text-align: center;
     padding: 20px;
 
-    .items-title {
+    .items-title-rubric {
 
-    	@include font($color: $color-green2, $size: 14px);
-    	line-height: 16px;
-
+  		@include font($color: $color-green2, $size: 14px);
+    	
     	&.white { color: $color-white; 
    
     		&:after { margin: 20px 0; }
-
     	}
 
     	&:after {
@@ -50,6 +48,16 @@
     		background-color: $color-green2;
     		margin: 10px auto;
     	}
+
+    	&:hover { color: #25aa6a; }
+
+    }
+
+    .items-title-articl {
+		
+		@include font($color: $color-text, $size: 14px);
+		
+		&:hover  { color: #779db6; }
     }
 }
 

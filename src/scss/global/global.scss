@@ -35,6 +35,20 @@ textarea {
     padding: 14px 0;
     @include font($font-awesome, $color-blue, 14px); 
 
+    &-views:before {
+		
+		@include pseudo(inline-block, "\f06e");
+		@include font($font-awesome, $color-blue, 14px); 
+
+    }
+
+    &-messag:before {
+		
+		@include pseudo(inline-block, "\f27a");
+		@include font($font-awesome, $color-blue, 14px); 
+
+    }
+
     &.white { 
 
     	color: $color-white; 
