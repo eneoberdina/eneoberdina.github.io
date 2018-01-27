@@ -85,7 +85,7 @@
 
 			&:hover .sub-menu { display: block; }
 		
-			 &:before {
+			 &:after {
 
 				content: '•';
 				display: inline-block;
@@ -94,13 +94,13 @@
 				
 			}
 
-			&:hover:before { color: transparent; }
+			&:hover:after { color: transparent; }
 
 	       // &:hover + li:before { color: transparent; }
 	        
 	        &:hover  { background-color: $color-blue2; }
 
-	        &:first-of-type:before {color: transparent; } 
+	        &:last-of-type:after {color: transparent; } 
 
 	    }
 
@@ -122,7 +122,7 @@
 
 	    	li.menu-item:hover { background-color: #2f8fc8; }
 			
-			li.menu-item::before { font-size: 0; }
+			li.menu-item::after { font-size: 0; }
 		}
 	}
 }
