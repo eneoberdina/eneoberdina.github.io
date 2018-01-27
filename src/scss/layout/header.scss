@@ -120,9 +120,22 @@
 	    	margin: 0;
 	    	z-index: 2;
 
-	    	li.menu-item:hover { background-color: #2f8fc8; }
+	    	li.menu-item:hover {
+
+	    	 background-color: #2f8fc8; 
+
+	    	 > ul.sub-menu.second { display: block; }
+
+	    	}
 			
 			li.menu-item::after { font-size: 0; }
+
+			ul.sub-menu.second { 
+				
+				display: none;
+				left: 100%;
+				top: 0; 	
+			}
 		}
 	}
 }
