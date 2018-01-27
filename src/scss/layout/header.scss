@@ -78,7 +78,7 @@
 		width: 1060px; 
 		margin: 0 auto;
 
-		 li.menu-item { 
+		 li.menu-item  { 
 
 			transition:  all 0.3s;
 			position: relative;
@@ -91,16 +91,16 @@
 				display: inline-block;
 				vertical-align: middle;
 				@include font($size: 12px); 
+				
 			}
 
-			
 			&:hover:before { color: transparent; }
 
-	        &:hover + li:before { color: transparent; }
+	       // &:hover + li:before { color: transparent; }
 	        
-	        &:hover { background-color: $color-blue2; }
+	        &:hover  { background-color: $color-blue2; }
 
-	        &:first-of-type:before {content: none;} 
+	        &:first-of-type:before {color: transparent; } 
 
 	    }
 
@@ -108,7 +108,7 @@
 
 			display: inline-block;
 			@include font($size: 16px);
-			padding: 18px 10px;
+			padding: 18px 15px;
 		}
 
 		ul.sub-menu {
@@ -119,11 +119,10 @@
 	    	top: 100%;
 	    	margin: 0;
 	    	z-index: 2;
-			
-			.menu-item:hover { background-color: $color-blue3; }
-			
-			.menu-item::before { font-size: 0; }
-		}
 
+	    	li.menu-item:hover { background-color: #2f8fc8; }
+			
+			li.menu-item::before { font-size: 0; }
+		}
 	}
 }
