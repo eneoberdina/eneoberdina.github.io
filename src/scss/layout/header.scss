@@ -6,10 +6,10 @@
  header {
 
  	background-color: $color-header; 
- 	@include background-image (url(/images/background/image_heder.jpg), $size: cover);
-
-
- }
+ 	background-image: url(/images/background/image_heder.jpg);
+ 	background-repeat: no-repeat;
+	background-size: cover;
+}
 
  .wrapper-header { 
 
@@ -26,11 +26,14 @@
 	width: 100%;
 	align-items:center;
 	justify-content: space-between;
-	padding: 37px 0;
+	padding: 30px 0;
 
 	.menu-header-top { display: flex;
 
-		ul.menu-top { padding: 0 20px;
+		ul.menu-top { 
+
+			padding: 0 20px;
+			text-align: center;
 
 			a {
 			
@@ -67,7 +70,7 @@
 .main-navigation {
 
 	width: 100%;
-	@include background-image (url(/images/background/pattern_blue.png), $size: cover);
+	background-image: url(/images/background/pattern_blue.png);
 
 	ul.menu {
 

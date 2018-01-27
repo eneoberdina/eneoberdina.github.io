@@ -4,7 +4,7 @@
 
 .title-main {
    	
-	@include font($size:24px, $color:$color-blue);
+	@include font($font-family: font-serifbold, $size:24px, $color:$color-blue);
     text-align: center;
     position: relative;
     font-weight: 700;
@@ -21,37 +21,34 @@
 		background-image: -ms-linear-gradient(left, #fff, rgba(29, 82, 115, 0.3), #fff);
 		background-image: -o-linear-gradient(left, #fff, rgba(29, 82, 115, 0.3), #fff);
 		margin: 10px auto 0 auto;
+  	}
+}
 
-  	 }
+.items-title {
 
+	@include font($color: $color-green2, $size: 14px);
+	
+	&.white { color: $color-white; 
+
+		&:after { margin: 20px 0; }
+	}
+
+	&:after {
+		
+		@include pseudo;
+		width: 20px;
+		height: 1px;
+		background-color: $color-green2;
+		margin: 7px auto;
+	}
+
+    &.title-rubric:hover { color: #25aa6a; }
 }
 
 .items-content {
 
     text-align: center;
     padding: 20px;
-
-    .items-title-rubric {
-
-  		@include font($color: $color-green2, $size: 14px);
-    	
-    	&.white { color: $color-white; 
-   
-    		&:after { margin: 20px 0; }
-    	}
-
-    	&:after {
-    		
-    		@include pseudo;
-    		width: 20px;
-    		height: 1px;
-    		background-color: $color-green2;
-    		margin: 10px auto;
-    	}
-
-    	&:hover { color: #25aa6a; }
-
-    }
 
     .items-title-articl {
 		
@@ -63,17 +60,16 @@
 
 .articles-popularin { @include size;
   
- .items { 
+	.items { 
 
- 	flex-basis: calc(100%/4 - 20px); 
- 	background-color: rgba(239, 248, 253, 0.9);
- }
-
+	 	flex-basis: calc(100%/4 - 20px); 
+	 	background-color: rgba(239, 248, 253, 0.9);
+ 	}
 }
 
 .wrapper-discusses {
 
-	background-image: url(../images/background/doctor.jpg);
+	background-image: url(/images/background/doctor.jpg);
     background-position: 31% 89%;
     background-size: cover;
 }
@@ -87,40 +83,48 @@
 
 	    &-popular {
 	   
+	   		flex-grow: 0;
 		    flex-shrink: 0;
-		    width: 340px;
+		    flex-basis: 340px;
 		    height: 280px;
-		    background-color: $color-green;
-		    @include font($size: 24px);
+		    background-image: url(/images/background/pattern_green.png);
+		    @include font($font-family: font-serifbold, $size: 24px);
 			text-align: center;
 			margin-right: 40px;
-			padding: 107px 70px;
+			padding: 3.85em 2.85em;
+			box-sizing: border-box;
 			font-weight: 700;
-		
+			line-height: 30px;
 		}
 
 	.items { 
 
 		flex-basis: calc(100%/2 - 20px);
-		padding: 40px 0; 
-	} 
+		padding: 40px 0 0; 
+		line-height: 18px;
+
+		a:hover { color: #d0e8df;} 
 
 	.items-link {
 
 		display: block;
-		@include font( $size: 18px);
-	  	font-weight: 700;
-	    line-height: 18px;
+		@include font($font-family: $font-sansbold, $size: 18px);
 	    padding-bottom: 20px;
 	}
 
-	.items-content { 
+	.items-link-discus,
+	.items-text { @include font($size: 14px); }
 
-		text-align: left; 
-		color: $color-white;
-		padding: 0;
+	.items-link-discus:after {
+
+    		
+    		@include pseudo;
+    		width: 20px;
+    		height: 1px;
+    		background-color: $color-green2;
+    		margin: 20px 0;
+    	}
 	}
-
 }
 
 .articles-headings {
@@ -128,98 +132,114 @@
 	display: flex;
 	@include size;
 
+	.row-item { flex-basis: calc(100%/2 - 10px); 
+		
+		.content { padding-bottom: 7px; }
+
+		a:hover { color: #779db6;}
+	}	
+
 	.columns-left {
    		 
    		 flex: 1 1 0;
    		 padding-right: 20px;
+		
+		.title { width: 100%; }
 
-   		  &-row {  
- 
-   		.title { width: 100%; }
-
-			&-item { flex-basis: calc(100%/2 - 10px); }
-		}
-
+		.row-item { padding: 0 0 27px 0;}
 	}
 
 	.columns-right {
 
-	    flex: 0 1 529px;
-	    height: 534px;
+	    flex: 0 0 520px;
+	    display: flex;
+	    flex-wrap: wrap;
+		justify-content: center;
+	    min-height: 500px;
 	    border: 10px #f3fafe solid;
 	    box-sizing: border-box;
+	    padding: 0 40px;
 
-	    &-row {
-
+		.row-item {
+		    
+		    flex-basis: 155px;
+		    height: 155px;
 		    display: flex;
+		    flex-direction: column;
 		    justify-content: center;
+		    align-items: center;
+		    border-radius: 50%;
+		    position: relative;
+		    z-index: 1;
+		    @include background-image(url(/images/background/pop1.jpeg));
+			
+		    &.title {
 
-		    &-item {
-			    
-			    width: 165px;
-			    height: 165px;
-			    display:flex;
-			    justify-content: center;
-			    align-items: center;
-			    border-radius: 50%;
-				margin: 20px auto;
-			    position: relative;
-			    @include background-image(url(../images/background/pop1.jpeg));
+			    @include font($font-family:$font-serif, $color:$color-text2);
+				@include title-items;
+				margin: 0 auto;
+				padding: 0 18px;
+				text-align: center;
+				box-sizing: border-box;
 
-			    &:before {
-
-					@include pseudo;
-					position: absolute;
-					top: 0;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					background-color: rgba(255, 255, 255, 0.9);
-					border-radius: 50%;
-					margin: 10px;
-				}
-
-		    	.title {
-
-				  
-				    @include font($font-family:$font-serif, $color:$color-text2);
-				    text-align: center;
-				    position: relative;
-					@include title-items;
-					margin: 0 auto;
-					padding: 0 18px;
-				
-
-				    &:after { 
-
-					    border-color:  $color-text2;
-					    margin-right: auto;
-						margin-left: auto;
-				    }
-				}
+			    &:after { border-color:  $color-text2; }
 			}
+
+		    &:before {
+
+				@include pseudo;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: rgba(255, 255, 255, 0.9);
+				border-radius: 50%;
+				margin: 10px;
+				z-index: -1;
+			}
+
+			&:hover:before { background-color: rgb(249, 244, 244); }
 		}
 	}
 
 	.link-article { 
 
-		display: inline-flex;
-		@include font($size: 14px, $color: $color-text);
-		padding: 10px 0 30px 0;
-		
-		> p { font-size: 12px; } 
+		display: block;
+    	color:$color-text;
+    	font-size: 16px;
 
-		.link { flex-shrink: 0; }
+		&.float {
 
-		.symbol-link { 
-
-			@include font($font-awesome, 12px, $color-blue);
-			padding-right: 10px;
-
-			&.left { padding-left: 10px; }
-
+			display: inline;
+			font-size: 14px;
+			padding: 0;
 		}
 	}
+
+	.symbol-link { 
+
+		display: block;
+		font-size: 14px;
+		padding-top: 15px;
+
+		&.left { 
+
+			display: inline;
+			padding: 0;
+
+			&:after { padding-left: 10px;}
+		}
+	}
+
+	.symbol-link.right:before,
+	.symbol-link.left:after { 
+			
+		@include pseudo(inline-block,"\f0da");
+		@include font($font-awesome, $color-blue, 12px);
+		padding-right: 10px;
+	}
+
 }
 
 .wrapper-publications { background-color: #f3fafe;
@@ -227,19 +247,41 @@
 	.social-link-column {
 
 		width: 250px;
-	 	background-color: $color-green;
-	 	box-sizing: border-box;
-	 	@include font;
-	 	padding: 50px;
+		height: 270px;
+	 	background-image: url(/images/background/pattern_green.png);
+	 	color: $color-white;
+	 	padding: 39px  20px 0;
 		text-align: center;
+		line-height: 24px;
+
+		.title { color: $color-white;
+			
+			&:after { 
+
+				border-color: $color-white;
+				margin: 20px auto;
+			}
+		}
+
+		.title-social-link {
+		    padding: 10px 0 23px;
+		    display: block;
+		}
 	}
 
 	.articles-publications { 
 
 		@include size;
-		padding: 55px 0;
+		padding: 50px 0;
 	
-		&-social-link { margin: 20px 0;}
+		.title-main { 
+
+			width: 100%;
+		 	text-align:  left;
+		 	padding-bottom: 40px; 
+
+			&:after { content: none; }
+		}
 	}
 
 	.publication-columns {
@@ -252,31 +294,39 @@
 
 			display: flex;
 	    	flex-basis: calc(100%/2 - 10px);
+	    	padding-bottom: 30px;
 	    }
+		
+		.publication-content { padding-left: 20px;}
+		
+		.pub-picture { 
 
-		.publication-picture {
+			width: 70px;
+			height: 70px;
+		}
 
-		    width: 70px;  
+		.link-piblicat {
+
+    		display: block;
+    		color: $color-text;
+    		padding: 5px 5px 15px 5px;
+
+    		&:hover { color: #779db6;}
 		}
 			
-		.publication-link { color: $color-blue; }
-		
-	}
+		.pub-link { 
 
-	.title-main { 
+			color: $color-blue2;
 
-		width: 100%;
-	 	text-align:  left;
-	 	padding-bottom: 30px; 
-
-		&:after { content: none; }
+			&:hover {color: #2aa1f0;}
+		}
 	}
 }
 
 .question { 
 
 	@include size;
-	@include background-image(url(../images/background/fon_pop_vopros.jpg));
+	@include background-image(url(/images/background/fon_pop_vopros.jpg));
 	
 	&-wrapper {
 		
@@ -287,7 +337,7 @@
 		.title-main {
 		
 			width: 100%;
-			background-color: $color-green;
+			 background-image: url(/images/background/pattern_green.png);
 			color: $color-white;
 			padding: 29px 0;
 			margin-bottom: 40px;
@@ -308,10 +358,13 @@
 
 			&:last-child { padding-right: 0; }
 
-			li {
+			a {
 
+				display: block;
 				@include font($color: $color-text);
 				padding-bottom: 15px;
+
+				&:hover { color: #779db6; }
 			}
 		}
 	}

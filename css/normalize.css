@@ -10,7 +10,7 @@
  */
 
 html {
-  line-height: 1.15; /* 1 */
+  line-height: 16px; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
   
@@ -196,6 +196,9 @@ sub {
 sup {
   top: -0.5em;
 }
+
+div,
+span { box-sizing: border-box; }
 
 ul,
 ol {

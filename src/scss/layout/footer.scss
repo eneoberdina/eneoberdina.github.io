@@ -3,7 +3,7 @@
 @import 'global/mixin.scss';
 
 
- footer {background-color: $color-footer; }
+ footer {background-image: url(/images/background/pattern_blue.png); }
 
  .wrapper-footer { 
 
@@ -17,8 +17,9 @@
 
 .menu-footer { display: flex;
 	
-	ul {
+	ul.menu-footer {
 
+		display: block;
 		list-style: none;
 		padding: 0 30px;
 		margin: 0;
@@ -31,7 +32,6 @@
 			transition: 1s;
 			position: relative;
 			
-
 			&:after {
 
 				content: '';

@@ -18,49 +18,55 @@ textarea {
 
 }
 
-.logo-link {
+.logo-img {
 
     width: 359px;
-    height: 82px;
-    @include background-image (url(../images/background/logo.png));
-
-    img {display: none; }
-    
- }
+    height: 84px;     
+}
 
 .meta {
     
     display: flex;
     justify-content: space-around;
     padding: 14px 0;
-    @include font($font-awesome, $color-blue, 14px); 
+    @include font($font-awesome, $color-blue, 14px);
 
-    &-views:before {
-		
-		@include pseudo(inline-block, "\f06e");
-		@include font($font-awesome, $color-blue, 14px); 
+    &.meta-white { justify-content: flex-start;
 
+		.messag:before { margin-left: 20px; }
+     }
+
+    &-span { 
+
+    	@include pseudo(inline-block, ""); 
+    	@include font($font-awesome, $color-blue, 14px);
+
+    	&.white { color: $color-white; }
     }
 
-    &-messag:before {
-		
-		@include pseudo(inline-block, "\f27a");
-		@include font($font-awesome, $color-blue, 14px); 
-
+    .views:before { 
+    	content: "\f06e";
+    	padding-right: 5px;
     }
 
-    &.white { 
+    .messag:before {
 
-    	color: $color-white; 
-    	justify-content: flex-start;
-
-    	.meta-messag { padding: 0 20px; }
+    	content:"\f27a";
+    	padding-right: 5px;
     }
 }
 
 .soclink  {
     
-    @include font($font-awesome, $color-white, 16px); 
+    @include font($font-awesome); 
+    padding: 7px;
+
+    &:hover {
+
+    	color: $color-green;
+    	background-color: $color-white;
+    	border-radius: 5px;
+    }
     
  }
 
@@ -69,13 +75,13 @@ textarea {
 	width: 100%;
 	@include font($font-serifbold, $size: 20px, $color: $color-text);
     @include title-items; 
+    padding: 0 0 20px 0;
 
     &.right { 
 
     	display: inline-block;
-    	padding: 30px 0 0 70px ;
+    	padding: 20px 0 0 70px ;
     }
 	
 	&:after { border-color:  $color-blue; }
-
 }
