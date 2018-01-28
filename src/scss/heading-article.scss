@@ -17,11 +17,12 @@
 .main { 
 
 	flex: 1 1 0;
+	max-width: 700px;
 	padding-right: 50px;
 	line-height: 24px;
 }
 
-:after, :before, figure { font-family: $font-serif; }
+figure { font-family: $font-serif; }
 
 h1,
 h2,
@@ -55,8 +56,6 @@ hr.blue {
 	border: 1px solid #57a7dc;
 }
 
-p { padding: 10px 0; }
-
 span.underline {
 
 	color: $color-blue4;
@@ -66,6 +65,14 @@ span.underline {
 span.bold { font-family: $font-sansbold; }
 
 span.color { color: $color-green3; }
+
+.post,
+.advert,
+.row-heading.top,
+ p { padding: 10px 0; }
+
+.meta-span,
+a { color: $color-text2; }
 
 .vnimanie {
    
@@ -84,12 +91,10 @@ span.color { color: $color-green3; }
 	float: left;
 	background-image:url(/images/control/bv_osnovnoi.png);
 	margin: 0 40px 0px 40px;
-
-
    }
 }
 
-ul  li { 
+main ul  li { 
 
 	display: flex;
 	line-height: 22px;
@@ -103,7 +108,7 @@ ul  li {
 	}
 }
 
-ol { counter-reset: list1; 
+main ol { counter-reset: list1; 
 
 	li  { padding: 8px 0 8px 0; }
 
@@ -115,6 +120,7 @@ ol { counter-reset: list1;
 		content: counters(list1,".")".";
 		margin-right:10px;
 		color: $color-green3;
+		font-family: $font-serif;
 	}
 } 
 
@@ -125,7 +131,6 @@ ol { counter-reset: list1;
 	text-align: center;
 	font-size: 14px;
 }
-
 
 .title-heading { 
 
@@ -142,10 +147,9 @@ ol { counter-reset: list1;
 
 	display: block;
 	height: 178px;
-	padding: 10px 0px 0px;
 	margin-bottom: 40px;
 
-	.group-link { display: flex; }
+.group-link { display: flex; }
 
 .heading-item {
 
@@ -164,4 +168,142 @@ ol { counter-reset: list1;
 		width: 140px;
 		height: 140px
 	}
+}
+
+
+.related {
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .items { 
+
+    	flex-basis: calc(100%/3 - 20px);
+    	background-color: rgba(241, 249, 253, 0.9);
+    	border: transparent;
+		transition: all .5s;
+    	position: relative;
+    
+    	img { width: 100%; }
+
+    	&:hover {
+
+    		background-color: transparent;
+    		border: 1px solid #f1f9fd;
+
+    		img { height: 0; }
+
+    		.items-content { 
+    			
+				height:auto;
+				overflow: visible;
+				text-align: left;
+			}
+
+    		.items-title-articl { 
+
+    			text-shadow: 0.25px 0.1px 0px #496e86, -0.25px -0.1px 0px #496e86;
+    		}
+
+    		 .items-title-articl:after {
+    		 	position: initial;
+    		 	margin: 13px 0 0 0;
+    		}
+    	}
+    }
+
+	.items-content {
+
+		height: 60px;
+		overflow: hidden;
+	}
+
+    .items-title-articl { 
+		
+		&:after {
+			
+			@include pseudo;
+			width: 20px;
+			height: 1px;
+			background-color: $color-blue;
+			position: absolute;
+			top: 66%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+    }
+
+    .content { font-size: 14px; }
+}
+
+.publication {
+
+    display: flex;
+    border: 1px solid #f1f9fd;
+    padding: 20px 0;
+    margin: 20px 0;
+
+    .picture {
+
+	    height: 200px;
+	    width: 230px;
+	    margin: 0 20px;
+	}
+
+    .link-pub {
+
+		display: block;
+    	font-family: $font-sansbold;
+    	font-size: 24px;
+
+    	&:hover { color: $color-blue3; }
+
+    	&:after {
+			
+			@include pseudo;
+			width: 20px;
+			height: 1px;
+			background-color: $color-blue;
+			margin: 10px 0;
+		}
+	}
+
+    .piblicat { 
+
+		display: block;
+    	font-size: 14px;
+    	line-height: 18px;
+    }
+
+	.meta { justify-content: flex-start;
+		
+		.messag { margin-left: 20px; }
+	}
+}
+
+.wp-pagenavi {
+
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
+
+    .link-navigation {
+
+    	display: inline-block;
+		min-width: 34px;
+	    font-size: 14px;
+	    border-radius: 5px;
+	    border: 1px solid #cde7f8;
+	    padding: 5px 0;
+	    text-align: center;  
+	    margin: 0 3px;
+	
+	    &.active { background-color: #cde7f8; }
+
+	    &:hover { background-color: #edf2f6; }
+	}
+
+	.dott { margin: 0 2px; }
 }

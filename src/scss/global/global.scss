@@ -66,7 +66,7 @@ textarea {
     	border-radius: 5px;
     }
     
- }
+}
 
 .title-articl {
 
@@ -120,7 +120,7 @@ textarea {
 		@include pseudo;
 		width: 20px;
 		height: 1px;
-		background-color: $color-green2;
+		background-color: $color-blue;
 		margin: 7px auto;
 	}
 }
@@ -133,7 +133,11 @@ textarea {
     .items-title-articl { @include font($color: $color-text, $size: 14px); }
 }
 
-.items { flex-basis: calc(100%/4 - 20px); }
+.items { 
+
+	flex-basis: calc(100%/4 - 20px);
+	line-height: 16px;
+}
 
 .row-heading {
 
@@ -194,12 +198,12 @@ textarea {
 	}
 }
 
-.publication-content { padding-left: 20px;}
 	
-	.pub-picture { 
+.pub-picture { 
 
 		width: 70px;
 		height: 70px;
+		margin-right: 20px;
 	}
 
 	.link-piblicat {
