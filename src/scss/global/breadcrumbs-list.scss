@@ -1,0 +1,22 @@
+@import 'global/vars.scss';
+@import 'global/mixin.scss';
+@import 'global/global.scss';
+
+.breadcrumb { @include font($font-sans, $color-blue, 13px);
+	
+	&:before {
+		
+		@include pseudo(inline-block, "\f0da"); 
+		@include font($font-awesome, $color-blue, 14px);
+    	line-height: 24px;
+    	padding: 0 7px;
+    }
+
+	&:first-child:before { 
+		
+		content:"\f015";
+		padding-left: 0;
+
+	}
+}
+

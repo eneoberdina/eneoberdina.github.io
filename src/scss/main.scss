@@ -2,66 +2,13 @@
 @import 'global/mixin.scss';
 @import 'global/global.scss';
 
-.title-main {
-   	
-	@include font($font-family: font-serifbold, $size:24px, $color:$color-blue);
-    text-align: center;
-    position: relative;
-    font-weight: 700;
-
-    &:after {
-		
-		@include pseudo;
-		width: 200px;
-		height: 3px;
-		border-radius: 50%;
-		background: rgba(29, 82, 115, 0.3);
-		background-image: -webkit-linear-gradient(left, #fff, rgba(29, 82, 115, 0.3), #fff);
-		background-image: -moz-linear-gradient(left, #fff,rgba(29, 82, 115, 0.3), #fff);
-		background-image: -ms-linear-gradient(left, #fff, rgba(29, 82, 115, 0.3), #fff);
-		background-image: -o-linear-gradient(left, #fff, rgba(29, 82, 115, 0.3), #fff);
-		margin: 10px auto 0 auto;
-  	}
-}
-
-.items-title {
-
-	@include font($color: $color-green2, $size: 14px);
-	
-	&.white { color: $color-white; 
-
-		&:after { margin: 20px 0; }
-	}
-
-	&:after {
-		
-		@include pseudo;
-		width: 20px;
-		height: 1px;
-		background-color: $color-green2;
-		margin: 7px auto;
-	}
-}
-
-.items-content {
-
-    text-align: center;
-    padding: 20px;
-
-    .items-title-articl {
-		
-		@include font($color: $color-text, $size: 14px);
-    }
-}
+main { padding: 40px 0; }
 
 .articles-popularin { @include size;
-  
-	.items { 
-
-	 	flex-basis: calc(100%/4 - 20px); 
-	 	background-color: rgba(239, 248, 253, 0.9);
-
-	 	&:hover  * {color :$color-green2; }
+ 
+ 	.items {background-color: rgba(239, 248, 253, 0.9);
+		
+		&:hover  * {color :$color-green2; }
  	}
 }
 
@@ -147,68 +94,16 @@
 		.row-item { padding: 0 0 27px 0;}
 	}
 
-	.columns-right {
+	.row-heading {
 
 	    flex: 0 0 520px;
-	    display: flex;
-	    flex-wrap: wrap;
-		justify-content: center;
 	    min-height: 500px;
+	    background-color: transparent;
 	    border: 10px #f3fafe solid;
 	    box-sizing: border-box;
 	    padding: 0 40px;
 
-		.row-item {
-		    
-		    flex-basis: 155px;
-		    height: 155px;
-		    display: flex;
-		    flex-direction: column;
-		    justify-content: center;
-		    align-items: center;
-		    border-radius: 50%;
-		    position: relative;
-		    z-index: 1;
-		    @include background-image(url(/images/background/pop1.jpeg));
-		    transition: .5s;
-			
-			&:hover  { 
-
-				background-color: $color-green2;
-				background-image: none;
-
-				&.title { color: $color-green2; 
-
-					&:after { border-color:  $color-green2; }
-				}
-			}
-		    
-		    &.title {
-
-			    @include font($font-family:$font-serif, $color:$color-text2);
-				@include title-items;
-				margin: 0 auto;
-				padding: 0 18px;
-				text-align: center;
-				box-sizing: border-box;
-
-			    &:after { border-color:  $color-text2; }
-			}
-
-		    &:before {
-
-				@include pseudo;
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				background-color: rgba(255, 255, 255, 0.9);
-				border-radius: 50%;
-				margin: 10px;
-				z-index: -1;
-			}
-		}
+	   .heading-item { flex-basis: 155px; }	
 	}
 
 	.link-article { 
@@ -247,7 +142,6 @@
 		@include font($font-awesome, $color-blue, 12px);
 		padding-right: 10px;
 	}
-
 }
 
 .wrapper-publications { background-color: #f3fafe;
@@ -304,30 +198,6 @@
 	    	flex-basis: calc(100%/2 - 10px);
 	    	padding-bottom: 30px;
 	    }
-		
-		.publication-content { padding-left: 20px;}
-		
-		.pub-picture { 
-
-			width: 70px;
-			height: 70px;
-		}
-
-		.link-piblicat {
-
-    		display: block;
-    		color: $color-text;
-    		padding: 5px 5px 15px 5px;
-
-    		&:hover { color: $color-blue3;}
-		}
-			
-		.pub-link { 
-
-			color: $color-blue2;
-
-			&:hover {color: #2aa1f0;}
-		}
 	}
 }
 
@@ -345,7 +215,7 @@
 		.title-main {
 		
 			width: 100%;
-			 background-image: url(/images/background/pattern_green.png);
+			background-image: url(/images/background/pattern_green.png);
 			color: $color-white;
 			padding: 29px 0;
 			margin-bottom: 40px;
@@ -356,7 +226,6 @@
 				background-image: -moz-linear-gradient(left, #fff,$color-white, #fff);
 				background-image: -ms-linear-gradient(left, #fff, $color-white, #fff);
 				background-image: -o-linear-gradient(left, #fff, $color-white, #fff);
-
 			}
 		}
 

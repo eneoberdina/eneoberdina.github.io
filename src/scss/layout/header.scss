@@ -95,13 +95,10 @@
 			}
 
 			&:hover:after { color: transparent; }
-
-	       // &:hover + li:before { color: transparent; }
 	        
 	        &:hover  { background-color: $color-blue2; }
 
 	        &:last-of-type:after {color: transparent; } 
-
 	    }
 
 		a {

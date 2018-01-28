@@ -1,0 +1,167 @@
+@import 'global/vars.scss';
+@import 'global/mixin.scss';
+@import 'global/global.scss';
+@import 'global/breadcrumbs-list.scss';
+@import 'global/sidebar.scss';
+
+.site-content {
+   
+    display: flex;
+    flex-wrap: wrap;
+    width: 1060px;
+    justify-content: space-between;
+    padding: 30px 0;
+    margin: 0 auto;
+}   
+
+.main { 
+
+	flex: 1 1 0;
+	padding-right: 50px;
+	line-height: 24px;
+}
+
+:after, :before, figure { font-family: $font-serif; }
+
+h1,
+h2,
+h3,
+h4  {
+	
+	@include font($font-serifbold, $color-text2, 24px); 
+	font-weight: 700;
+	margin: 0;
+	padding: 10px 0;
+}
+
+h1 { 
+
+	display: inline-block;
+	font-size: 32px;
+	line-height: 44px;
+	border-bottom: 4px solid  #57a7dc;
+	margin: 0;
+	padding: 20px 0 10px;		
+}
+
+h3 { font-size: 20px; }
+
+h3 { font-size: 18px; }
+
+hr.blue {
+
+	color: #57a7dc;
+	margin: 0 0 40px;
+	border: 1px solid #57a7dc;
+}
+
+p { padding: 10px 0; }
+
+span.underline {
+
+	color: $color-blue4;
+	text-decoration: underline;
+}
+
+span.bold { font-family: $font-sansbold; }
+
+span.color { color: $color-green3; }
+
+.vnimanie {
+   
+   border-radius: 5px;
+   background-color: $color-blue4;
+   border: 10px solid #eef8fd;
+   @include font;
+   padding: 30px 34px 30px 0;
+   margin: 20px 0;
+
+   &:before {
+
+   	@include pseudo(inline-block, "");
+   	width: 59px;
+	height: 70px;
+	float: left;
+	background-image:url(/images/control/bv_osnovnoi.png);
+	margin: 0 40px 0px 40px;
+
+
+   }
+}
+
+ul  li { 
+
+	display: flex;
+	line-height: 22px;
+	padding: 8px 0 8px 0;
+
+	&:before {
+		
+		@include pseudo(initial, "\f0da");
+		@include font($font-awesome,$color-green3);
+		padding: 0 19px;
+	}
+}
+
+ol { counter-reset: list1; 
+
+	li  { padding: 8px 0 8px 0; }
+
+	li li  { padding: 10px 0 0 0; }
+	
+	li:before {
+		
+		counter-increment: list1;
+		content: counters(list1,".")".";
+		margin-right:10px;
+		color: $color-green3;
+	}
+} 
+
+.float-right {
+
+	float: right;
+	font-style: italic;
+	text-align: center;
+	font-size: 14px;
+}
+
+
+.title-heading { 
+
+	display: block;
+	width: 129px;	
+	background-image: url(/images/background/yarlik.png);
+	background-repeat: no-repeat;
+	padding: 12px;
+	margin: 0 0 10px 0;
+	@include font($font-serifbold, $color-white, 14px);
+}
+
+.row-heading.top {
+
+	display: block;
+	height: 178px;
+	padding: 10px 0px 0px;
+	margin-bottom: 40px;
+
+	.group-link { display: flex; }
+
+.heading-item {
+
+	width: 95px;
+	height: 95px;
+	font-size: 13px;
+
+		&:after { margin-top: 5px; }
+	}
+}
+
+.row-heading.bottom { flex-basis: 100%;
+	
+	.heading-item {
+
+		width: 140px;
+		height: 140px
+	}
+}
