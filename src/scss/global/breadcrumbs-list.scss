@@ -1,6 +1,7 @@
 @import 'global/vars.scss';
 @import 'global/mixin.scss';
-@import 'global/global.scss';
+
+.breadcrumbs-list { padding: 0; }
 
 .breadcrumb { @include font($font-sans, $color-blue, 13px);
 	

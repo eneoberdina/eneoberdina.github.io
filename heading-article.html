@@ -297,36 +297,58 @@
 				</div>
 
 			</main>
-			<div class="widget-area">
+			<aside class="widget-area">
 				<div class="short-navig">
-					<span class="row-navig">item
+					<div class="row-navig">item
 						<span class="total-number">12</span>
-					</span>
-					<span class="row-navig">item
+					</div>
+					<div class="row-navig">item
 						<span class="total-number">12</span>
-					</span>
-					<span class="row-navig hidden"
-						<span class="row-navig open">item
+					</div>
+					<div class="row-navig" id="active" onclick="StateToggle('#hidd-block1'); StateToggle('#active');">item
+						<span class="total-number">12</span>
+					</div>
+					<div class="hidden-block" id="hidd-block1">
+						<div class="hidd">item
 							<span class="total-number">12</span>
-						</span>
-						<span class="row-navig open">item
+						</div>
+						<div class=" hidd">item
 							<span class="total-number">12</span>
-						</span>
-					</span>
-					<span class="row-navig">item
+						</div>
+						<div class="hidd">item
+							<span class="total-number">12</span>
+						</div>
+					</div>
+					<div class="row-navig open">item
 						<span class="total-number">12</span>
-					</span>
-					<span class="row-navig">item
+					</div>
+					<div class="row-navig">item
 						<span class="total-number">12</span>
-					</span>
+					</div>
+					<div class="row-navig">item
+						<span class="total-number">12</span>
+					</div>
 				</div>
-				<div class="advertising"></div>
-				<article class="items">
-					<a class="items-picture" href="">
-						<img src="/images/background/pop1.jpeg" alt="">
-					</a>
+				<a class="asadvert-aside" href="">
+					<img src="images/background/reclama2.jpeg" class="picture-aside"  alt="">
+				</a>
+				<span class="title-aside">Свежие публикации</span>
+				<article class="items back">
+						<a class="items-picture" href="">
+							<img class="picture-aside" src="/images/background/pop1.jpeg" alt="">
+						</a>
+						<div class="items-content">
+							<a class="items-title title-rubric" href="">Питание</a>
+							<a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
+							<div class="meta">
+		                 		<span class="meta-span views"> 10000</span>
+		                 		<span class="meta-span messag"> 100</span>
+		           	 		</div>
+           	 		</div>
+       			 </article>
+       			 <span class="title-aside">Свежие публикации</span>
+       			 <article class="items border">
 					<div class="items-content">
-						<a class="items-title title-rubric" href="">Питание</a>
 						<a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
 						<div class="meta">
 	                 		<span class="meta-span views"> 10000</span>
@@ -334,10 +356,8 @@
                	 		</div>
 					</div>       
        			 </article>
-       			 <article class="items">
-	
+       			 <article class="items border">
 					<div class="items-content">
-						<a class="items-title title-rubric" href="">Питание</a>
 						<a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
 						<div class="meta">
 	                 		<span class="meta-span views"> 10000</span>
@@ -345,8 +365,28 @@
                	 		</div>
 					</div>       
        			 </article>
-				<div class="advertising"></div>
-			</div>
+       			 <article class="items border">
+					<div class="items-content">
+						<a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
+						<div class="meta">
+	                 		<span class="meta-span views"> 10000</span>
+	                 		<span class="meta-span messag"> 100</span>
+               	 		</div>
+					</div>       
+       			 </article>
+       			 <article class="items border">
+					<div class="items-content">
+						<a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
+						<div class="meta">
+	                 		<span class="meta-span views"> 10000</span>
+	                 		<span class="meta-span messag"> 100</span>
+               	 		</div>
+					</div>       
+       			 </article>
+				<a class="asadvert-aside" href="">
+					<img class="picture-aside"  src="images/background/reclama2.jpeg" alt="">
+				</a>
+			</aside>
 			<div class="row-heading bottom">
 				<a class="heading-item" href="">Симптомы</a>
 				<a class="heading-item" href="">Питание</a>
@@ -381,5 +421,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src="/js/TogglerOpenClose.js"></script>
 	</body>
 </html>
