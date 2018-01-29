@@ -129,7 +129,12 @@ textarea {
     text-align: center;
     padding: 10px 20px;
 
-    .items-title-articl { @include font($color: $color-text, $size: 14px); }
+    .items-title-articl { 
+
+		display: block;
+    	@include font($color: $color-text, $size: 14px);
+    	padding-top: 10px;
+	}
 }
 
 .items { 
