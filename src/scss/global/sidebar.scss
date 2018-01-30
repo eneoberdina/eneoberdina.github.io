@@ -1,17 +1,12 @@
 @import 'global/vars.scss';
 @import 'global/mixin.scss';
-@import 'global/global.scss';
 
 .widget-area {
    
 	flex-basis: 310px;
 	flex-shrink: 0;
 
-	a { 
-
-		display: block;
-		transition: .5s;
-	}
+	a { transition: .5s; }
 
 	.items { text-align: left;
 			
@@ -65,17 +60,10 @@
 	}
 }
 
-.picture-aside {
-
-	display: block;
-	margin: 0 auto;
-}
-
 .short-navig { padding-top: 7px; }
 
 .row-navig {
 
-    display: block;
     background-color: #eef8fd;
     border-bottom: 1px solid $color-white;
     font-family: $font-sansbold;
@@ -133,7 +121,6 @@
 
 .title-aside {
 
-	display: block;
 	background-image: url(/images/background/pattern_blue.png);
 	background-repeat: repeat;
 	@include font($font-sansbold, $color-white, 18px);

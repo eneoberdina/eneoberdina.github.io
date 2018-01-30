@@ -1,15 +1,25 @@
 @import 'global/vars.scss';
 @import 'global/mixin.scss';
-@import 'global/global.scss';
 
 main { padding: 40px 0; }
 
-.articles-popularin { @include size;
- 
- 	.items {background-color: rgba(239, 248, 253, 0.9);
+.articles-popularin,
+.articles-headings,
+.question,
+.articles-publications {
+	
+	@include size;
+ 	margin: 50px auto;
+}
+
+.articles-popularin { 
+
+	.items {
+
+		background-color: rgba(239, 248, 253, 0.9);
 		
 		&:hover  * {color :$color-green2; }
- 	}
+	}
 }
 
 .wrapper-discusses {
@@ -21,9 +31,7 @@ main { padding: 40px 0; }
 
 .articles-discusses {
    
-	display: flex;
    	width: 880px;
-	margin: 0 auto;
     padding: 40px 0;
 
 	    &-popular {
@@ -34,7 +42,6 @@ main { padding: 40px 0; }
 		    height: 280px;
 		    background-image: url(/images/background/pattern_green.png);
 		    @include font($font-family: font-serifbold, $size: 24px);
-			text-align: center;
 			margin-right: 40px;
 			padding: 3.85em 2.85em;
 			box-sizing: border-box;
@@ -52,7 +59,6 @@ main { padding: 40px 0; }
 
 	.items-link {
 
-		display: block;
 		@include font($font-family: $font-sansbold, $size: 18px);
 	    padding-bottom: 20px;
 	}
@@ -74,10 +80,7 @@ main { padding: 40px 0; }
 
 .articles-headings {
 
-	display: flex;
-	@include size;
-
-	.row-item { flex-basis: calc(100%/2 - 10px); 
+    .row-item { flex-basis: calc(100%/2 - 10px); 
 		
 		.content { padding-bottom: 7px; }
 
@@ -108,7 +111,6 @@ main { padding: 40px 0; }
 
 	.link-article { 
 
-		display: block;
     	color:$color-text;
     	font-size: 16px;
 
@@ -122,7 +124,6 @@ main { padding: 40px 0; }
 
 	.symbol-link { 
 
-		display: block;
 		font-size: 14px;
 		padding-top: 15px;
 
@@ -153,7 +154,6 @@ main { padding: 40px 0; }
 	 	background-image: url(/images/background/pattern_green.png);
 	 	color: $color-white;
 	 	padding: 39px  20px 0;
-		text-align: center;
 		line-height: 24px;
 
 		.title { color: $color-white;
@@ -165,15 +165,11 @@ main { padding: 40px 0; }
 			}
 		}
 
-		.title-social-link {
-		    padding: 10px 0 23px;
-		    display: block;
-		}
+		.title-social-link { padding: 10px 0 23px; }
 	}
 
 	.articles-publications { 
 
-		@include size;
 		padding: 50px 0;
 	
 		.title-main { 
@@ -188,28 +184,26 @@ main { padding: 40px 0; }
 
 	.publication-columns {
 	   
-	    display: flex;
 	    flex-wrap: wrap;
 	    flex: 1 1 0;
 
-	    .publication {
+	    .publication.main {
 
-			display: flex;
 	    	flex-basis: calc(100%/2 - 10px);
-	    	padding-bottom: 30px;
-	    }
+	    	padding: 0 0 20px 0;
+	    	margin: 0;
+	    	line-height: 16px;
+	 	}
 	}
 }
 
 .question { 
 
-	@include size;
 	@include background-image(url(/images/background/fon_pop_vopros.jpg));
 	
 	&-wrapper {
 		
 		width: 880px;
-		margin: 0 auto;
 		padding: 50px 0;
 
 		.title-main {

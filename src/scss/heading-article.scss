@@ -1,17 +1,10 @@
 @import 'global/vars.scss';
 @import 'global/mixin.scss';
-@import 'global/global.scss';
-@import 'global/breadcrumbs-list.scss';
-@import 'global/sidebar.scss';
 
 .site-content {
    
-    display: flex;
-    flex-wrap: wrap;
     width: 1060px;
-    justify-content: space-between;
     padding: 30px 0;
-    margin: 0 auto;
 }   
 
 .main { 
@@ -31,18 +24,16 @@ h4  {
 	
 	@include font($font-serifbold, $color-text2, 24px); 
 	font-weight: 700;
-	margin: 0;
 	padding: 10px 0;
 }
 
 h1 { 
 
-	display: inline-block;
 	font-size: 32px;
 	line-height: 44px;
 	border-bottom: 4px solid  #57a7dc;
-	margin: 0;
-	padding: 20px 0 10px;		
+	padding: 20px 0 10px;
+	margin: 0;	
 }
 
 h3 { font-size: 20px; }
@@ -71,7 +62,7 @@ span.color { color: $color-green3; }
 .row-heading.top,
  p { padding: 10px 0; }
 
-.meta-span,
+.meta-span.dark,
 a { color: $color-text2; }
 
 .vnimanie {
@@ -93,12 +84,10 @@ a { color: $color-text2; }
 	margin: 0 40px 0px 40px;
    
    }
-
 }
 
-main ul  li { 
+.main ul  li { 
 
-	display: flex;
 	line-height: 22px;
 	padding: 8px 0 8px 0;
 
@@ -110,7 +99,7 @@ main ul  li {
 	}
 }
 
-main ol { counter-reset: list1; 
+.main ol { counter-reset: list1; 
 
 	li  { padding: 8px 0 8px 0; }
 
@@ -130,28 +119,23 @@ main ol { counter-reset: list1;
 
 	float: right;
 	font-style: italic;
-	text-align: center;
 	font-size: 14px;
 }
 
 .title-heading { 
 
-	display: block;
 	width: 129px;	
 	background-image: url(/images/background/yarlik.png);
 	background-repeat: no-repeat;
-	padding: 12px;
+	padding: 8px 12px;
 	margin: 0 0 10px 0;
 	@include font($font-serifbold, $color-white, 14px);
 }
 
 .row-heading.top {
 
-	display: block;
 	height: 178px;
 	margin-bottom: 40px;
-
-.group-link { display: flex; }
 
 .heading-item {
 
@@ -174,7 +158,6 @@ main ol { counter-reset: list1;
 
 .related {
     
-    display: flex;
     justify-content: space-between;
     padding: 20px 0;
 
@@ -183,8 +166,9 @@ main ol { counter-reset: list1;
     	flex-basis: calc(100%/3 - 20px);
     	background-color: rgba(241, 249, 253, 0.9);
     	border: transparent;
-		transition: all .5s;
     	position: relative;
+    	transition: height 5.5s, background-color 2s;
+    	 
 
     	img { width: 100%; }
 
@@ -193,7 +177,7 @@ main ol { counter-reset: list1;
     		background-color: transparent;
     		border: 1px solid #f1f9fd;
 
-    		img { height: 0; }
+    		img { height: 0px; }
 
     		.items-content { 
     			
@@ -213,6 +197,8 @@ main ol { counter-reset: list1;
     		 	position: initial;
     		 	margin: 13px 0 0 0;
     		}
+
+    		.meta-span { color: $color-text2; }
     	}
     }
 
@@ -233,7 +219,6 @@ main ol { counter-reset: list1;
 			top: 68%;
 			left: 0;
 			right: 0;
-			margin: 0 auto;
 		}
     }
 
@@ -242,10 +227,11 @@ main ol { counter-reset: list1;
 
 .publication {
 
-    display: flex;
     border: 1px solid #f1f9fd;
     padding: 20px 0;
     margin: 20px 0;
+
+    &.backhover:hover { background-color: #eff8fd;}
 
     .picture {
 
@@ -256,7 +242,6 @@ main ol { counter-reset: list1;
 
     .link-pub {
 
-		display: block;
     	font-family: $font-sansbold;
     	font-size: 24px;
 
@@ -273,7 +258,6 @@ main ol { counter-reset: list1;
 
     .piblicat { 
 
-		display: block;
     	font-size: 14px;
     	line-height: 18px;
     }

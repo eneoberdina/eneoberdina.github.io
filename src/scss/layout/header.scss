@@ -1,7 +1,5 @@
 @import 'global/vars.scss';
 @import 'global/mixin.scss';
-@import 'global/global.scss';
-@import 'search.scss';
 
  header {
 
@@ -13,31 +11,22 @@
 
  .wrapper-header { 
 
- 	display: flex;
  	flex-wrap: wrap;
- 	@include size;
- 	margin: 0 auto;
- 	
+ 	@include size;	
  }
 
 .header-body {
 
-	display: flex;
 	width: 100%;
 	align-items:center;
 	justify-content: space-between;
 	padding: 30px 0;
 
-	.menu-header-top { display: flex;
+	.menu-header-top {
 
-		ul.menu-top { 
-
-			padding: 0 20px;
-			text-align: center;
-
+		ul.menu-top { padding: 0 20px;
+		
 			a {
-			
-				display: inline-block;
 				@include font($size: 14px);
 				padding-bottom: 5px;
 				transition: 1s;
@@ -72,13 +61,9 @@
 	width: 100%;
 	background-image: url(/images/background/pattern_blue.png);
 
-	ul.menu {
-
-		display: flex;
-		width: 1060px; 
-		margin: 0 auto;
-
-		 li.menu-item  { 
+	ul.menu { width: 1060px; 
+	
+		li.menu-item  { 
 
 			transition:  all 0.3s;
 			position: relative;
@@ -103,7 +88,6 @@
 
 		a {
 
-			display: inline-block;
 			@include font($size: 16px);
 			padding: 18px 15px;
 		}
@@ -136,4 +120,49 @@
 			}
 		}
 	}
+}
+.search-form {
+
+	width: 250px;
+	flex-wrap: wrap;
+
+   .searchstring {
+   
+	    width: calc(100% - 55px);
+	    height: 36px;
+	    padding-left: 10px;
+	    border: 1px solid #eff8fd;
+	    background-color: #eff8fd;
+	    border-radius: 0;
+	    @include font($font-sans,  rgba(73, 110, 134, 0.5), 14px);
+	     
+		&::-moz-placeholder { 
+
+			@include font($font-sans,  rgba(73, 110, 134, 0.5), 14px);
+			opacity: 1; 
+		 }
+
+	 	&::-webkit-input-placeholder { @include font($font-sans,  rgba(73, 110, 134, 0.5), 14px);
+	 		opacity: 1; 
+
+	 	}	
+	}
+}
+
+.searchsubmit {
+   
+	    width: 40px;
+	    height: 40px;
+	    @include font($font-awesome, $color-white, 14px); 
+	    vertical-align: top;
+	    border: 1px solid #eff8fd;
+	    background-color: $color-blue2;
+	    border-radius: 0;
+	    cursor: pointer;
+}
+
+.sign-search {
+
+	@include font($size: 12px);
+	padding-top: 5px;
 }

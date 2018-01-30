@@ -44,8 +44,6 @@ nav {
  */
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
   clear: both;
   box-sizing: border-box;
 }
@@ -105,10 +103,13 @@ a {
   background-color: transparent; /* 1 */
   -webkit-text-decoration-skip: objects; /* 2 */
   text-decoration: none;
-  transition: .3s;
+ transition: 0.5s;
+
 }
 
 a:active,a:hover {	outline: 0;}
+
+div:hover, article:hover { transition: .5s; }
 
 /**
  * 1. Remove the bottom border in Chrome 57- and Firefox 39-.

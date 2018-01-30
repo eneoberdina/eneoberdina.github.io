@@ -15,7 +15,7 @@
  @mixin size($size: 1060px) {
 
  	width: $size;
-    margin: 50px auto;
+    margin: 0px auto;
  }
 
  @mixin pseudo($display: block, $content: '') {
