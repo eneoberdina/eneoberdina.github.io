@@ -12,6 +12,8 @@
   max-width: 700px;
   padding-right: 50px;
   line-height: 24px; }
+  .main.article {
+    font-size: 16px; }
 
 figure {
   font-family: "PTSerif-Regular"; }
@@ -22,25 +24,29 @@ h3,
 h4 {
   font: 24px "PTSerif-Bold";
   color: #1d5273;
-  font-weight: 700;
-  padding: 10px 0; }
+  padding: 10px 0;
+  margin: 0; }
 
 h1 {
   font-size: 32px;
   line-height: 44px;
-  border-bottom: 4px solid  #57a7dc;
+  border-bottom: 1px solid  #57a7dc;
   padding: 20px 0 10px;
-  margin: 0; }
+  margin: 0 0 40px;
+  position: relative; }
+  h1:after {
+    content: "";
+    display: block;
+    width: 160px;
+    border: 3px solid #57a7dc;
+    position: absolute;
+    bottom: 0; }
 
 h3 {
   font-size: 20px; }
 
 h3 {
   font-size: 18px; }
-
-.blue {
-  margin: 0 0 40px;
-  border: 1px solid #57a7dc; }
 
 .underline {
   color: #55a8de;
@@ -65,33 +71,53 @@ a {
 .vnimanie {
   background-color: #55a8de;
   border: 10px solid #eef8fd;
-  font: 14px "PTSans-Regular";
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font: 16px "PTSans-Regular";
   color: #ffffff;
-  padding: 30px 34px 30px 0;
+  padding: 25px 25px 25px 0;
   margin: 20px 0; }
+  .vnimanie.vn-green {
+    background-color: #2bd081;
+    border-color: #d9ffed; }
+    .vnimanie.vn-green:before {
+      background: url(/images/control/bv_vajno.png) no-repeat; }
+    .vnimanie.vn-green .vnimanie-block {
+      display: block;
+      border-top: 1px solid rgba(255, 255, 255, 0.25);
+      margin-top: 10px;
+      padding-top: 10px; }
+    .vnimanie.vn-green .critical {
+      font-family: "PTSans-Bold"; }
   .vnimanie:before {
     content: "";
     display: inline-block;
-    width: 59px;
+    width: 78px;
     height: 70px;
-    float: left;
-    background-image: url(/images/control/bv_osnovnoi.png);
+    background: url(/images/control/bv_osnovnoi.png) no-repeat;
     margin: 0 40px 0 40px; }
 
 .main ul li {
   line-height: 22px;
-  padding: 8px  0; }
+  padding: 8px 0; }
   .main ul li:before {
     content: "";
     display: initial;
     font: 14px "FontAwesome";
     color: #2bd081;
-    padding: 0 19px; }
+    padding: 0 19px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center; }
 
 .main ol {
   counter-reset: list1; }
   .main ol li {
-    padding: 8px  0; }
+    padding: 8px 0; }
   .main ol li li {
     padding: 10px 0 0 0; }
   .main ol li:before {
@@ -134,11 +160,6 @@ a {
     height: 140px; }
 
 .related {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   padding: 20px 0; }
   .related .items {
     -webkit-flex-basis: -webkit-calc(100%/3 - 20px);
@@ -148,14 +169,14 @@ a {
     background-color: rgba(241, 249, 253, 0.9);
     border: transparent;
     position: relative;
-    -webkit-transition: height 5.5s, background-color 2s;
-    -o-transition: height 5.5s, background-color 2s;
-    -moz-transition: height 5.5s, background-color 2s;
-    transition: height 5.5s, background-color 2s; }
+    -webkit-transition: height 5.5s, background 2s;
+    -o-transition: height 5.5s, background 2s;
+    -moz-transition: height 5.5s, background 2s;
+    transition: height 5.5s, background 2s; }
     .related .items img {
       width: 100%; }
     .related .items:hover {
-      background-color: transparent;
+      background: transparent;
       border: 1px solid #f1f9fd; }
       .related .items:hover img {
         height: 0; }

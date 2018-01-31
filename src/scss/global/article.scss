@@ -1,0 +1,71 @@
+@import 'global/vars.scss';
+@import 'global/mixin.scss';
+
+.summary {
+    background-color: #eef8fd;
+    padding: 40px 40px 30px 90px;
+
+    .title {
+     	
+     	display: block;
+     	@include font($font-family: $font-serifbold, $color:$color-text, $size: 20px );
+    	padding-bottom: 20px;
+	}
+
+	.ul-summary  { 
+ 		
+ 		height: 118px;
+   		overflow: hidden;
+		flex-wrap: wrap;
+
+		&.opened { height: auto; }
+
+		.item { flex-wrap: wrap; 
+
+			&.last  { opacity: .5; }
+		}
+
+		.item:before { color: $color-blue3; }
+	}
+
+	hr {
+
+		border: 1px solid $color-white;
+		margin: 20px 0 30px;
+	}
+
+	.expand {
+	    @include font( $size: 13px );
+	    border-radius: 5px;
+	    background-color: $color-green3;
+	    padding: 6px 24px;
+	    cursor: pointer;
+
+	    &:hover { background-color: #93e3bd; }
+	}
+}
+.article .articles-popularin {
+
+	width: 100%;
+    border-radius: 5px;
+    background-color: #eef8fd;
+    padding: 0 20px 20px 20px;
+    box-sizing: border-box;
+    margin: 20px 0;
+
+    .items { 
+
+    	flex-basis: calc(100%/3 - 20px);
+    	background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+.similar { 
+
+	width: 100%;
+	background: url(/images/background/pattern_green.png) repeat;
+	text-transform: uppercase;
+	@include font($font-family: $font-serifbold, $color:$color-white);
+	padding: 13px 0;
+	margin: 20px 0;
+}

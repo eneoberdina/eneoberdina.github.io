@@ -73,19 +73,55 @@
                 </nav>
         </header>
         <div class="site-content">
-            <main class="main">
+            <main class="main article">
                 <p class="breadcrumbs-list">
                     <a href="" class="breadcrumb">Главное меню</a> 
                     <a href="" class="breadcrumb">Симптомы</a>
-                    <a href="" class="breadcrumb last">Симптомы</a> 
+                    <a href="" class="breadcrumb last">Lorem ipsum dolor sit</a> 
                 </p>
-                <h1>H1  Lorem ipsum dolor sit amet, consectetur adipisicing elitlorem</h1>
-                <hr class="blue"></hr>
+                <h1>H1  Lorem ipsum dolor sit amet, consectetur adipisicing elitlorem
+                </h1>
                 <div class="summary">
                     <span class="title">Cодержание статьи</span>
-                    <span class="item">lorem</span>
-                    <span class="item">lorem</span>
-                    <button class="expand">развернуть</button>
+                    <ul class="ul-summary" id="hidden-ul">
+                        <li class="item">
+                            <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</a>
+                        </li>
+                        <li class="item">
+                            <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            </a>
+                            <ul class="sub-summary">
+                                <li class="item last">
+                                    <a href="">Lorem ipsum dolor sit amet, consectetur</a>
+                                </li>
+                                <li class="item last">
+                                    <a href="">Lorem ipsum dolor sit amet, consectetur</a>
+                                </li>
+                                <li class="item last">
+                                    <a href="">Lorem ipsum dolor sit amet, consectetur</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="item">
+                            <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</a>
+                        </li>
+                        <li class="item">
+                            <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</a>
+                            <ul class="sub-summary">
+                                <li class="item last">
+                                    <a href="">Lorem ipsum dolor sit amet, consectetur</a>
+                                </li>
+                                <li class="item last">
+                                    <a href="">Lorem ipsum dolor sit amet, consectetur</a>
+                                </li>
+                                <li class="item last">
+                                    <a href="">Lorem ipsum dolor sit amet, consectetur</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <hr />
+                    <button class="expand" onclick="StateToggle('#hidden-ul');">развернуть</button>
                 </div>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -133,9 +169,11 @@
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                 </p>
                 <div class="vnimanie">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna 
-                    quis nostrud exercitation ullamco laboris nisi 
+                    <span class="vnimanie-block">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna 
+                        quis nostrud exercitation ullamco laboris nisi 
+                    </span>
                 </div>
                 <h3>Lorem ipsum dolor sit amet, consectetu</h3>
                 <p>
@@ -258,10 +296,14 @@
                     vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
                     no sea takimata sanctus est Lorem ipsum dolor sit amet.amet
                 </p>
-                <div class="vnimanie vnimanie-green">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna 
-                    quis nostrud exercitation ullamco laboris nisi 
+                 <div class="vnimanie vn-green">
+                    <span class="critical">Очень важно!
+                        <span class="vnimanie-block">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna 
+                            quis nostrud exercitation ullamco laboris nisi 
+                        </span>
+                    </span>
                 </div>
                 <p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
@@ -325,60 +367,48 @@
                 <div class="advert">
                     <img src="/images/background/reclama.jpeg" alt="reclama">
                 </div>
-                <div class="related">
+                <section class="articles-popularin display-flex">
+                     <span class="similar">похожие статьи</span>
                     <article class="items">
-                        <span class="similar">похожие статьи</span>
                         <a class="items-picture" href="">
                             <img src="/images/background/ps1.jpeg" alt="">
                         </a>
                         <div class="items-content">
+                            <a class="items-title title-rubric" href="/heading.html">Питание</a>
+                            <a class="items-title-articl" href="/heading-article.html">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
+                            <div class="meta">
+                                <span class="meta-span views"> 10000</span>
+                                <span class="meta-span messag"> 100</span>
+                            </div>
+                        </div>       
+                     </article>
+                     <article class="items">
+                        <a class="items-picture" href="">
+                            <img src="/images/background/ps1.jpeg" alt="">
+                        </a>
+                        <div class="items-content">
+                            <a class="items-title title-rubric" href="">Питание</a>
                             <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
-                            <p class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,    
-                            </p>
-                        </div> 
-                        <div class="meta">
-                            <span class="meta-span views"> 10000</span>
-                            <span class="meta-span messag"> 100</span>
-                        </div>      
-                    </article>
-                    <article class="items">
+                            <div class="meta">
+                                <span class="meta-span views"> 10000</span>
+                                <span class="meta-span messag"> 100</span>
+                            </div>
+                        </div>
+                     </article>
+                     <article class="items">
                         <a class="items-picture" href="">
                             <img src="/images/background/ps1.jpeg" alt="">
                         </a>
                         <div class="items-content">
+                            <a class="items-title title-rubric" href="">Питание</a>
                             <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
-                            <p class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,    
-                            </p>
-                        </div>  
-                        <div class="meta">
-                            <span class="meta-span views"> 10000</span>
-                            <span class="meta-span messag"> 100</span>
-                        </div>     
-                    </article>
-                    <article class="items">
-                        <a class="items-picture" href="">
-                            <img src="/images/background/ps1.jpeg" alt="">
-                        </a>
-                        <div class="items-content">
-                            <a class="items-title-articl" href="">
-                                Lorem ipsum dolor sit amet
-                                sit amet
-                            </a>
-                            <p class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,    
-                            </p>
-                        </div> 
-                        <div class="meta">
-                            <span class="meta-span views"> 10000</span>
-                            <span class="meta-span messag"> 100</span>
-                        </div>    
-                    </article>
-                </div>
+                            <div class="meta">
+                                <span class="meta-span views"> 10000</span>
+                                <span class="meta-span messag"> 100</span>
+                            </div>
+                        </div>
+                     </article>
+                </section>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna 

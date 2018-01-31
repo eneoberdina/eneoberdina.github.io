@@ -6,8 +6,6 @@
     flex-basis: 310px;
     flex-shrink: 0;
 
-    a { transition: .5s; }
-
     .items { text-align: left;
             
         &.back { 
@@ -33,7 +31,6 @@
                 
                 &:hover  a, 
                 &:hover .meta-span { color: $color-white; }
-
             }
             
              .items-content { 
@@ -70,11 +67,10 @@
     font-size: 18px;
     padding: 16px 20px;
     cursor: pointer;
-    transition: .5s;
 
     &.opened:before { @include pseudo(inline-block, "\f0d8");}
         
-    &:before{
+    &:before {
 
         @include pseudo(inline-block, "\f0d7");
         font-family: $font-awesome;
@@ -83,11 +79,11 @@
 }
 
 .row-navig:hover,
-.row-navig.opened,
-.hidd:hover {
+.row-navig.opened:hover,
+.hidd:hover { 
 
     background-color: $color-green3;
-    color: $color-white;
+    color:$color-white; 
 }
 
 .total-number {
@@ -102,7 +98,7 @@
 
     .hidd {
 
-        background-color: transparent;
+       
         font-family: $font-sans;
         padding: 16px 20px 16px 47px;
         border: 1px solid #eef8fd;

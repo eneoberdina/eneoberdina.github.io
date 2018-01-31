@@ -125,9 +125,9 @@
 
    .searchstring {
    
-        width: calc(100% - 55px);
-        padding-left: 10px;
-        background-color: #eff8fd;
+        width: calc(100% - 65px);
+        padding: 10px;
+        background: #eff8fd;
         border-radius: 0;
         @include font($font-sans,  rgba(73, 110, 134, 0.5));
          

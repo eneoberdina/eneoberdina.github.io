@@ -334,6 +334,7 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
+
 }
 
 /**
@@ -369,6 +370,10 @@ progress {
 textarea {
   overflow: auto;
 }
+hr {
+	border: 0;
+}
+
 
 /**
  * 1. Add the correct box sizing in IE 10-.

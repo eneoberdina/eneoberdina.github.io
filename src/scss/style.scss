@@ -5,6 +5,7 @@
 @import 'global/breadcrumbs-list.scss';
 @import 'global/sidebar.scss';
 @import 'heading-article.scss';
+@import 'global/article.scss';
 @import 'layout/footer.scss';
 @import 'main.scss';
 
@@ -25,18 +26,21 @@ main ul  li,
 .meta,
 .row-heading, 
 .heading-item,
+.vnimanie,
 .search-form,
 .wrapper-footer,
 .menu-footer { display: flex; }
 
 .site-content, 
 .display-flex, 
-.row-heading {
+.row-heading,
+.related {
 
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+h1,
 .items .items-link,
 .link-article,
 .items-title-articl,
@@ -50,9 +54,9 @@ main ul  li,
 .link-piblicat,
 .widget-area a,
 .picture-aside,
-.title-aside { display: block; }
+.title-aside,
+.expand { display: block; }
 
-h1,
 .searchstrin,
 .searchsubmit, 
 .title-articl.right,
@@ -69,7 +73,8 @@ ul.menu-top,
 .items-content,
 .heading-item,
 .wp-pagenavi,
-.link-navigation  { text-align: center;}
+.link-navigation,
+.similar  { text-align: center;}
 
 .site-content,
 .items-title-articl:after,
@@ -77,9 +82,8 @@ ul.menu-top,
 .picture-aside,
 .articles-discusses,
 .question-wrapper,
-.heading-item
-
- { margin: 0 auto;}
+.heading-item,
+.expand { margin: 0 auto;}
 
 
 body,
