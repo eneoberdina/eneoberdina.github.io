@@ -9,10 +9,10 @@
 
 .main { 
 
-	flex: 1 1 0;
-	max-width: 700px;
-	padding-right: 50px;
-	line-height: 24px;
+    flex: 1 1 0;
+    max-width: 700px;
+    padding-right: 50px;
+    line-height: 24px;
 }
 
 figure { font-family: $font-serif; }
@@ -21,41 +21,40 @@ h1,
 h2,
 h3,
 h4  {
-	
-	@include font($font-serifbold, $color-text2, 24px); 
-	font-weight: 700;
-	padding: 10px 0;
+    
+    @include font($font-serifbold, $color-text2, 24px); 
+    font-weight: 700;
+    padding: 10px 0;
 }
 
 h1 { 
 
-	font-size: 32px;
-	line-height: 44px;
-	border-bottom: 4px solid  #57a7dc;
-	padding: 20px 0 10px;
-	margin: 0;	
+    font-size: 32px;
+    line-height: 44px;
+    border-bottom: 4px solid  #57a7dc;
+    padding: 20px 0 10px;
+    margin: 0;  
 }
 
 h3 { font-size: 20px; }
 
 h3 { font-size: 18px; }
 
-hr.blue {
+.blue {
 
-	color: #57a7dc;
-	margin: 0 0 40px;
-	border: 1px solid #57a7dc;
+    margin: 0 0 40px;
+    border: 1px solid #57a7dc;
 }
 
-span.underline {
+.underline {
 
-	color: $color-blue4;
-	text-decoration: underline;
+    color: $color-blue4;
+    text-decoration: underline;
 }
 
-span.bold { font-family: $font-sansbold; }
+.bold { font-family: $font-sansbold; }
 
-span.color { color: $color-green3; }
+.color { color: $color-green3; }
 
 .post,
 .advert,
@@ -67,7 +66,6 @@ a { color: $color-text2; }
 
 .vnimanie {
    
-   border-radius: 5px;
    background-color: $color-blue4;
    border: 10px solid #eef8fd;
    @include font;
@@ -76,84 +74,84 @@ a { color: $color-text2; }
 
    &:before {
 
-   	@include pseudo(inline-block, "");
-   	width: 59px;
-	height: 70px;
-	float: left;
-	background-image:url(/images/control/bv_osnovnoi.png);
-	margin: 0 40px 0px 40px;
+    @include pseudo(inline-block, "");
+    width: 59px;
+    height: 70px;
+    float: left;
+    background-image:url(/images/control/bv_osnovnoi.png);
+    margin: 0 40px 0 40px;
    
    }
 }
 
 .main ul  li { 
 
-	line-height: 22px;
-	padding: 8px 0 8px 0;
+    line-height: 22px;
+    padding: 8px  0;
 
-	&:before {
-		
-		@include pseudo(initial, "\f0da");
-		@include font($font-awesome,$color-green3);
-		padding: 0 19px;
-	}
+    &:before {
+        
+        @include pseudo(initial, "\f0da");
+        @include font($font-awesome,$color-green3);
+        padding: 0 19px;
+    }
 }
 
 .main ol { counter-reset: list1; 
 
-	li  { padding: 8px 0 8px 0; }
+    li  { padding: 8px  0; }
 
-	li li  { padding: 10px 0 0 0; }
-	
-	li:before {
-		
-		counter-increment: list1;
-		content: counters(list1,".")".";
-		margin-right:10px;
-		color: $color-green3;
-		font-family: $font-serif;
-	}
+    li li  { padding: 10px 0 0 0; }
+    
+    li:before {
+        
+        counter-increment: list1;
+        content: counters(list1,".")".";
+        margin-right:10px;
+        color: $color-green3;
+        font-family: $font-serif;
+    }
 } 
 
 .float-right {
 
-	float: right;
-	font-style: italic;
-	font-size: 14px;
+    float: right;
+    font-style: italic;
 }
 
 .title-heading { 
 
-	width: 129px;	
-	background-image: url(/images/background/yarlik.png);
-	background-repeat: no-repeat;
-	padding: 8px 12px;
-	margin: 0 0 10px 0;
-	@include font($font-serifbold, $color-white, 14px);
+    width: 129px;   
+    background-image: url(/images/background/yarlik.png);
+    background-repeat: no-repeat;
+    padding: 8px 12px;
+    margin: 0 0 10px 0;
+    @include font($font-serifbold, $color-white);
 }
 
 .row-heading.top {
 
-	height: 178px;
-	margin-bottom: 40px;
+    height: 178px;
+    margin-bottom: 40px;
 
 .heading-item {
 
-	width: 95px;
-	height: 95px;
-	font-size: 13px;
+    width: 95px;
+    height: 95px;
+    font-size: 13px;
+    line-height: 13px;
 
-		&:after { margin-top: 5px; }
-	}
+        &:after { margin-top: 5px; }
+    }
 }
 
 .row-heading.bottom { flex-basis: 100%;
-	
-	.heading-item {
+    
+    .heading-item {
 
-		width: 140px;
-		height: 140px
-	}
+        width: 140px;
+        height: 140px
+    }
 }
 
 .related {
@@ -163,66 +161,64 @@ a { color: $color-text2; }
 
     .items { 
 
-    	flex-basis: calc(100%/3 - 20px);
-    	background-color: rgba(241, 249, 253, 0.9);
-    	border: transparent;
-    	position: relative;
-    	transition: height 5.5s, background-color 2s;
-    	 
+        flex-basis: calc(100%/3 - 20px);
+        background-color: rgba(241, 249, 253, 0.9);
+        border: transparent;
+        position: relative;
+        transition: height 5.5s, background-color 2s;
+         
 
-    	img { width: 100%; }
+        img { width: 100%; }
 
-    	&:hover {
+        &:hover {
 
-    		background-color: transparent;
-    		border: 1px solid #f1f9fd;
+            background-color: transparent;
+            border: 1px solid #f1f9fd;
 
-    		img { height: 0px; }
+            img { height: 0; }
 
-    		.items-content { 
-    			
-				height:auto;
-				overflow: visible;
-				text-align: left;
-			}
+            .items-content { 
+                
+                height:auto;
+                overflow: visible;
+                text-align: left;
+            }
 
-    		.items-title-articl { 
-				
-				color: $color-text;
-    			text-shadow: 0.25px 0.1px 0px #496e86, -0.25px -0.1px 0px #496e86;
-    		}
+            .items-title-articl { 
+                
+                color: $color-text;
+                text-shadow: 0.25px 0.1px 0 #496e86, -0.25px -0.1px 0 #496e86;
+            }
 
-    		 .items-title-articl:after {
-    		 	
-    		 	position: initial;
-    		 	margin: 13px 0 0 0;
-    		}
+             .items-title-articl:after {
+                
+                position: initial;
+                margin: 13px 0 0 0;
+            }
 
-    		.meta-span { color: $color-text2; }
-    	}
+            .meta-span { color: $color-text2; }
+        }
     }
 
-	.items-content {
+    .items-content {
 
-		height: 60px;
-		overflow: hidden;
-	}
+        height: 60px;
+        overflow: hidden;
+    }
 
     .items-title-articl { 
-		
-		&:after {
-			
-			@include pseudo;
-			width: 20px;
-			border: 1px solid $color-blue;
-			position: absolute;
-			top: 68%;
-			left: 0;
-			right: 0;
-		}
+        
+        &:after {
+            
+            @include pseudo;
+            width: 20px;
+            border: 1px solid $color-blue;
+            position: absolute;
+            top: 68%;
+            left: 0;
+            right: 0;
+        }
     }
-
-    .content { font-size: 14px; }
 }
 
 .publication {
@@ -235,35 +231,33 @@ a { color: $color-text2; }
 
     .picture {
 
-	    height: 200px;
-	    width: 230px;
-	    margin: 0 20px;
-	}
+        height: 200px;
+        width: 230px;
+        margin: 0 20px;
+    }
 
     .link-pub {
 
-    	font-family: $font-sansbold;
-    	font-size: 24px;
+        font-family: $font-sansbold;
+        font-size: 24px;
 
-    	&:hover { color: $color-blue3; }
+        &:hover { color: $color-blue3; }
 
-    	&:after {
-			
-			@include pseudo;
-			width: 20px;
-			border: 1px solid $color-blue;
-			margin: 10px 0;
-		}
-	}
-
-    .piblicat { 
-
-    	font-size: 14px;
-    	line-height: 18px;
+        &:after {
+            
+            @include pseudo;
+            width: 20px;
+            border: 1px solid $color-blue;
+            margin: 10px 0;
+        }
     }
 
-	.meta { justify-content: flex-start;
-		
-		.messag { margin-left: 20px; }
-	}
+    .piblicat { line-height: 18px; }
+
+    .meta { justify-content: flex-start;
+        
+        .messag { margin-left: 20px; }
+    }
+
+    .pub-link { font-size: 16px;}
 }

@@ -3,61 +3,61 @@
 
 .widget-area {
    
-	flex-basis: 310px;
-	flex-shrink: 0;
+    flex-basis: 310px;
+    flex-shrink: 0;
 
-	a { transition: .5s; }
+    a { transition: .5s; }
 
-	.items { text-align: left;
-			
-		&.back { 
+    .items { text-align: left;
+            
+        &.back { 
 
-			border:30px solid #eff8fd;
-			margin-bottom: 30px;
+            border:30px solid #eff8fd;
+            margin-bottom: 30px;
 
-			.items-content { background-color: $color-white;
-		
-				&:hover  a, 
-				&:hover .meta-span { color: $color-green3; }
-			} 
-		}
+            .items-content { background-color: $color-white;
+        
+                &:hover  a, 
+                &:hover .meta-span { color: $color-green3; }
+            } 
+        }
 
-		&.border {
+        &.border {
 
-		 	border-left: 1px solid #eff8fd;
-			border-right: 1px solid #eff8fd;
-			
-			&:last-of-type { border-bottom: 1px solid #eff8fd; }
+            border-left: 1px solid #eff8fd;
+            border-right: 1px solid #eff8fd;
+            
+            &:last-of-type { border-bottom: 1px solid #eff8fd; }
 
-			&:hover { background-color: $color-green3;
-				
-				&:hover  a, 
-				&:hover .meta-span { color: $color-white; }
+            &:hover { background-color: $color-green3;
+                
+                &:hover  a, 
+                &:hover .meta-span { color: $color-white; }
 
-			}
-			
-			 .items-content { 
-				
-				a { 
+            }
+            
+             .items-content { 
+                
+                a { 
 
-					text-align: left;
-					font-size: 16px;
-				}
+                    text-align: left;
+                    font-size: 16px;
+                }
 
-				.meta { 
+                .meta { 
 
-					justify-content: flex-start;
-					padding: 5px 0;
-					
-					.messag { margin-left: 30px; }
-				}
-			}
-		}
+                    justify-content: flex-start;
+                    padding: 5px 0;
+                    
+                    .messag { margin-left: 30px; }
+                }
+            }
+        }
 
-		.meta-span { color: $color-blue3; }
+        .meta-span { color: $color-blue3; }
 
-		.items-title-articl { padding: 5px 0; }
-	}
+        .items-title-articl { padding: 5px 0; }
+    }
 }
 
 .short-navig { padding-top: 7px; }
@@ -73,12 +73,12 @@
     transition: .5s;
 
     &.opened:before { @include pseudo(inline-block, "\f0d8");}
-		
+        
     &:before{
 
-    	@include pseudo(inline-block, "\f0d7");
-    	font-family: $font-awesome;
-    	padding-right: 20px;
+        @include pseudo(inline-block, "\f0d7");
+        font-family: $font-awesome;
+        padding-right: 20px;
     }
 }
 
@@ -86,28 +86,28 @@
 .row-navig.opened,
 .hidd:hover {
 
-	background-color: $color-green3;
+    background-color: $color-green3;
     color: $color-white;
 }
 
 .total-number {
 
-	font-family: $font-sans;
-	float: right;
+    font-family: $font-sans;
+    float: right;
 }
 
 .hidden-block { display: none; 
 
-	&.opened { display: block; }
+    &.opened { display: block; }
 
-	.hidd {
+    .hidd {
 
-		background-color: transition; 
-		font-family: $font-sans;
-		padding: 16px 20px 16px 47px;
-		border: 1px solid #eef8fd;
-		border-top: 0;
-	}
+        background-color: transparent;
+        font-family: $font-sans;
+        padding: 16px 20px 16px 47px;
+        border: 1px solid #eef8fd;
+        border-top: 0;
+    }
 }
 
 .asadvert-aside {
@@ -121,18 +121,18 @@
 
 .title-aside {
 
-	background-image: url(/images/background/pattern_blue.png);
-	background-repeat: repeat;
-	@include font($font-sansbold, $color-white, 18px);
-	padding: 16px 20px;
+    background-image: url(/images/background/pattern_blue.png);
+    background-repeat: repeat;
+    @include font($font-sansbold, $color-white, 18px);
+    padding: 16px 20px;
 
-	&:before {
+    &:before {
 
-		@include pseudo(inline-block, "");
-	
-		width: 20px;
-		border: 1px solid $color-white;
-		margin-right: 20px;
-		vertical-align: middle;
-	} 
+        @include pseudo(inline-block, "");
+    
+        width: 20px;
+        border: 1px solid $color-white;
+        margin-right: 20px;
+        vertical-align: middle;
+    } 
 }

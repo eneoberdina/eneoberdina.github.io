@@ -1,242 +1,248 @@
 @import 'global/vars.scss';
 @import 'global/mixin.scss';
 
-main { padding: 40px 0; }
-
 .articles-popularin,
 .articles-headings,
 .question,
 .articles-publications {
-	
-	@include size;
- 	margin: 50px auto;
+    
+    @include size;
+    margin: 50px auto;
 }
+
+.articles-headings .content,
+.articles-publications,
+.articles-headings .heading-item {font-size: 16px; }
 
 .articles-popularin { 
 
-	.items {
+    .items {
 
-		background-color: rgba(239, 248, 253, 0.9);
-		
-		&:hover  * {color :$color-green2; }
-	}
+        background-color: rgba(239, 248, 253, 0.9);
+        
+        &:hover  * {color :$color-green2; }
+    }
 }
 
-.wrapper-discusses {
+.home-titl { padding: 50px 0 0; }
 
-	background-image: url(/images/background/doctor.jpg);
-    background-position: 31% 89%;
+.wrapper-discusses { 
+    
+    background: url(/images/background/doctor.jpg) no-repeat;
     background-size: cover;
 }
 
 .articles-discusses {
    
-   	width: 880px;
+    width: 880px;
     padding: 40px 0;
 
-	    &-popular {
-	   
-	   		flex-grow: 0;
-		    flex-shrink: 0;
-		    flex-basis: 340px;
-		    height: 280px;
-		    background-image: url(/images/background/pattern_green.png);
-		    @include font($font-family: font-serifbold, $size: 24px);
-			margin-right: 40px;
-			padding: 3.85em 2.85em;
-			box-sizing: border-box;
-			font-weight: 700;
-			line-height: 30px;
-		}
+        &-popular {
+       
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 340px;
+            height: 280px;
+            background-image: url(/images/background/pattern_green.png);
+            @include font($font-family: $font-serifbold, $size: 24px);
+            margin-right: 40px;
+            padding: 100px 60px;
+            font-weight: 700;
+            line-height: 30px;
+        }
 
-	.items { 
+    .items { 
 
-		flex-basis: calc(100%/2 - 20px);
-		padding: 40px 0 0; 
-		line-height: 18px;
+        flex-basis: calc(100%/2 - 20px);
+        padding: 40px 0 0; 
+        line-height: 18px;
 
-		a:hover { color: #d0e8df;} 
+        a:hover { color: #d0e8df;} 
 
-	.items-link {
+    .items-link {
 
-		@include font($font-family: $font-sansbold, $size: 18px);
-	    padding-bottom: 20px;
-	}
+        @include font($font-family: $font-sansbold, $size: 18px);
+        padding-bottom: 20px;
+    }
 
-	.items-link-discus,
-	.items-text { @include font($size: 14px); }
+    .items-link-discus,
+    .items-text { @include font; }
 
-	.items-link-discus:after {
+    .items-link-discus:after {
 
-    		
-    		@include pseudo;
-    		width: 20px;
-    		height: 1px;
-    		background-color: $color-green2;
-    		margin: 20px 0;
-    	}
-	}
+            
+            @include pseudo;
+            width: 20px;
+            border: 1px solid $color-green2;
+            margin: 20px 0;
+        }
+    }
 }
 
-.articles-headings {
+.articles-headings.home {
 
     .row-item { flex-basis: calc(100%/2 - 10px); 
-		
-		.content { padding-bottom: 7px; }
+        
+        a:hover { color: $color-blue3;}
+    }   
 
-		a:hover { color: $color-blue3;}
-	}	
+     > .columns-left {
+         
+         flex: 1 1 0;
+         padding-right: 20px;
+        
+     > .title { width: 100%; }
 
-	.columns-left {
-   		 
-   		 flex: 1 1 0;
-   		 padding-right: 20px;
-		
-		.title { width: 100%; }
+     > .row-item { padding: 0 0 18px 0;}
 
-		.row-item { padding: 0 0 27px 0;}
-	}
+    }
 
-	.row-heading {
+    .row-heading {
 
-	    flex: 0 0 520px;
-	    min-height: 500px;
-	    background-color: transparent;
-	    border: 10px #f3fafe solid;
-	    box-sizing: border-box;
-	    padding: 0 40px;
+        flex: 0 0 520px;
+        background-color: transparent;
+        border: 10px #f3fafe solid;
+        padding: 0 40px;
 
-	   .heading-item { flex-basis: 155px; }	
-	}
+       .heading-item { 
+       
+       flex-basis: 170px;
+       height: 170px;
+   
+   } 
 
-	.link-article { 
+        > .title-articl.right { padding: 20px 0 0 10px; }
 
-    	color:$color-text;
-    	font-size: 16px;
+    }
 
-		&.float {
+    .link-article { 
 
-			display: inline;
-			font-size: 14px;
-			padding: 0;
-		}
-	}
+        color:$color-text;
+        font-size: 16px;
 
-	.symbol-link { 
+        &.float {
 
-		font-size: 14px;
-		padding-top: 15px;
+            display: inline;
+            font-size: 14px;
+            padding: 0;
+        }
+    }
 
-		&.left { 
+    .symbol-link { 
 
-			display: inline;
-			padding: 0;
+        font-size: 14px;
+        padding-top: 15px;
 
-			&:after { padding-left: 10px;}
-		}
-	}
+        &.left { 
 
-	.symbol-link.right:before,
-	.symbol-link.left:after { 
-			
-		@include pseudo(inline-block,"\f0da");
-		@include font($font-awesome, $color-blue, 12px);
-		padding-right: 10px;
-	}
+            display: inline;
+            padding: 0;
+
+            &:after { padding-left: 10px;}
+        }
+    }
+
+    .symbol-link.right:before,
+    .symbol-link.left:after { 
+            
+        @include pseudo(inline-block,"\f0da");
+        @include font($font-awesome, $color-blue, 12px);
+        padding-right: 10px;
+    }
 }
 
 .wrapper-publications { background-color: #f3fafe;
 
-	.social-link-column {
+    .social-link-column {
 
-		width: 250px;
-		height: 270px;
-	 	background-image: url(/images/background/pattern_green.png);
-	 	color: $color-white;
-	 	padding: 39px  20px 0;
-		line-height: 24px;
+        width: 250px;
+        height: 270px;
+        background-image: url(/images/background/pattern_green.png);
+        color: $color-white;
+        padding: 39px  20px 0;
+        line-height: 24px;
 
-		.title { color: $color-white;
-			
-			&:after { 
+        .title { color: $color-white;
+            
+            &:after { 
 
-				border-color: $color-white;
-				margin: 20px auto;
-			}
-		}
+                border-color: $color-white;
+                margin: 20px auto;
+            }
+        }
 
-		.title-social-link { padding: 10px 0 23px; }
-	}
+        .title-social-link { padding: 10px 0 23px; }
+    }
 
-	.articles-publications { 
+    .articles-publications { 
 
-		padding: 50px 0;
-	
-		.title-main { 
+        padding: 50px 0;
+    
+        .title-main { 
 
-			width: 100%;
-		 	text-align:  left;
-		 	padding-bottom: 40px; 
+            width: 100%;
+            text-align:  left;
+            padding-bottom: 40px; 
 
-			&:after { content: none; }
-		}
-	}
+            &:after { content: none; }
+        }
+    }
 
-	.publication-columns {
-	   
-	    flex-wrap: wrap;
-	    flex: 1 1 0;
+    .publication-columns {
+       
+        flex-wrap: wrap;
+        flex: 1 1 0;
 
-	    .publication.main {
+        .publication.main {
 
-	    	flex-basis: calc(100%/2 - 10px);
-	    	padding: 0 0 20px 0;
-	    	margin: 0;
-	    	line-height: 16px;
-	 	}
-	}
+            flex-basis: calc(100%/2 - 10px);
+            padding: 0 0 20px 0;
+            margin: 0;
+            line-height: 16px;
+        }
+    }
 }
 
 .question { 
 
-	@include background-image(url(/images/background/fon_pop_vopros.jpg));
-	
-	&-wrapper {
-		
-		width: 880px;
-		padding: 50px 0;
+    @include background-image(url(/images/background/fon_pop_vopros.jpg));
+    
+    &-wrapper {
+        
+        width: 880px;
+        padding: 50px 0;
 
-		.title-main {
-		
-			width: 100%;
-			background-image: url(/images/background/pattern_green.png);
-			color: $color-white;
-			padding: 29px 0;
-			margin-bottom: 40px;
-			  
-			&:after {
+        .title-main {
+        
+            width: 100%;
+            background-image: url(/images/background/pattern_green.png);
+            color: $color-white;
+            padding: 29px 0;
+            margin-bottom: 40px;
+              
+            &:after {
 
-				background-image: -webkit-linear-gradient(left, #fff, $color-white, #fff);
-				background-image: -moz-linear-gradient(left, #fff,$color-white, #fff);
-				background-image: -ms-linear-gradient(left, #fff, $color-white, #fff);
-				background-image: -o-linear-gradient(left, #fff, $color-white, #fff);
-			}
-		}
+                background-image: -webkit-linear-gradient(left, #fff, $color-white, #fff);
+                background-image: -moz-linear-gradient(left, #fff,$color-white, #fff);
+                background-image: -ms-linear-gradient(left, #fff, $color-white, #fff);
+                background-image: -o-linear-gradient(left, #fff, $color-white, #fff);
+            }
+        }
 
-		ul {
+        ul {
 
-			flex-basis: calc(100%/5 - 20px);
+            flex-basis: calc(100%/5 - 20px);
 
-			&:last-child { padding-right: 0; }
+            &:last-child { padding-right: 0; }
 
-			a {
+            a {
 
-				display: block;
-				@include font($color: $color-text);
-				padding-bottom: 15px;
+                display: block;
+                @include font($color: $color-text, $size: 16px);
+                padding-bottom: 15px;
 
-				&:hover { color: $color-green2; }
-			}
-		}
-	}
+                &:hover { color: $color-green2; }
+            }
+        }
+    }
 }

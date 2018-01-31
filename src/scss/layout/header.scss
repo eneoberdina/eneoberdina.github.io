@@ -1,168 +1,163 @@
 @import 'global/vars.scss';
 @import 'global/mixin.scss';
 
- header {
+ header { 
+ 
+ background: url(/images/background/image_heder.jpg) no-repeat; 
+ background-size: cover;
 
- 	background-color: $color-header; 
- 	background-image: url(/images/background/image_heder.jpg);
- 	background-repeat: no-repeat;
-	background-size: cover;
 }
 
  .wrapper-header { 
 
- 	flex-wrap: wrap;
- 	@include size;	
+    flex-wrap: wrap;
+    @include size;  
  }
 
 .header-body {
 
-	width: 100%;
-	align-items:center;
-	justify-content: space-between;
-	padding: 30px 0;
+    width: 100%;
+    align-items:center;
+    justify-content: space-between;
+    padding: 30px 0;
 
-	.menu-header-top {
+    .menu-header-top {
 
-		ul.menu-top { padding: 0 20px;
-		
-			a {
-				@include font($size: 14px);
-				padding-bottom: 5px;
-				transition: 1s;
-				position: relative;
-				
-				&:after {
+        ul.menu-top { padding: 0 20px;
+        
+            a {
+                color: $color-white;
+                padding-bottom: 5px;
+                position: relative;
+                
+                &:after {
 
-					content: '';
-					position: absolute;
-					top: 100%;
-					left: 0;
-					width: 100%;
-					height: 1px;
-					background: $color-white;	
-					opacity: 0;
-					transition: opacity .3s,transform .3s;
-					transform: translateY(10px);
-				}
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    border: 1px solid $color-white;
+                    opacity: 0;
+                    transition: opacity .3s,transform .3s;
+                    transform: translateY(10px);
+                }
 
-				&:hover:after { 
+                &:hover:after { 
 
-					opacity: 1;
-					transform: translateY(-4px);
-				}
-			}
-		}	
-	}
+                    opacity: 1;
+                    transform: translateY(-4px);
+                }
+            }
+        }   
+    }
 }
 
 .main-navigation {
 
-	width: 100%;
-	background-image: url(/images/background/pattern_blue.png);
+    width: 100%;
+    background: url(/images/background/pattern_blue.png);
 
-	ul.menu { width: 1060px; 
-	
-		li.menu-item  { 
+    ul.menu { width: 1060px; 
+    
+        li.menu-item  { 
 
-			transition:  all 0.3s;
-			position: relative;
+            transition:  all 0.3s;
+            position: relative;
 
-			&:hover .sub-menu { display: block; }
-		
-			 &:after {
+            &:hover .sub-menu { display: block; }
+        
+             &:after {
 
-				content: '•';
-				display: inline-block;
-				vertical-align: middle;
-				@include font($size: 12px); 
-				
-			}
+                content: '•';
+                display: inline-block;
+                vertical-align: middle;
+                @include font($size: 12px); 
+                
+            }
 
-			&:hover:after { color: transparent; }
-	        
-	        &:hover  { background-color: $color-blue2; }
+            &:hover:after { color: transparent; }
+            
+            &:hover  { background-color: $color-blue2; }
 
-	        &:last-of-type:after {color: transparent; } 
-	    }
+            &:last-of-type:after {color: transparent; } 
+        }
 
-		a {
+        a {
 
-			@include font($size: 16px);
-			padding: 18px 15px;
-		}
+            @include font($size: 16px);
+            padding: 18px 15px;
+        }
 
-		ul.sub-menu {
-			
-			display: none;
-			min-width: 230px;
-			background-color: $color-blue2;
-			position: absolute;
-	    	top: 100%;
-	    	margin: 0;
-	    	z-index: 2;
+        ul.sub-menu {
+            
+            display: none;
+            min-width: 230px;
+            background-color: $color-blue2;
+            position: absolute;
+            top: 100%;
+            margin: 0;
+            z-index: 2;
 
-	    	li.menu-item:hover {
+            li.menu-item:hover {
 
-	    	 background-color: #2f8fc8; 
+             background-color: #2f8fc8; 
 
-	    	 > ul.sub-menu.second { display: block; }
+             > ul.sub-menu.second { display: block; }
 
-	    	}
-			
-			li.menu-item::after { font-size: 0; }
+            }
+            
+            li.menu-item::after { font-size: 0; }
 
-			ul.sub-menu.second { 
-				
-				display: none;
-				left: 100%;
-				top: 0; 	
-			}
-		}
-	}
+            ul.sub-menu.second { 
+                
+                display: none;
+                left: 100%;
+                top: 0;     
+            }
+        }
+    }
 }
 .search-form {
 
-	width: 250px;
-	flex-wrap: wrap;
+    width: 250px;
+    flex-wrap: wrap;
 
    .searchstring {
    
-	    width: calc(100% - 55px);
-	    height: 36px;
-	    padding-left: 10px;
-	    border: 1px solid #eff8fd;
-	    background-color: #eff8fd;
-	    border-radius: 0;
-	    @include font($font-sans,  rgba(73, 110, 134, 0.5), 14px);
-	     
-		&::-moz-placeholder { 
+        width: calc(100% - 55px);
+        padding-left: 10px;
+        background-color: #eff8fd;
+        border-radius: 0;
+        @include font($font-sans,  rgba(73, 110, 134, 0.5));
+         
+        &::-moz-placeholder { 
 
-			@include font($font-sans,  rgba(73, 110, 134, 0.5), 14px);
-			opacity: 1; 
-		 }
+            @include font($font-sans,  rgba(73, 110, 134, 0.5));
+            opacity: 1; 
+         }
 
-	 	&::-webkit-input-placeholder { @include font($font-sans,  rgba(73, 110, 134, 0.5), 14px);
-	 		opacity: 1; 
+        &::-webkit-input-placeholder { @include font($font-sans,  rgba(73, 110, 134, 0.5));
+            opacity: 1; 
 
-	 	}	
-	}
+        }   
+    }
 }
 
 .searchsubmit {
    
-	    width: 40px;
-	    height: 40px;
-	    @include font($font-awesome, $color-white, 14px); 
-	    vertical-align: top;
-	    border: 1px solid #eff8fd;
-	    background-color: $color-blue2;
-	    border-radius: 0;
-	    cursor: pointer;
+        width: 40px;
+        height: 40px;
+        @include font($font-awesome, $color-white);
+        vertical-align: top;
+        border: 1px solid #eff8fd;
+        background-color: $color-blue2;
+        border-radius: 0;
+        cursor: pointer;
 }
 
 .sign-search {
 
-	@include font($size: 12px);
-	padding-top: 5px;
+    @include font($size: 12px);
+    padding-top: 5px;
 }

@@ -1,23 +1,28 @@
 @charset "UTF-8";
-main {
-  padding: 40px 0; }
-
 .articles-popularin,
 .articles-headings,
 .question,
 .articles-publications {
   width: 1060px;
-  margin: 0px auto;
+  margin: 0 auto;
   margin: 50px auto; }
+
+.articles-headings .content,
+.articles-publications,
+.articles-headings .heading-item {
+  font-size: 16px; }
 
 .articles-popularin .items {
   background-color: rgba(239, 248, 253, 0.9); }
   .articles-popularin .items:hover * {
     color: #00d381; }
 
+.home-titl {
+  padding: 50px 0 0; }
+
 .wrapper-discusses {
-  background-image: url(/images/background/doctor.jpg);
-  background-position: 31% 89%;
+  background: url(/images/background/doctor.jpg) no-repeat;
+  -o-background-size: cover;
   background-size: cover; }
 
 .articles-discusses {
@@ -26,109 +31,107 @@ main {
   .articles-discusses-popular {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
+    -moz-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
     -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
-            flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
     -webkit-flex-basis: 340px;
-        -ms-flex-preferred-size: 340px;
-            flex-basis: 340px;
+    -ms-flex-preferred-size: 340px;
+    flex-basis: 340px;
     height: 280px;
     background-image: url(/images/background/pattern_green.png);
-    font-family: font-serifbold;
+    font: 24px "PTSerif-Bold";
     color: #ffffff;
-    font-size: 24px;
     margin-right: 40px;
-    padding: 3.85em 2.85em;
-    box-sizing: border-box;
+    padding: 100px 60px;
     font-weight: 700;
     line-height: 30px; }
   .articles-discusses .items {
     -webkit-flex-basis: -webkit-calc(100%/2 - 20px);
-        -ms-flex-preferred-size: calc(100%/2 - 20px);
-            flex-basis: calc(100%/2 - 20px);
+    -ms-flex-preferred-size: calc(100%/2 - 20px);
+    flex-basis: -moz-calc(100%/2 - 20px);
+    flex-basis: calc(100%/2 - 20px);
     padding: 40px 0 0;
     line-height: 18px; }
     .articles-discusses .items a:hover {
       color: #d0e8df; }
     .articles-discusses .items .items-link {
-      font-family: "PTSans-Bold";
+      font: 18px "PTSans-Bold";
       color: #ffffff;
-      font-size: 18px;
       padding-bottom: 20px; }
     .articles-discusses .items .items-link-discus,
     .articles-discusses .items .items-text {
-      font-family: "PTSans-Regular";
-      color: #ffffff;
-      font-size: 14px; }
+      font: 14px "PTSans-Regular";
+      color: #ffffff; }
     .articles-discusses .items .items-link-discus:after {
       content: "";
       display: block;
       width: 20px;
-      height: 1px;
-      background-color: #00d381;
+      border: 1px solid #00d381;
       margin: 20px 0; }
 
-.articles-headings .row-item {
+.articles-headings.home .row-item {
   -webkit-flex-basis: -webkit-calc(100%/2 - 10px);
-      -ms-flex-preferred-size: calc(100%/2 - 10px);
-          flex-basis: calc(100%/2 - 10px); }
-  .articles-headings .row-item .content {
-    padding-bottom: 7px; }
-  .articles-headings .row-item a:hover {
+  -ms-flex-preferred-size: calc(100%/2 - 10px);
+  flex-basis: -moz-calc(100%/2 - 10px);
+  flex-basis: calc(100%/2 - 10px); }
+  .articles-headings.home .row-item a:hover {
     color: #77c1ee; }
 
-.articles-headings .columns-left {
+.articles-headings.home > .columns-left {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
+  -moz-box-flex: 1;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0;
   padding-right: 20px; }
-  .articles-headings .columns-left .title {
+  .articles-headings.home > .columns-left > .title {
     width: 100%; }
-  .articles-headings .columns-left .row-item {
-    padding: 0 0 27px 0; }
+  .articles-headings.home > .columns-left > .row-item {
+    padding: 0 0 18px 0; }
 
-.articles-headings .row-heading {
+.articles-headings.home .row-heading {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 520px;
-      -ms-flex: 0 0 520px;
-          flex: 0 0 520px;
-  min-height: 500px;
+  -moz-box-flex: 0;
+  -ms-flex: 0 0 520px;
+  flex: 0 0 520px;
   background-color: transparent;
   border: 10px #f3fafe solid;
-  box-sizing: border-box;
   padding: 0 40px; }
-  .articles-headings .row-heading .heading-item {
-    -webkit-flex-basis: 155px;
-        -ms-flex-preferred-size: 155px;
-            flex-basis: 155px; }
+  .articles-headings.home .row-heading .heading-item {
+    -webkit-flex-basis: 170px;
+    -ms-flex-preferred-size: 170px;
+    flex-basis: 170px;
+    height: 170px; }
+  .articles-headings.home .row-heading > .title-articl.right {
+    padding: 20px 0 0 10px; }
 
-.articles-headings .link-article {
+.articles-headings.home .link-article {
   color: #496e86;
   font-size: 16px; }
-  .articles-headings .link-article.float {
+  .articles-headings.home .link-article.float {
     display: inline;
     font-size: 14px;
     padding: 0; }
 
-.articles-headings .symbol-link {
+.articles-headings.home .symbol-link {
   font-size: 14px;
   padding-top: 15px; }
-  .articles-headings .symbol-link.left {
+  .articles-headings.home .symbol-link.left {
     display: inline;
     padding: 0; }
-    .articles-headings .symbol-link.left:after {
+    .articles-headings.home .symbol-link.left:after {
       padding-left: 10px; }
 
-.articles-headings .symbol-link.right:before,
-.articles-headings .symbol-link.left:after {
+.articles-headings.home .symbol-link.right:before,
+.articles-headings.home .symbol-link.left:after {
   content: "";
   display: inline-block;
-  font-family: "FontAwesome";
+  font: 12px "FontAwesome";
   color: #7bbfec;
-  font-size: 12px;
   padding-right: 10px; }
 
 .wrapper-publications {
@@ -157,16 +160,18 @@ main {
         content: none; }
   .wrapper-publications .publication-columns {
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 0;
-        -ms-flex: 1 1 0px;
-            flex: 1 1 0; }
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0; }
     .wrapper-publications .publication-columns .publication.main {
       -webkit-flex-basis: -webkit-calc(100%/2 - 10px);
-          -ms-flex-preferred-size: calc(100%/2 - 10px);
-              flex-basis: calc(100%/2 - 10px);
+      -ms-flex-preferred-size: calc(100%/2 - 10px);
+      flex-basis: -moz-calc(100%/2 - 10px);
+      flex-basis: calc(100%/2 - 10px);
       padding: 0 0 20px 0;
       margin: 0;
       line-height: 16px; }
@@ -174,6 +179,7 @@ main {
 .question {
   background-image: url(/images/background/fon_pop_vopros.jpg);
   background-position: center;
+  -o-background-size: cover;
   background-size: cover; }
   .question-wrapper {
     width: 880px;
@@ -186,18 +192,19 @@ main {
       margin-bottom: 40px; }
       .question-wrapper .title-main:after {
         background-image: -webkit-linear-gradient(left, #fff, #ffffff, #fff);
+        background-image: -moz-linear-gradient(left, #fff, #ffffff, #fff);
         background-image: -o-linear-gradient(left, #fff, #ffffff, #fff); }
     .question-wrapper ul {
       -webkit-flex-basis: -webkit-calc(100%/5 - 20px);
-          -ms-flex-preferred-size: calc(100%/5 - 20px);
-              flex-basis: calc(100%/5 - 20px); }
+      -ms-flex-preferred-size: calc(100%/5 - 20px);
+      flex-basis: -moz-calc(100%/5 - 20px);
+      flex-basis: calc(100%/5 - 20px); }
       .question-wrapper ul:last-child {
         padding-right: 0; }
       .question-wrapper ul a {
         display: block;
-        font-family: "PTSans-Regular";
+        font: 16px "PTSans-Regular";
         color: #496e86;
-        font-size: 16px;
         padding-bottom: 15px; }
         .question-wrapper ul a:hover {
           color: #00d381; }

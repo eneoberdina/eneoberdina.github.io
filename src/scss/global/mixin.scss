@@ -1,8 +1,7 @@
-@mixin font($font-family: $font-sans, $color: $color-white, $size: 16px) {
+@mixin font($font-family: $font-sans, $color: $color-white, $size:14px) {
 
-	font-family: $font-family;
-	color: $color;
-	font-size: $size; 
+    font: $size $font-family;
+    color: $color;
 }
 
 @mixin background-image($patch, $pos: center, $size: cover)  {
@@ -14,8 +13,8 @@
 
  @mixin size($size: 1060px) {
 
- 	width: $size;
-    margin: 0px auto;
+    width: $size;
+    margin: 0 auto;
  }
 
  @mixin pseudo($display: block, $content: '') {
@@ -27,11 +26,11 @@
 
 @mixin title-items { 
 
-	&:after {
+    &:after {
 
-		@include pseudo;
-		width: 20px;
-		border: 1px solid $color-white;
-		margin-top: 20px;	
-	}
+        @include pseudo;
+        width: 20px;
+        border: 1px solid $color-white;
+        margin-top: 20px;   
+    }
 }
