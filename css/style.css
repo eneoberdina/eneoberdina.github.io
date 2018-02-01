@@ -289,7 +289,9 @@ figure {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   font: 24px "PTSerif-Bold";
   color: #1d5273;
   padding: 10px 0;
@@ -315,6 +317,9 @@ h3 {
 
 h3 {
   font-size: 18px; }
+
+h5, h6 {
+  font-size: 16px; }
 
 .underline {
   color: #55a8de;
@@ -386,18 +391,32 @@ a {
   counter-reset: list1; }
   .main ol li {
     padding: 8px 0; }
-  .main ol li li {
-    padding: 10px 0 0 0; }
   .main ol li:before {
+    content: counter(list1);
     counter-increment: list1;
-    content: counters(list1, ".") ".";
     margin-right: 10px;
     color: #2bd081;
     font-family: "PTSerif-Regular"; }
+  .main ol li li {
+    padding: 10px 0 0 0; }
+  .main ol li ol {
+    width: 100%;
+    margin-top: 20px; }
+  .main ol li ol li:before {
+    content: "\f0da";
+    font-family: "FontAwesome";
+    margin-left: -30px; }
+
+.post p {
+  padding: 0; }
 
 .float-right {
   float: right;
-  font-style: italic; }
+  margin: 10px 0 0 30px; }
+
+.float-left {
+  float: left;
+  margin: 10px 30px 0 0; }
 
 .title-heading {
   width: 129px;
@@ -570,6 +589,30 @@ a {
   color: #ffffff;
   padding: 13px 0;
   margin: 20px 0; }
+
+.table-block {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  overflow: auto;
+  font-size: 16px;
+  line-height: 20px; }
+  .table-block .tftable {
+    table-layout: fixed;
+    word-wrap: break-word; }
+
+td, th {
+  border: 1px solid #cde7f8;
+  padding: 3px 10px; }
+
+th {
+  background-color: #7bbfec;
+  font-family: "PTSans-Bold";
+  color: #ffffff; }
+  th.middle {
+    width: 400px; }
+
+tr:nth-child(odd) {
+  background-color: #eef7fd; }
 
 footer {
   background-image: url(/images/background/pattern_blue.png); }
@@ -838,7 +881,7 @@ footer {
 
 body,
 ul.menu,
-main ul li,
+main ul li, ol li,
 .wrapper-header,
 .header-body,
 .menu-header-top,
@@ -912,7 +955,8 @@ ul.menu-top,
 .heading-item,
 .wp-pagenavi,
 .link-navigation,
-.similar {
+.similar,
+figure {
   text-align: center; }
 
 .site-content,
@@ -1148,7 +1192,7 @@ body {
     .wp-pagenavi .link-navigation.active {
       background-color: #cde7f8; }
     .wp-pagenavi .link-navigation:hover {
-      background-color: #edf2f6; }
+      background-color: #f1f9fd; }
   .wp-pagenavi .dott {
     margin: 0 2px; }
 

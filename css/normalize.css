@@ -10,7 +10,6 @@
  */
 
 html {
-  line-height: 16px; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
   
@@ -56,20 +55,16 @@ h1 {
  * 1. Add the correct display in IE.
  */
 
-figcaption,
-figure,
-main { /* 1 */
-  display: block;
-}
+figure { 
 
+  width: 50%; 
+  margin: 0; 
+}
 /**
  * Add the correct margin in IE 8.
  */
 
-figure {
-  margin: 20px 0px 10px 20px;
-}
-
+ figcaption { font-style: italic; }
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
@@ -211,13 +206,6 @@ ol {
 ul, ol {
     list-style: none;
 
-}
-
-
-li > ul,
-li > ol {
-    margin-bottom: 0;
-    margin-left: 1.5em;
 }
 
 p { 
@@ -473,4 +461,9 @@ template {
 
 [hidden] {
   display: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
 }

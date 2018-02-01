@@ -69,3 +69,36 @@
 	padding: 13px 0;
 	margin: 20px 0;
 }
+
+.table-block {
+
+	border-radius: 5px;
+	overflow: auto;
+	font-size: 16px;
+	line-height: 20px;
+	
+	.tftable { 
+
+		table-layout: fixed; 
+		word-wrap: break-word;
+	}
+
+}
+
+td, th { 
+
+	border: 1px solid #cde7f8; 
+	padding: 3px 10px; 
+}
+	
+
+th {
+
+	background-color: $color-blue;
+	font-family: $font-sansbold;
+	color: $color-white;
+
+	&.middle { width: 400px; }
+}
+
+tr:nth-child(odd) { background-color: #eef7fd; }

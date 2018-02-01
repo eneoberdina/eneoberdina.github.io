@@ -11,7 +11,7 @@
 
 body,
 ul.menu,
-main ul  li, 
+main ul li, ol li, 
 .wrapper-header,
 .header-body,
 .menu-header-top,
@@ -74,7 +74,8 @@ ul.menu-top,
 .heading-item,
 .wp-pagenavi,
 .link-navigation,
-.similar  { text-align: center;}
+.similar,
+figure  { text-align: center;}
 
 .site-content,
 .items-title-articl:after,
@@ -307,7 +308,7 @@ body {
     
         &.active { background-color: #cde7f8; }
 
-        &:hover { background-color: #edf2f6; }
+        &:hover { background-color: #f1f9fd; }
     }
 
     .dott { margin: 0 2px; }
