@@ -8,6 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+* { outline: 0; }
 
 html {
   -ms-text-size-adjust: 100%; /* 2 */
@@ -44,7 +45,6 @@ nav {
 
 h1 {
   clear: both;
-  box-sizing: border-box;
 }
 
 /* Grouping content
@@ -55,23 +55,23 @@ h1 {
  * 1. Add the correct display in IE.
  */
 
-figure { 
-
-  width: 50%; 
-  margin: 0; 
-}
+figure { margin: 0; }
 /**
  * Add the correct margin in IE 8.
  */
 
- figcaption { font-style: italic; }
+ figcaption { 
+
+  font-style: italic;
+  padding: 10px 0; 
+}
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
 
 hr {
-  box-sizing: content-box; /* 1 */
+
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
@@ -193,9 +193,6 @@ sup {
   top: -0.5em;
 }
 
-div,
-span { box-sizing: border-box; }
-
 ul,
 ol {
     margin: 0;
@@ -210,8 +207,7 @@ ul, ol {
 
 p { 
 
-    margin: 0;
-                    box-sizing: border-box;
+  margin: 0;
 
  }
 

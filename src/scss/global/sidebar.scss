@@ -6,12 +6,14 @@
     flex-basis: 310px;
     flex-shrink: 0;
 
-    .items { text-align: left;
+    .items { 
             
         &.back { 
 
             border:30px solid #eff8fd;
             margin-bottom: 30px;
+
+            img { width: 100%; }
 
             .items-content { background-color: $color-white;
         
@@ -41,19 +43,17 @@
                     font-size: 16px;
                 }
 
-                .meta { 
+                .meta {  
 
                     justify-content: flex-start;
-                    padding: 5px 0;
+                    padding: 10px 10px 0;
                     
                     .messag { margin-left: 30px; }
                 }
             }
         }
 
-        .meta-span { color: $color-blue3; }
-
-        .items-title-articl { padding: 5px 0; }
+       .meta-span { color: $color-blue3; }
     }
 }
 
@@ -101,7 +101,6 @@
        
         font-family: $font-sans;
         padding: 16px 20px 16px 47px;
-        border: 1px solid #eef8fd;
         border-top: 0;
     }
 }
@@ -132,3 +131,5 @@
         vertical-align: middle;
     } 
 }
+
+.end-block { position: relative;}

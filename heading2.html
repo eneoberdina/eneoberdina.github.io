@@ -36,49 +36,89 @@
 				</div>
 			</div>
 			<nav class="main-navigation">
-					<ul class="menu">
-						<li class="menu-item"><a href="">Болезни</a>
-							<ul class="sub-menu">
-								<li class="menu-item"><a href="">item</a></li>
-								<li class="menu-item"><a href="">Lorem dolorsitamet</a></li>
-								<li class="menu-item"><a href="">item</a></li>
-								<li class="menu-item"><a href="">item</a></li>
-							</ul>
-						</li>
-						<li class="menu-item"><a href="">Болезни у детей</a>
-							<ul class="sub-menu">
-								<li class="menu-item">
-								<a href="">item</a>
-									<ul class="sub-menu second">
-										<li class="menu-item"><a href="">item</a></li>
-										<li class="menu-item"><a href="">item</a></li>
-										
-									</ul>
-								</li>
-								<li class="menu-item"><a href="">item</a></li>
-								<li class="menu-item"><a href="">item</a></li>
-								<li class="menu-item"><a href="">item</a>
-									<ul class="sub-menu second">
-										<li class="menu-item"><a href="">item</a></li>
-										<li class="menu-item"><a href="">item</a></li>
-										<li class="menu-item"><a href="">item</a></li>
-										<li class="menu-item"><a href="">item</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li class="menu-item"><a href="">Симптомы</a></li>
-						<li class="menu-item"><a href="">Инфо</a></li>
-					</ul>
-				</nav>
+                    <ul class="menu">
+                        <li class="menu-item"><a href="">Болезни</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="/article.html">Страница-статьи</a></li>
+                                <li class="menu-item"><a href="/heading-article.html">Рубрика-со-статьей</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="/heading.html">Рубрика-(без-статьи-и-больше-3-4)</a>
+                                        </li>
+                                        <li class="menu-item"><a href="/heading2.html">Рубрика-(без-статьи-и-меньше-3-4)</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="">item</a></li>
+                                                <li class="menu-item"><a href="">item</a></li>
+                                                <li class="menu-item"><a href="">item</a></li>
+                                                <li class="menu-item"><a href="">item</a></li>
+                                            </ul>
+                                        </li> 
+                                    </ul>
+                                </li>
+                                <li class="menu-item"><a href="">item</a></li>
+                                <li class="menu-item"><a href="">item</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="">Болезни у детей</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                <a href="">item</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="">item</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a href="">item</a></li>
+                                                <li class="menu-item"><a href="">item</a></li>
+                                                <li class="menu-item"><a href="">item</a></li>
+                                                <li class="menu-item"><a href="">item</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item"><a href="">item</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <li class="menu-item"><a href="">item</a></li>
+                                <li class="menu-item"><a href="">item</a></li>
+                                <li class="menu-item"><a href="">item</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="">item</a></li>
+                                        <li class="menu-item"><a href="">item</a></li>
+                                        <li class="menu-item"><a href="">item</a></li>
+                                        <li class="menu-item"><a href="">item</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="">Симптомы</a></li>
+                        <li class="menu-item"><a href="">Инфо</a></li>
+                    </ul>
+                </nav>
 		</header>
 		<div class="site-content">
 			<main class="main">
-				<p class="breadcrumbs-list">
-					<a href="" class="breadcrumb">Главное меню</a> 
-					<a href="" class="breadcrumb">Симптомы</a>
-				 	<a href="" class="breadcrumb last">Симптомы</a>	
-				</p>
+				<div class="breadcrumblist"> 
+                    <ul itemscope itemtype="http://schema.org/BreadcrumbList"> 
+                        <li itemprop="itemListElement" itemscope 
+                        itemtype="http://schema.org/ListItem"> 
+                            <a itemscope itemtype="http://schema.org/Thing" 
+                            itemprop="item" href="http://.ru"> 
+                            <span itemprop="name">Главная</span></a> 
+                            <meta itemprop="position" content="1" /> 
+                        </li> 
+                        <li itemprop="itemListElement" itemscope 
+                        itemtype="http://schema.org/ListItem"> 
+                            <a itemscope itemtype="http://schema.org/Thing" 
+                            itemprop="item" href="http://.ru/news"> 
+                            <span itemprop="name">Симптомы</span></a> 
+                            <meta itemprop="position" content="2" /> 
+                        </li>
+                        <li itemprop="itemListElement" itemscope 
+                        itemtype="http://schema.org/ListItem"> 
+                            <a itemscope itemtype="http://schema.org/Thing" 
+                            itemprop="item" href="http://.ru/news"> 
+                            <span itemprop="name">Lorem ipsum dolor sit</span></a> 
+                            <meta itemprop="position" content="3" /> 
+                        </li>  
+                    </ul> 
+                </div>
 				<h1>Симптомы</h1>
 				<hr class="blue"></hr>
 				<div class="row-heading top">
@@ -93,19 +133,19 @@
 					</div>
 				</div>
 				<article class="publication backhover">
-					<a href="">
+					<span>
 						<img class="picture" src="/images/background/pop1.jpeg" alt="">
-					</a>
+					</span>
 					<div class="publication-content">
 						<a href="" class="link-pub">
 							Lorem ipsum dolor sit amet, consectetur
 							Lorem ipsum dolor sit amet, consectetur
 						</a>
-						<a class="piblicat" href="">
+						<span class="piblicat">
 							Lorem ipsum dolor sit amet, consectetur
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit
 							tempor incididunt ut labore et dolore magna aliqua.
-						</a>
+						</span>
 						<div class="meta">
 	                 		<span class="meta-span dark views"> 10000</span>
 	                 		<span class="meta-span dark messag"> 100</span>
@@ -114,19 +154,19 @@
 					</div>		
 				</article>
 				<article class="publication backhover">
-					<a href="">
+					<span>
 						<img class="picture" src="/images/background/pop1.jpeg" alt="">
-					</a>
+					</span>
 					<div class="publication-content">
 						<a href="" class="link-pub">
 							Lorem ipsum dolor sit amet, consectetur
 							Lorem ipsum dolor sit amet, consectetur
 						</a>
-						<a class="piblicat" href="">
+						<span class="piblicat">
 							Lorem ipsum dolor sit amet, consectetur
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit
 							tempor incididunt ut labore et dolore magna aliqua.
-						</a>
+						</span>
 						<div class="meta">
 	                 		<span class="meta-span dark views"> 10000</span>
 	                 		<span class="meta-span dark messag"> 100</span>
@@ -230,9 +270,10 @@
                	 		</div>
 					</div>       
        			 </article>
-				<a class="asadvert-aside" href="">
+				<a class="asadvert-aside end-block" href="">
 					<img class="picture-aside"  src="images/background/reclama2.jpeg" alt="">
 				</a>
+				<div class="top-buttom"></div>
 			</aside>
 			<div class="row-heading bottom">
 				<a class="heading-item" href="">Симптомы</a>

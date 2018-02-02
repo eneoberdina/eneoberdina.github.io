@@ -1,31 +1,39 @@
 @import 'global/vars.scss';
 @import 'global/mixin.scss';
 
-.summary {
-    background-color: #eef8fd;
-    padding: 40px 40px 30px 90px;
+.contents-wrap {
 
-    .title {
+	background-color: #eef8fd;
+	padding: 40px 40px 30px 90px;
+
+    .kc_title {
      	
      	display: block;
      	@include font($font-family: $font-serifbold, $color:$color-text, $size: 20px );
     	padding-bottom: 20px;
 	}
 
-	.ul-summary  { 
+	.contents  { 
  		
  		height: 118px;
    		overflow: hidden;
 		flex-wrap: wrap;
 
-		&.opened { height: auto; }
+		&.opened { height: auto;
 
-		.item { flex-wrap: wrap; 
+			.top .sub-contents { opacity: 1; }
+		 }
 
-			&.last  { opacity: .5; }
+		.top{ flex-wrap: wrap; 
+
+			.sub-contents  { 
+
+				opacity: .5; 
+				padding-left: 25px;
+			}
 		}
 
-		.item:before { color: $color-blue3; }
+		.top:before { color: $color-blue3; }
 	}
 
 	hr {
@@ -36,7 +44,6 @@
 
 	.expand {
 	    @include font( $size: 13px );
-	    border-radius: 5px;
 	    background-color: $color-green3;
 	    padding: 6px 24px;
 	    cursor: pointer;
@@ -47,7 +54,6 @@
 .article .articles-popularin {
 
 	width: 100%;
-    border-radius: 5px;
     background-color: #eef8fd;
     padding: 0 20px 20px 20px;
     box-sizing: border-box;
@@ -72,33 +78,240 @@
 
 .table-block {
 
-	border-radius: 5px;
 	overflow: auto;
 	font-size: 16px;
 	line-height: 20px;
 	
-	.tftable { 
+	table { 
 
-		table-layout: fixed; 
-		word-wrap: break-word;
+		td, th { 
+
+			border: 1px solid #cde7f8; 
+			padding: 3px 10px; 
+		}
+	
+		th {
+
+			background-color: $color-blue;
+			font-family: $font-sansbold;
+			color: $color-white;
+		}
+
+		tr:nth-child(odd) { background-color: #eef7fd; }
+	}
+}
+
+.soc-inf { font-size: 16px; }
+
+.soc-ico {
+    
+	background-color: #338ec7;
+	position: relative;
+	text-align: center;
+	margin: 0 5px;
+
+	&:hover { background-color: $color-green; }
+
+
+	&:hover:before {
+
+		content: attr(data-title); 
+	    position: absolute; 
+	    left: 0; 
+	    top: -26px; 
+	    z-index: 1;
+	    background-color: #dcfeed;
+	    font-size: 12px; 
+	    color: rgba(73, 110, 134, 0.75);
+	    padding: 3px;
+	    white-space: nowrap; 
 	}
 
-}
+	.counter {
 
-td, th { 
-
-	border: 1px solid #cde7f8; 
-	padding: 3px 10px; 
-}
+	 font-size: 14px;
+	 font-family: $font-sans;
+	 padding-left: 5px;
 	
-
-th {
-
-	background-color: $color-blue;
-	font-family: $font-sansbold;
-	color: $color-white;
-
-	&.middle { width: 400px; }
+	}
 }
 
-tr:nth-child(odd) { background-color: #eef7fd; }
+.commits {
+
+	width: 100%;
+	padding: 0  20px;
+	line-height: 16px;
+
+	.content { padding-bottom: 10px; }
+
+	.title-articl { 
+
+		padding: 30px 0 0; 
+		color: $color-blue;
+
+		&:after { margin: 20px 0;}
+	}
+
+	.columns-right {
+
+    	 width: 35%;
+    	 display: block;
+    	 background-image: url(/images/background/pattern_blue.png);
+    	 margin: 20px 0;
+    	 padding: 10px 20px;
+
+    	*, .link-article { color: $color-white;}
+
+    	.symbol-link { 
+    		color: rgba(255, 255, 255, 0.7);
+    		font-size: 14px;
+    		padding: 10px 0 30px;
+		}
+    }
+
+	.columns-left {width: 65%;
+
+    	.link-article.float {color: rgba(73, 110, 134, 0.7);}
+	}
+}
+
+.articles-popularin.read-block {
+
+	position: relative;
+	background-color: transparent;
+
+	.items:hover .items-title:after  { border-color: $color-green; }
+
+	.title-heading {
+	    position: absolute;
+	    top: 10px;
+	}
+
+	.items-title::after { border-color: $color-blue; }
+}
+
+.link-append,
+.answer {
+	
+	    float: right;
+	    @include font($color: $color-white);
+	    padding: 4px 10px;
+}
+
+.title-commits {
+
+	background-image: url(/images/background/pattern_blue.png);
+	@include font($font-family: $font-serifbold, $size: 16px);
+	border-radius: 5px;
+	line-height: 27px;
+	padding: 13px 20px;
+	margin-bottom: 20px;
+
+	.count { padding: 0 10px; }
+
+	.link-append {
+
+	    @include font($color: rgba(73, 110, 134, 0.7 ));
+	 
+		 &:hover { background-color: #a4d9f6;}
+	}
+}
+
+ul.ul-commits  li { display: block;
+
+	&:before { content: none;}
+
+	  ul { padding-left: 60px;
+
+	   li:before {
+        
+	        @include pseudo(inline-block, "\f0da");
+	        @include font($font-awesome, $color-blue);
+	        padding: 15px 10px 0 0;
+	        vertical-align: top;
+    	}
+
+    	.text-commit {  padding: 10px 10px 10px 20px; }
+     
+        ul { padding-left: 60px;
+
+	        li:before {
+	        
+		        @include pseudo(inline-block, "\f0da  \f0da");
+		        @include font($font-awesome, $color-blue);
+		        vertical-align: top;
+	    	}
+	    }
+    }
+}
+
+     
+.commit-item span{ display: inline-block; }
+
+.icon {
+
+	width: 32px;
+ 	height: 32px;
+  	background-image: url(/images/control/user_icon.png);
+  	background-repeat: no-repeat;
+  	background-size: contain;
+  	margin-right: 20px;
+}
+
+.time {
+
+  color: $color-blue;
+  font-size: 14px;
+}
+
+.text-commit { 
+
+	border-bottom: 1px solid #eef8fd;
+	font-size: 14px;
+    padding: 10px 10px 10px 0;
+}
+
+.answer,
+input[type="submit"] {
+
+	background-color: $color-blue; 
+	margin: 20px 0;
+	
+	&:hover { background-color: #33a9f8; }
+}
+
+.comment-reply-title { @include font($font-family: $font-serifbold, $color: $color-text, $size: 16px); }
+
+.comment-form { 
+
+	background-color:  #eef8fd;
+	padding: 20px 40px;
+
+	* {
+		border-radius: 5px;
+		border: 0;
+		background-color: $color-white;
+	}
+
+	input[type="text"] { 
+
+		flex-basis:calc(100%/2 - 30px);
+		padding: 10px;
+		margin: 15px 0;
+	}
+
+	input[type="submit"] { 
+		
+		width: 100%;
+		color: $color-white;
+		padding: 10px;
+		cursor: pointer;
+	}
+
+	textarea { 
+
+		width: 100%;
+		height: 80px;
+		padding: 10px;
+	}
+}

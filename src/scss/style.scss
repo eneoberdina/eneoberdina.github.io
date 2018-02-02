@@ -2,12 +2,13 @@
 @import 'global/vars.scss';
 @import 'global/mixin.scss';
 @import 'layout/header.scss';
-@import 'global/breadcrumbs-list.scss';
 @import 'global/sidebar.scss';
+@import 'main.scss';
 @import 'heading-article.scss';
 @import 'global/article.scss';
 @import 'layout/footer.scss';
-@import 'main.scss';
+
+@import 'global/breadcrumbs-list.scss';
 
 body,
 ul.menu,
@@ -29,12 +30,14 @@ main ul li, ol li,
 .vnimanie,
 .search-form,
 .wrapper-footer,
-.menu-footer { display: flex; }
+.menu-footer,
+.comment-form { display: flex; }
 
 .site-content, 
 .display-flex, 
 .row-heading,
-.related {
+.related,
+.comment-form {
 
     flex-wrap: wrap;
     justify-content: space-between;
@@ -55,7 +58,12 @@ h1,
 .widget-area a,
 .picture-aside,
 .title-aside,
-.expand { display: block; }
+.content,
+.expand,
+.link-append,
+.answer,
+.comment-reply-title,
+.text-commit { display: block; }
 
 .searchstrin,
 .searchsubmit, 
@@ -63,6 +71,7 @@ h1,
 .link-navigation,
 .searchsubmit,
 .searchstring,
+.soc-ico,
 ul.menu-top a,
 ul.menu a { display: inline-block;}
 
@@ -75,6 +84,7 @@ ul.menu-top,
 .wp-pagenavi,
 .link-navigation,
 .similar,
+.items,
 figure  { text-align: center;}
 
 .site-content,
@@ -86,6 +96,23 @@ figure  { text-align: center;}
 .heading-item,
 .expand { margin: 0 auto;}
 
+.hidden-block .hidd,
+.related .items.nopicture,
+.commits,
+.articles-popularin.read-block .items,
+.link-append,
+.comment-form { border: 1px solid #eef8fd; }
+
+.article .articles-popularin,
+.expand,
+.table-block,
+.soc-ico,
+.commits,
+.columns-right,
+.link-append,
+.answer
+.icon,
+.comment-form {border-radius: 5px; }
 
 body,
 button,
@@ -99,6 +126,20 @@ body {
     flex-direction: column;
 }
 
+.top-buttom {
+
+    background-image: url(/images/control/up.svg);
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    right: 90px;
+    cursor: pointer;
+    transition: 1s;
+
+    &:hover { transform: rotate(720deg); }
+    
+}
+
 .logo-img {
 
     width: 359px;
@@ -108,7 +149,7 @@ body {
 .meta {
     
     justify-content: space-around;
-    padding: 10px 0;
+    padding: 20px 10px;
 
     &.meta-white { justify-content: flex-start;
 
@@ -135,18 +176,19 @@ body {
     }
 }
 
-.soclink  {
-    
-    @include font($font-family: $font-awesome, $size: 16px ); 
-    padding: 7px;
+.soclink, .soc-ico { 
 
-    &:hover {
+ 	@include font($font-family: $font-awesome, $size: 16px); 
+ 	padding: 4px;
+	min-width: 50px;
+	box-sizing: border-box;
+}
 
-        color: $color-green;
-        background-color: $color-white;
-        border-radius: 5px;
-    }
-    
+.soclink:hover {
+
+    color: $color-green;
+    background-color: $color-white;
+    border-radius: 5px;
 }
 
 .title-articl {
@@ -216,6 +258,15 @@ body {
 
     flex-basis: calc(100%/4 - 20px);
     line-height: 16px;
+    padding: 0 0 10px;
+
+    .items-picture {
+	    
+	    display: block;
+	    margin-bottom: 10px;
+	}
+
+    .items-title-articl { padding: 0 10px; }
 }
 
 .row-heading {

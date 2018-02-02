@@ -1,23 +1,43 @@
 @import 'global/vars.scss';
 @import 'global/mixin.scss';
 
-.breadcrumbs-list { padding: 0; }
-
-.breadcrumb { @include font($font-sans, $color-blue, 13px);
+.breadcrumblist > ul { display: flex;
     
-    &:before {
+    li { 
         
-        @include pseudo(inline-block, "\f0da"); 
-        @include font($font-awesome, $color-blue);
-        line-height: 24px;
-        padding: 0 7px;
+        line-height: 16px;
+        padding: 0;
+    
+        &:first-of-type:before { 
+            
+            content:"\f015";
+            padding-left: 0;
+        }
+
+        &:last-of-type  { 
+
+            span { 
+
+                color: $color-text;
+
+                &:hover  { text-decoration: none; }
+            }
+        }
+    }
+    
+    li span { 
+
+        @include font($font-sans, $color-blue, 13px);
+
+        &:hover { text-decoration: underline; }
     }
 
-    &:first-child:before { 
+    li:before {
         
-        content:"\f015";
-        padding-left: 0;
-
+        content:"\f0da"; 
+        color: $color-blue;
+        padding: 3px 10px;
     }
 }
+
 

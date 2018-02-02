@@ -24,7 +24,8 @@ h2,
 h3,
 h4,
 h5,
-h6  {
+h6,
+.soc-inf  {
     
     @include font($font-serifbold, $color-text2, 24px); 
     padding: 10px 0;
@@ -56,19 +57,20 @@ h3 { font-size: 18px; }
 
 h5, h6 { font-size: 16px; }
 
-.underline {
+.wrapper-content  p a { color: $color-green3;
 
-    color: $color-blue4;
-    text-decoration: underline;
+     &:hover {
+        
+        color:  $color-blue4;
+        text-decoration: underline;
+    }  
 }
-
-.bold { font-family: $font-sansbold; }
-
-.color { color: $color-green3; }
 
 .post,
 .advert,
 .row-heading.top,
+.soc-list,
+.comment-reply-title,
  p { padding: 10px 0; }
 
 .meta-span.dark,
@@ -112,7 +114,7 @@ a { color: $color-text2; }
    }
 }
 
-.main ul  li { 
+.main  ul  li { 
 
     line-height: 22px;
     padding: 8px 0;
@@ -154,15 +156,17 @@ a { color: $color-text2; }
     }
 }
 
-.post  p { padding: 0; } 
+.alignright, .alignleft  {  width: 50%; }
 
-.float-right { 
+    .aligncenter { width: 100%; }
+
+.alignright { 
 
     float: right; 
     margin: 10px 0 0 30px;
 }
 
-.float-left { 
+.alignleft { 
 
     float: left;
     margin: 10px 30px 0 0; 
@@ -207,64 +211,62 @@ a { color: $color-text2; }
 
     .items { 
 
+        height: 280px;
         flex-basis: calc(100%/3 - 20px);
         background-color: rgba(241, 249, 253, 0.9);
         border: transparent;
         position: relative;
-        transition: height 5.5s, background 2s;
-         
+        padding: 0;
+        overflow: hidden;
 
-        img { width: 100%; }
+        &.nopicture {
 
-        &:hover {
+            background-color: transparent;
+            text-align: left;
+            padding: 7px 20px 0;
+            box-sizing: border-box;
+           
 
-            background: transparent;
-            border: 1px solid #f1f9fd;
+            .items-title-articl {
 
-            img { height: 0; }
+                &:before { content: none; }
 
-            .items-content { 
-                
-                height:auto;
-                overflow: visible;
-                text-align: left;
-            }
+                &:after {
 
-            .items-title-articl { 
-                
-                color: $color-text;
-                text-shadow: 0.25px 0.1px 0 #496e86, -0.25px -0.1px 0 #496e86;
-            }
-
-             .items-title-articl:after {
-                
-                position: initial;
-                margin: 13px 0 0 0;
+                    @include pseudo;
+                    width: 20px;
+                    border: 1px solid $color-blue;
+                    margin: 15px 0 0;
+                }
             }
 
             .meta-span { color: $color-text2; }
         }
-    }
 
-    .items-content {
+        img { width: 100%; }
 
-        height: 60px;
-        overflow: hidden;
-    }
+        .items-title-articl { color: $color-text;
 
-    .items-title-articl { 
+            &:hover { color: $color-blue;}
+
+            &:before {
+
+                @include pseudo;
+                width: 20px;
+                border: 1px solid $color-blue;
+                margin: 10px auto;
+            }
         
-        &:after {
-            
-            @include pseudo;
-            width: 20px;
-            border: 1px solid $color-blue;
-            position: absolute;
-            top: 68%;
-            left: 0;
-            right: 0;
+            &.bold {
+
+                font-family: $font-sansbold;
+                font-size: 18px;
+                line-height: 18px;
+                padding: 20px 0
+            }
+        
         }
-    }
+    }     
 }
 
 .publication {

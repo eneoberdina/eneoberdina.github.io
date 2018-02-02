@@ -47,14 +47,18 @@
     margin-right: 40px;
     padding: 100px 60px;
     font-weight: 700;
-    line-height: 30px; }
+    line-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
   .articles-discusses .items {
     -webkit-flex-basis: -webkit-calc(100%/2 - 20px);
     -ms-flex-preferred-size: calc(100%/2 - 20px);
     flex-basis: -moz-calc(100%/2 - 20px);
     flex-basis: calc(100%/2 - 20px);
     padding: 40px 0 0;
-    line-height: 18px; }
+    line-height: 18px;
+    text-align: left; }
     .articles-discusses .items a:hover {
       color: #d0e8df; }
     .articles-discusses .items .items-link {
@@ -100,6 +104,9 @@
   flex: 0 0 520px;
   background-color: transparent;
   border: 10px #f3fafe solid;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0 40px; }
   .articles-headings.home .row-heading .heading-item {
     -webkit-flex-basis: 170px;
