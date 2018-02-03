@@ -24,7 +24,7 @@
   max-width: 700px;
   padding-right: 50px;
   line-height: 24px; }
-  .main.article {
+  .main.article, .main .wrapper-content {
     font-size: 16px; }
   @media screen and (max-width: 39.9375em) {
     .main {
@@ -258,8 +258,10 @@ a {
   border: 1px solid #f1f9fd;
   padding: 20px 0;
   margin: 20px 0; }
-  .publication.backhover:hover {
+  .publication:nth-child(2n) {
     background-color: #eff8fd; }
+  .publication.nobackg {
+    background-color: transparent; }
   .publication .picture {
     height: 200px;
     width: 230px;

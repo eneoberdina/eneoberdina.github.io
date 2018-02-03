@@ -216,8 +216,9 @@ ul.ya-share2_list li:before { content: none; }
 	.link-append {
 
 	    @include font($color: rgba(73, 110, 134, 0.7 ));
-	 
-		 &:hover { background-color: #a4d9f6;}
+	 	background-color: #eef8fd;
+
+		&:hover { background-color: #a4d9f6;}
 	}
 }
 

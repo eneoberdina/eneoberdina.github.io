@@ -140,6 +140,8 @@ header {
   -webkit-border-radius: 0;
   border-radius: 0;
   cursor: pointer; }
+  .searchsubmit:hover {
+    background-color: #a8d3ef; }
 
 .sign-search {
   font: 12px "PTSans-Regular";
@@ -505,7 +507,7 @@ header {
   max-width: 700px;
   padding-right: 50px;
   line-height: 24px; }
-  .main.article {
+  .main.article, .main .wrapper-content {
     font-size: 16px; }
   @media screen and (max-width: 39.9375em) {
     .main {
@@ -739,8 +741,10 @@ a {
   border: 1px solid #f1f9fd;
   padding: 20px 0;
   margin: 20px 0; }
-  .publication.backhover:hover {
+  .publication:nth-child(2n) {
     background-color: #eff8fd; }
+  .publication.nobackg {
+    background-color: transparent; }
   .publication .picture {
     height: 200px;
     width: 230px;
@@ -937,7 +941,8 @@ ul.ya-share2_list li:before {
     padding: 0 10px; }
   .title-commits .link-append {
     font: 14px "PTSans-Regular";
-    color: rgba(73, 110, 134, 0.7); }
+    color: rgba(73, 110, 134, 0.7);
+    background-color: #eef8fd; }
     .title-commits .link-append:hover {
       background-color: #a4d9f6; }
 
@@ -1207,8 +1212,7 @@ figure {
 .hidden-block .hidd,
 .related .items.nopicture,
 .commits,
-.articles-popularin.read-block .items,
-.link-append {
+.articles-popularin.read-block .items {
   border: 1px solid #eef8fd; }
 
 .article .articles-popularin,
@@ -1247,7 +1251,7 @@ body {
   width: 90px;
   height: 90px;
   position: absolute;
-  right: 90px;
+  right: 40px;
   cursor: pointer;
   -webkit-transition: 1s;
   -o-transition: 1s;

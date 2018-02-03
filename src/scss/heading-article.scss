@@ -22,7 +22,7 @@
     padding-right: 50px;
     line-height: 24px;
 
-    &.article { font-size: 16px; }
+    &.article, .wrapper-content{ font-size: 16px; }
 
     @media screen and (max-width: 39.9375em) { 
        
@@ -291,8 +291,10 @@ a { color: $color-text2; }
     padding: 20px 0;
     margin: 20px 0;
 
-    &.backhover:hover { background-color: #eff8fd;}
-
+    &:nth-child(2n) { background-color: #eff8fd;}
+    
+    &.nobackg { background-color: transparent; }
+    
     .picture {
 
         height: 200px;

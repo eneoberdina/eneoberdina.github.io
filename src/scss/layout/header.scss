@@ -152,6 +152,8 @@
         background-color: $color-blue2;
         border-radius: 0;
         cursor: pointer;
+
+        &:hover { background-color:  #a8d3ef;}
 }
 
 .sign-search {

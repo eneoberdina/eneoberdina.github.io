@@ -100,8 +100,7 @@ figure  { text-align: center;}
 .hidden-block .hidd,
 .related .items.nopicture,
 .commits,
-.articles-popularin.read-block .items,
-.link-append { border: 1px solid #eef8fd; }
+.articles-popularin.read-block .items { border: 1px solid #eef8fd; }
 
 .article .articles-popularin,
 .expand,
@@ -132,7 +131,7 @@ body {
     width: 90px;
     height: 90px;
     position: absolute;
-    right: 90px;
+    right: 40px;
     cursor: pointer;
     transition: 1s;
 
