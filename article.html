@@ -870,5 +870,23 @@
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script src="/js/MMenu.js"></script>
         <script src="/js/TogglerOpenClose.js"></script>
+         <script>
+         jQuery(document).ready(function( $ ) {
+      $("#site-navigation").mmenu({
+         "slidingSubmenus": false,
+         "offCanvas": {
+            "pageSelector": "#page",
+            "inset":".sub-menu"
+         },
+         "extensions": [
+            "pagedim-black",
+            "theme-dark"
+         ]
+      }, {
+   // configuration
+   clone: true
+});
+   });
+   </script>
     </body>
 </html>
