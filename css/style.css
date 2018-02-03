@@ -146,6 +146,19 @@ header {
   color: #ffffff;
   padding-top: 5px; }
 
+.slicknav_btn {
+  position: relative;
+  display: none;
+  padding: 0.438em 0.625em 0.438em 0.625em;
+  cursor: pointer;
+  font: 14px "PTSans-Bold";
+  color: #ffffff; }
+  .slicknav_btn:before {
+    content: "\f0c9";
+    font: 14px "FontAwesome";
+    color: #ffffff;
+    padding-right: 10px; }
+
 .widget-area {
   -webkit-flex-basis: 310px;
   -ms-flex-preferred-size: 310px;
@@ -470,6 +483,18 @@ header {
 .site-content {
   width: 1060px;
   padding: 30px 0; }
+  @media screen and (max-width: 39.9375em) {
+    .site-content {
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .site-content img {
+        max-width: 100%; } }
 
 .main {
   -webkit-box-flex: 1;
@@ -482,6 +507,20 @@ header {
   line-height: 24px; }
   .main.article {
     font-size: 16px; }
+  @media screen and (max-width: 39.9375em) {
+    .main {
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 0 20px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; } }
 
 figure {
   font-family: "PTSerif-Regular"; }
@@ -807,6 +846,12 @@ a {
   .table-block table tr:nth-child(odd) {
     background-color: #eef7fd; }
 
+.ya-share2, .soc-inf {
+  display: inline-block; }
+
+ul.ya-share2_list li:before {
+  content: none; }
+
 .soc-inf {
   font-size: 16px; }
 
@@ -1080,7 +1125,8 @@ main ul li, ol li,
 .search-form,
 .wrapper-footer,
 .menu-footer,
-.comment-form {
+.comment-form,
+.ya-share2_list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -1162,8 +1208,7 @@ figure {
 .related .items.nopicture,
 .commits,
 .articles-popularin.read-block .items,
-.link-append,
-.comment-form {
+.link-append {
   border: 1px solid #eef8fd; }
 
 .article .articles-popularin,

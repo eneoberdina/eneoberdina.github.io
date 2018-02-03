@@ -159,3 +159,19 @@
     @include font($size: 12px);
     padding-top: 5px;
 }
+
+.slicknav_btn {
+
+    position: relative;
+    display: none;
+    padding: 0.438em 0.625em 0.438em 0.625em;
+    cursor: pointer;
+    @include font($font-sansbold, $color-white);
+
+
+        &:before {
+        content: "\f0c9";
+        @include font($font-awesome, $color-white);
+        padding-right:10px
+    }
+}

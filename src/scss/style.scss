@@ -31,7 +31,8 @@ main ul li, ol li,
 .search-form,
 .wrapper-footer,
 .menu-footer,
-.comment-form { display: flex; }
+.comment-form,
+.ya-share2_list { display: flex; }
 
 .site-content, 
 .display-flex, 
@@ -100,8 +101,7 @@ figure  { text-align: center;}
 .related .items.nopicture,
 .commits,
 .articles-popularin.read-block .items,
-.link-append,
-.comment-form { border: 1px solid #eef8fd; }
+.link-append { border: 1px solid #eef8fd; }
 
 .article .articles-popularin,
 .expand,
