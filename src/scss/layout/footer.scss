@@ -9,21 +9,21 @@
  	padding: 25px 0;
  	@include size;
 
- 	@media screen and (max-width: 768px) { width: 100%; }
+ 	@media screen and (max-width: 1023px) { width: 100%; }
+
+ 	  @media screen and (min-width: 1024px) and (max-width: 1240px)  {width: 100%;}
 }
 
 .menu-footer { 
 
-	
-	
-	ul.menu-footer {
+		ul.menu-footer {
 
 		display: block;
 		list-style: none;
 		padding: 0 30px;
 		margin: 0;
 
-		@media screen and (max-width: 768px) { display: none; }
+		@media screen and (max-width: 1023px) { display: none; }
 
 		a {
 		

@@ -8,7 +8,13 @@
     
     @include size;
     margin: 50px auto;
+
+    @media screen and (max-width: 1023px) { width: 100%;}
+
+    @media screen and (min-width: 1024px) and (max-width: 1240px)  {  width: 100%; }
+
 }
+
 
 .articles-headings .content,
 .articles-publications,
@@ -35,7 +41,23 @@
 .articles-discusses {
    
     width: 880px;
-    padding: 40px 0;
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 768px) { 
+
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    @media screen and (max-width: 1023px) {
+
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1240px)  {  width: 100%; }
 
         &-popular {
        
@@ -50,6 +72,13 @@
             font-weight: 700;
             line-height: 30px;
             box-sizing: border-box;
+
+            @media screen and (max-width: 1023px) { 
+
+                flex-basis: 100%;
+                height: auto;
+                padding: 20px  10px;
+            }
         }
 
     .items { 
@@ -59,7 +88,10 @@
         line-height: 18px;
         text-align: left;
 
-        a:hover { color: #d0e8df;} 
+        a:hover { color: #d0e8df;}
+
+
+        @media screen and (max-width: 560px) {  flex-basis: 100%;}
 
     .items-link {
 
@@ -84,6 +116,19 @@
 
 .articles-headings.home {
 
+     @media screen and (max-width: 1023px) {
+        
+        padding: 0 10px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1240px)  { 
+
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
     .row-item { flex-basis: calc(100%/2 - 10px); 
         
         a:hover { color: $color-blue3;}
@@ -93,6 +138,8 @@
          
          flex: 1 1 0;
          padding-right: 20px;
+
+         @media screen and (max-width: 1023px) { flex-basis: 100%;}
         
      > .title { width: 100%; }
 
@@ -108,12 +155,23 @@
         box-sizing: border-box;
         padding: 0 40px;
 
+         @media screen and (max-width: 1023px) {
+            
+           flex: 100%;
+        }
+
        .heading-item { 
        
        flex-basis: 170px;
        height: 170px;
-   
-   } 
+
+        @media screen and (max-width: 1023px) {
+
+            flex-basis: 120px;
+            height: 120px;
+            margin: 10px auto;
+        }
+    } 
 
         > .title-articl.right { padding: 20px 0 0 10px; }
 
@@ -155,7 +213,10 @@
     }
 }
 
-.wrapper-publications { background-color: #f3fafe;
+.wrapper-publications { 
+
+    background-color: #f3fafe;
+    padding: 0 10px;
 
     .social-link-column {
 
@@ -210,11 +271,17 @@
 .question { 
 
     @include background-image(url(/images/background/fon_pop_vopros.jpg));
+    padding: 0 10px;
+    box-sizing: border-box;
     
     &-wrapper {
         
         width: 880px;
         padding: 50px 0;
+
+    @media screen and (max-width: 1023px) { width: 100%;}
+
+    @media screen and (min-width: 1024px) and (max-width: 1240px)  {  width: 100%; }
 
         .title-main {
         

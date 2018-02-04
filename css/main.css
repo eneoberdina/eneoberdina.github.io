@@ -6,6 +6,18 @@
   width: 1060px;
   margin: 0 auto;
   margin: 50px auto; }
+  @media screen and (max-width: 1023px) {
+    .articles-popularin,
+    .articles-headings,
+    .question,
+    .articles-publications {
+      width: 100%; } }
+  @media screen and (min-width: 1024px) and (max-width: 1240px) {
+    .articles-popularin,
+    .articles-headings,
+    .question,
+    .articles-publications {
+      width: 100%; } }
 
 .articles-headings .content,
 .articles-publications,
@@ -27,7 +39,26 @@
 
 .articles-discusses {
   width: 880px;
-  padding: 40px 0; }
+  padding: 40px 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media screen and (max-width: 768px) {
+    .articles-discusses {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding: 10px; } }
+  @media screen and (max-width: 1023px) {
+    .articles-discusses {
+      width: 100%;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding: 10px; } }
+  @media screen and (min-width: 1024px) and (max-width: 1240px) {
+    .articles-discusses {
+      width: 100%; } }
   .articles-discusses-popular {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -51,6 +82,13 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
+    @media screen and (max-width: 1023px) {
+      .articles-discusses-popular {
+        -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        height: auto;
+        padding: 20px  10px; } }
   .articles-discusses .items {
     -webkit-flex-basis: -webkit-calc(100%/2 - 20px);
     -ms-flex-preferred-size: calc(100%/2 - 20px);
@@ -61,6 +99,11 @@
     text-align: left; }
     .articles-discusses .items a:hover {
       color: #d0e8df; }
+    @media screen and (max-width: 560px) {
+      .articles-discusses .items {
+        -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; } }
     .articles-discusses .items .items-link {
       font: 18px "PTSans-Bold";
       color: #ffffff;
@@ -75,6 +118,23 @@
       width: 20px;
       border: 1px solid #00d381;
       margin: 20px 0; }
+
+@media screen and (max-width: 1023px) {
+  .articles-headings.home {
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; } }
+
+@media screen and (min-width: 1024px) and (max-width: 1240px) {
+  .articles-headings.home {
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; } }
 
 .articles-headings.home .row-item {
   -webkit-flex-basis: -webkit-calc(100%/2 - 10px);
@@ -91,6 +151,11 @@
   -ms-flex: 1 1 0px;
   flex: 1 1 0;
   padding-right: 20px; }
+  @media screen and (max-width: 1023px) {
+    .articles-headings.home > .columns-left {
+      -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%; } }
   .articles-headings.home > .columns-left > .title {
     width: 100%; }
   .articles-headings.home > .columns-left > .row-item {
@@ -108,11 +173,25 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 40px; }
+  @media screen and (max-width: 1023px) {
+    .articles-headings.home .row-heading {
+      -webkit-box-flex: 100%;
+      -webkit-flex: 100%;
+      -moz-box-flex: 100%;
+      -ms-flex: 100%;
+      flex: 100%; } }
   .articles-headings.home .row-heading .heading-item {
     -webkit-flex-basis: 170px;
     -ms-flex-preferred-size: 170px;
     flex-basis: 170px;
     height: 170px; }
+    @media screen and (max-width: 1023px) {
+      .articles-headings.home .row-heading .heading-item {
+        -webkit-flex-basis: 120px;
+        -ms-flex-preferred-size: 120px;
+        flex-basis: 120px;
+        height: 120px;
+        margin: 10px auto; } }
   .articles-headings.home .row-heading > .title-articl.right {
     padding: 20px 0 0 10px; }
 
@@ -142,7 +221,8 @@
   padding-right: 10px; }
 
 .wrapper-publications {
-  background-color: #f3fafe; }
+  background-color: #f3fafe;
+  padding: 0 10px; }
   .wrapper-publications .social-link-column {
     width: 250px;
     height: 270px;
@@ -187,10 +267,20 @@
   background-image: url(/images/background/fon_pop_vopros.jpg);
   background-position: center;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   .question-wrapper {
     width: 880px;
     padding: 50px 0; }
+    @media screen and (max-width: 1023px) {
+      .question-wrapper {
+        width: 100%; } }
+    @media screen and (min-width: 1024px) and (max-width: 1240px) {
+      .question-wrapper {
+        width: 100%; } }
     .question-wrapper .title-main {
       width: 100%;
       background-image: url(/images/background/pattern_green.png);

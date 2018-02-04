@@ -1,47 +1,4 @@
 @charset "UTF-8";
-.site-content {
-  width: 1060px;
-  padding: 30px 0; }
-  @media screen and (max-width: 768px) {
-    .site-content {
-      width: 100%;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -moz-box-orient: vertical;
-      -moz-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; }
-      .site-content img {
-        max-width: 100%; } }
-
-.main {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 0;
-  -moz-box-flex: 1;
-  -ms-flex: 1 1 0px;
-  flex: 1 1 0;
-  max-width: 700px;
-  padding-right: 50px;
-  line-height: 24px; }
-  .main.article, .main .wrapper-content {
-    font-size: 16px; }
-  @media screen and (max-width: 768px) {
-    .main {
-      width: 100%;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -moz-box-orient: vertical;
-      -moz-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      padding: 0 10px;
-      margin: 0 auto;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box; } }
-
 figure {
   font-family: "PTSerif-Regular"; }
 
@@ -118,7 +75,7 @@ a {
     height: 70px;
     background: url(/images/control/bv_osnovnoi.png) no-repeat center;
     margin: 0 40px 0 40px; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1023px) {
       .vnimanie:before {
         margin: 0 auto 10px; } }
   .vnimanie.vn-green {
@@ -133,7 +90,7 @@ a {
       padding-top: 10px; }
     .vnimanie.vn-green .critical {
       font-family: "PTSans-Bold"; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1023px) {
     .vnimanie {
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
@@ -174,8 +131,14 @@ a {
     font-family: "FontAwesome";
     margin-left: -30px; }
 
+figure img {
+  width: 100%; }
+
 .alignright, .alignleft {
   width: 50%; }
+  @media screen and (max-width: 1023px) {
+    .alignright, .alignleft {
+      width: 100%; } }
 
 .aligncenter {
   width: 100%; }
@@ -183,10 +146,18 @@ a {
 .alignright {
   float: right;
   margin: 10px 0 0 30px; }
+  @media screen and (max-width: 1023px) {
+    .alignright {
+      float: none;
+      margin: 10px 0 0; } }
 
 .alignleft {
   float: left;
   margin: 10px 30px 0 0; }
+  @media screen and (max-width: 1023px) {
+    .alignleft {
+      float: none;
+      margin: 10px 0 0; } }
 
 .title-heading {
   width: 129px;
@@ -199,7 +170,7 @@ a {
 
 .row-heading.top {
   padding: 0 20px 30px; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1023px) {
     .row-heading.top {
       padding: 0 5px 20px; } }
   .row-heading.top .heading-item {
@@ -207,7 +178,7 @@ a {
     height: 95px;
     font-size: 13px;
     line-height: 13px;
-    margin: 10px 0; }
+    margin: 10px auto; }
     .row-heading.top .heading-item:after {
       margin-top: 5px; }
 
@@ -218,6 +189,11 @@ a {
   .row-heading.bottom .heading-item {
     width: 140px;
     height: 140px; }
+    @media screen and (max-width: 1023px) {
+      .row-heading.bottom .heading-item {
+        width: 96px;
+        height: 96px;
+        margin: 10px auto; } }
 
 .related {
   padding: 20px 0; }
@@ -232,7 +208,7 @@ a {
     position: relative;
     padding: 0;
     overflow: hidden; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 641px) {
       .related .items {
         -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
@@ -245,9 +221,12 @@ a {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1023px) {
         .related .items.nopicture {
           padding: 10px; } }
+      @media screen and (min-width: 1024px) and (max-width: 1240px) {
+        .related .items.nopicture {
+          padding: 7px 5px 0; } }
       .related .items.nopicture .items-title-articl:before {
         content: none; }
       .related .items.nopicture .items-title-articl:after {
@@ -280,7 +259,7 @@ a {
   border: 1px solid #f1f9fd;
   padding: 20px 0;
   margin: 20px 0; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 641px) {
     .publication {
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
@@ -320,5 +299,8 @@ a {
       margin-left: 20px; }
   .publication .pub-link {
     font-size: 16px; }
+
+.advert img {
+  width: 100%; }
 
 /*# sourceMappingURL=maps/heading-article.css.map */

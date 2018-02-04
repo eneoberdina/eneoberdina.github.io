@@ -126,16 +126,59 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
+.site-content {
+   
+    width: 1060px;
+    padding: 30px 0;
 
+    @media screen and (max-width: 1023px) { 
+       
+        width: 100%;
+        display: block;
+
+        img { 
+
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1240px)  {
+
+        width: 100%;
+        padding: 20px 10px;
+        box-sizing: border-box;
+    }
+}   
+
+.main { 
+
+    flex: 1 1 0;
+    max-width: 700px;
+    padding-right: 50px;
+    line-height: 24px;
+
+    &.article, .wrapper-content{ font-size: 16px; }
+
+    @media screen and (max-width: 1023px) { 
+       
+        width: 100%;
+        flex-direction: column;
+        padding: 0 10px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+}
 .top-buttom {
 
     background-image: url(/images/control/up.svg);
     width: 90px;
     height: 90px;
     position: absolute;
-    right: 40px;
+    right: 6px;
     cursor: pointer;
     transition: 1s;
+    z-index: 10;
 
     &:hover { transform: rotate(720deg); }
     
@@ -149,7 +192,7 @@ body {
 
 .meta {
     
-    justify-content: space-around;
+    justify-content: center;
     padding: 20px 10px;
 
     &.meta-white { justify-content: flex-start;
@@ -161,6 +204,7 @@ body {
 
         @include pseudo(inline-block, ""); 
         @include font($font-awesome, $color-blue);
+        margin: 0 15px;
 
         &.white { color: $color-white; }
     }
@@ -260,11 +304,18 @@ body {
     flex-basis: calc(100%/4 - 20px);
     line-height: 16px;
     padding: 0 0 10px;
+    margin: 10px;
+
+     @media screen and (max-width: 641px) {  flex-basis: 100%;}
+
+    @media screen and (min-width: 642px) and (max-width: 1023px)  {  flex-basis: calc(100%/2 - 20px); }
 
     .items-picture {
 	    
 	    display: block;
 	    margin-bottom: 10px;
+
+        img { width: 100%; }
 	}
 
     .items-title-articl { padding: 0 10px; }
@@ -274,6 +325,8 @@ body {
 
     background-color: #f1f9fd;
     padding: 40px;
+
+    @media screen and (max-width: 1023px) { padding: 10px;}
 }
 
 

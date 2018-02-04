@@ -6,7 +6,9 @@
 	background-color: #eef8fd;
 	padding: 40px 40px 30px 90px;
 
-	@media screen and (max-width: 768px) { padding: 10px; }
+	@media screen and (max-width: 1023px) { padding: 10px; }
+
+	@media screen and (min-width: 1024px) and (max-width: 1240px)  {  padding: 10px; }
 
     .kc_title {
      	
@@ -21,7 +23,7 @@
    		overflow: hidden;
 		flex-wrap: wrap;
 
-		@media screen and (max-width: 768px) { height: 114px; }
+		@media screen and (max-width: 1023px) { height: 114px; }
 
 		&.opened { height: auto;
 
@@ -30,7 +32,7 @@
 
 		.top{ flex-wrap: wrap; 
 
-			@media screen and (max-width: 768px) { display: inline-block; }
+			@media screen and (max-width: 1023px) { display: inline-block; }
 
 			.sub-contents  { 
 
@@ -65,12 +67,15 @@
     box-sizing: border-box;
     margin: 20px 0;
 
+     @media screen and (min-width: 1024px) and (max-width: 1240px)  { justify-content: center; }
+        
     .items { 
 
     	flex-basis: calc(100%/3 - 20px);
     	background-color: rgba(255, 255, 255, 0.9);
+    	margin: 0 5px;
 
-    	@media screen and (max-width: 768px) { flex-basis: 100%; }
+    	@media screen and (max-width: 641px) { flex-basis: 100%; }		
     }
 }
 
@@ -199,12 +204,14 @@ ul.ya-share2_list li:before { content: none; }
 
 	position: relative;
 	background-color: transparent;
+	padding: 5px;
 
 	.items:hover .items-title:after  { border-color: $color-green; }
 
 	.title-heading {
 	    position: absolute;
 	    top: 10px;
+	    left: 0;
 	}
 
 	.items-title::after { border-color: $color-blue; }

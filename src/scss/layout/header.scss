@@ -6,7 +6,7 @@
  background: url(/images/background/image_heder.jpg) no-repeat; 
  background-size: cover;
 
-    @media screen and (max-width: 768px) { padding: 10px; }
+    @media screen and (max-width: 1023px) { padding: 10px; }
 }
 
  .wrapper-header { 
@@ -14,8 +14,11 @@
     flex-wrap: wrap;
     @include size;  
 
-    @media screen and (max-width: 768px) { width: 100%; }
+    @media screen and (min-width: 1024px) and (max-width: 1240px)  {width: 100%;}
     
+    @media screen and (max-width: 1023px) { width: 100%; }
+
+   
  }
 
 .header-body {
@@ -25,7 +28,7 @@
     justify-content: space-between;
     padding: 30px 0;
 
-    @media screen and (max-width: 768px) { 
+    @media screen and (max-width: 1023px) { 
 
         flex-wrap: wrap; 
         padding: 30px 0 0;
@@ -33,7 +36,7 @@
 
     .menu-header-top {
 
-        @media screen and (max-width: 768px) { display: none; }
+        @media screen and (max-width: 1023px) { display: none; }
 
         ul.menu-top { padding: 0 20px;
         
@@ -70,9 +73,11 @@
     width: 100%;
     background: url(/images/background/pattern_blue.png);
 
-    @media screen and (max-width: 768px) { display: none; }
+    @media screen and (max-width: 1023px) { display: none; }
 
     ul.menu { width: 1060px; 
+
+        @media screen and (min-width: 1024px) and (max-width: 1240px)  {width: 100%;}
     
         li.menu-item  { 
 
