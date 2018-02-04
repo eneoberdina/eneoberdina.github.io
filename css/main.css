@@ -141,6 +141,13 @@
   -ms-flex-preferred-size: calc(100%/2 - 10px);
   flex-basis: -moz-calc(100%/2 - 10px);
   flex-basis: calc(100%/2 - 10px); }
+  @media screen and (max-width: 641px) {
+    .articles-headings.home .row-item {
+      -webkit-box-flex: 100%;
+      -webkit-flex: 100%;
+      -moz-box-flex: 100%;
+      -ms-flex: 100%;
+      flex: 100%; } }
   .articles-headings.home .row-item a:hover {
     color: #77c1ee; }
 
@@ -173,6 +180,9 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 40px; }
+  @media screen and (max-width: 641px) {
+    .articles-headings.home .row-heading {
+      padding: 0; } }
   @media screen and (max-width: 1023px) {
     .articles-headings.home .row-heading {
       -webkit-box-flex: 100%;
@@ -230,6 +240,9 @@
     color: #ffffff;
     padding: 39px  20px 0;
     line-height: 24px; }
+    @media screen and (max-width: 1023px) {
+      .wrapper-publications .social-link-column {
+        height: 200px; } }
     .wrapper-publications .social-link-column .title {
       color: #ffffff; }
       .wrapper-publications .social-link-column .title:after {
@@ -262,6 +275,26 @@
       padding: 0 0 20px 0;
       margin: 0;
       line-height: 16px; }
+      @media screen and (max-width: 641px) {
+        .wrapper-publications .publication-columns .publication.main {
+          -webkit-box-flex: 100%;
+          -webkit-flex: 100%;
+          -moz-box-flex: 100%;
+          -ms-flex: 100%;
+          flex: 100%;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          -moz-box-orient: horizontal;
+          -moz-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row; }
+          .wrapper-publications .publication-columns .publication.main .publication-content {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 1 0;
+            -moz-box-flex: 1;
+            -ms-flex: 1 1 0px;
+            flex: 1 1 0; } }
 
 .question {
   background-image: url(/images/background/fon_pop_vopros.jpg);
@@ -296,6 +329,12 @@
       -ms-flex-preferred-size: calc(100%/5 - 20px);
       flex-basis: -moz-calc(100%/5 - 20px);
       flex-basis: calc(100%/5 - 20px); }
+      @media screen and (max-width: 1023px) {
+        .question-wrapper ul {
+          -webkit-flex-basis: -webkit-calc(100%/2 - 10px);
+          -ms-flex-preferred-size: calc(100%/2 - 10px);
+          flex-basis: -moz-calc(100%/2 - 10px);
+          flex-basis: calc(100%/2 - 10px); } }
       .question-wrapper ul:last-child {
         padding-right: 0; }
       .question-wrapper ul a {

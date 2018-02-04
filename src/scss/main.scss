@@ -130,6 +130,8 @@
     }
 
     .row-item { flex-basis: calc(100%/2 - 10px); 
+
+        @media screen and (max-width: 641px) { flex: 100%;}
         
         a:hover { color: $color-blue3;}
     }   
@@ -155,10 +157,9 @@
         box-sizing: border-box;
         padding: 0 40px;
 
-         @media screen and (max-width: 1023px) {
-            
-           flex: 100%;
-        }
+         @media screen and (max-width: 641px) { padding: 0;}
+
+         @media screen and (max-width: 1023px) { flex: 100%; }
 
        .heading-item { 
        
@@ -227,6 +228,8 @@
         padding: 39px  20px 0;
         line-height: 24px;
 
+        @media screen and (max-width: 1023px) { height: 200px; }
+
         .title { color: $color-white;
             
             &:after { 
@@ -264,6 +267,15 @@
             padding: 0 0 20px 0;
             margin: 0;
             line-height: 16px;
+
+             @media screen and (max-width: 641px) { 
+
+                flex: 100%;
+                flex-direction: row;
+
+                .publication-content { flex: 1 1 0; }
+
+            }
         }
     }
 }
@@ -303,6 +315,8 @@
         ul {
 
             flex-basis: calc(100%/5 - 20px);
+
+            @media screen and (max-width: 1023px) { flex-basis: calc(100%/2 - 10px); }
 
             &:last-child { padding-right: 0; }
 
