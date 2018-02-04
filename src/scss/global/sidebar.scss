@@ -6,6 +6,8 @@
     flex-basis: 310px;
     flex-shrink: 0;
 
+    @media screen and (max-width: 768px) { padding: 0 10px; }
+
     .items { 
             
         &.back { 

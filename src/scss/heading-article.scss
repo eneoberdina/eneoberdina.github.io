@@ -6,7 +6,7 @@
     width: 1060px;
     padding: 30px 0;
 
-    @media screen and (max-width: 39.9375em) { 
+    @media screen and (max-width: 768px) { 
        
         width: 100%;
         flex-direction: column;
@@ -24,11 +24,12 @@
 
     &.article, .wrapper-content{ font-size: 16px; }
 
-    @media screen and (max-width: 39.9375em) { 
+    @media screen and (max-width: 768px) { 
        
         width: 100%;
         flex-direction: column;
-        padding: 0 20px;
+        padding: 0 10px;
+        margin: 0 auto;
         box-sizing: border-box;
     }
 }
@@ -101,33 +102,42 @@ a { color: $color-text2; }
    padding: 25px 25px 25px 0;
    margin: 20px 0;
 
-   &.vn-green {
-
-        background-color: #2bd081;
-        border-color: #d9ffed;
-
-        &:before { background:url(/images/control/bv_vajno.png) no-repeat; }
-
-        .vnimanie-block { 
-
-            display: block;
-            border-top: 1px solid rgba(255, 255, 255, 0.25);
-            margin-top: 10px;
-            padding-top: 10px;
-        }
-
-        .critical { font-family: $font-sansbold; }
-    }
-
    &:before {
 
-    @include pseudo(inline-block, "");
-    width: 78px;
-    height: 70px;
-    background:url(/images/control/bv_osnovnoi.png) no-repeat;
-    margin: 0 40px 0 40px;
+        @include pseudo(inline-block, "");
+        width: 128px;
+        height: 70px;
+        background:url(/images/control/bv_osnovnoi.png) no-repeat center;
+        margin: 0 40px 0 40px;
+
+        @media screen and (max-width: 768px) { margin: 0 auto 10px; }
+    }
+
+       &.vn-green {
+
+            background-color: #2bd081;
+            border-color: #d9ffed;
+
+            &:before { background:url(/images/control/bv_vajno.png) no-repeat center; }
+
+            .vnimanie-block { 
+
+                display: block;
+                border-top: 1px solid rgba(255, 255, 255, 0.25);
+                margin-top: 10px;
+                padding-top: 10px;
+            }
+
+            .critical { font-family: $font-sansbold; }
+        }
+
+    @media screen and (max-width: 768px) { 
+        
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
    
-   }
 }
 
 .main  ul  li { 
@@ -198,10 +208,9 @@ a { color: $color-text2; }
     @include font($font-serifbold, $color-white);
 }
 
-.row-heading.top {
+.row-heading.top { padding: 0 20px 30px;
 
-    height: 178px;
-    margin-bottom: 40px;
+     @media screen and (max-width: 768px) { padding: 0 5px 20px; }
 
 .heading-item {
 
@@ -209,6 +218,7 @@ a { color: $color-text2; }
     height: 95px;
     font-size: 13px;
     line-height: 13px;
+    margin: 10px 0;
 
         &:after { margin-top: 5px; }
     }
@@ -235,14 +245,21 @@ a { color: $color-text2; }
         padding: 0;
         overflow: hidden;
 
+        @media screen and (max-width: 768px) { 
+
+            flex-basis: 100%;
+            height: auto;
+        }
+
         &.nopicture {
 
             background-color: transparent;
             text-align: left;
             padding: 7px 20px 0;
             box-sizing: border-box;
-           
 
+            @media screen and (max-width: 768px) { padding: 10px; }
+           
             .items-title-articl {
 
                 &:before { content: none; }
@@ -291,9 +308,21 @@ a { color: $color-text2; }
     padding: 20px 0;
     margin: 20px 0;
 
+    @media screen and (max-width: 768px) { 
+
+        flex-wrap: wrap; 
+        padding: 10px;
+    }
+
     &:nth-child(2n) { background-color: #eff8fd;}
     
     &.nobackg { background-color: transparent; }
+
+    > a { 
+
+        display: block;
+        margin: 0 auto;
+     }
     
     .picture {
 

@@ -38,10 +38,12 @@ main ul li, ol li,
 .display-flex, 
 .row-heading,
 .related,
-.comment-form {
+.comment-form,
+.group-link {
 
     flex-wrap: wrap;
     justify-content: space-between;
+
 }
 
 h1,
@@ -141,8 +143,8 @@ body {
 
 .logo-img {
 
-    width: 359px;
-    height: 84px;     
+    width: 309px;
+    height: 64px;  
 }
 
 .meta {

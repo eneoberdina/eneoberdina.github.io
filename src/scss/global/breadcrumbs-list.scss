@@ -1,7 +1,11 @@
 @import 'global/vars.scss';
 @import 'global/mixin.scss';
 
-.breadcrumblist > ul { display: flex;
+.breadcrumblist > ul { 
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     
     li { 
         
