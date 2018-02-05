@@ -35,62 +35,64 @@
                      </form>    
                 </div>
             </div>
-            <nav class="main-navigation">
-                    <ul class="menu">
-                        <li class="menu-item"><a href="">Болезни</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="/article.html">Страница-статьи</a></li>
-                                <li class="menu-item"><a href="/heading-article.html">Рубрика-со-статьей</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item"><a href="/heading.html">Рубрика-(без-статьи-и-больше-3-4)</a>
-                                        </li>
-                                        <li class="menu-item"><a href="/heading2.html">Рубрика-(без-статьи-и-меньше-3-4)</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item"><a href="">item</a></li>
-                                                <li class="menu-item"><a href="">item</a></li>
-                                                <li class="menu-item"><a href="">item</a></li>
-                                                <li class="menu-item"><a href="">item</a></li>
-                                            </ul>
-                                        </li> 
-                                    </ul>
-                                </li>
-                                <li class="menu-item"><a href="">item</a></li>
-                                <li class="menu-item"><a href="">item</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="">Болезни у детей</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item">
-                                <a href="">item</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item"><a href="">item</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item"><a href="">item</a></li>
-                                                <li class="menu-item"><a href="">item</a></li>
-                                                <li class="menu-item"><a href="">item</a></li>
-                                                <li class="menu-item"><a href="">item</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item"><a href="">item</a></li>
-                                        
-                                    </ul>
-                                </li>
-                                <li class="menu-item"><a href="">item</a></li>
-                                <li class="menu-item"><a href="">item</a></li>
-                                <li class="menu-item"><a href="">item</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item"><a href="">item</a></li>
-                                        <li class="menu-item"><a href="">item</a></li>
-                                        <li class="menu-item"><a href="">item</a></li>
-                                        <li class="menu-item"><a href="">item</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="">Симптомы</a></li>
-                        <li class="menu-item"><a href="">Инфо</a></li>
-                    </ul>
-                </nav>
+           <nav id="site-navigation" class="main-navigation">
+                <ul id="primary-menu" class="menu">
+                    <li class="menu-item"><a href="">Болезни</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="/article.html">Страница-статьи</a></li>
+                            <li class="menu-item"><a href="/heading-article.html">Рубрика-со-статьей</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/heading.html">Рубрика-(без-статьи-и-больше-3-4)</a>
+                                    </li>
+                                    <li class="menu-item"><a href="/heading2.html">Рубрика-(без-статьи-и-меньше-3-4)</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="">item</a></li>
+                                            <li class="menu-item"><a href="">item</a></li>
+                                            <li class="menu-item"><a href="">item</a></li>
+                                            <li class="menu-item"><a href="">item</a></li>
+                                        </ul>
+                                    </li> 
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="">item</a></li>
+                            <li class="menu-item"><a href="">item</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="">Болезни у детей</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                            <a href="">item</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="">item</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="">item</a></li>
+                                            <li class="menu-item"><a href="">item</a></li>
+                                            <li class="menu-item"><a href="">item</a></li>
+                                            <li class="menu-item"><a href="">item</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item"><a href="">item</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="">item</a></li>
+                            <li class="menu-item"><a href="">item</a></li>
+                            <li class="menu-item"><a href="">item</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="">item</a></li>
+                                    <li class="menu-item"><a href="">item</a></li>
+                                    <li class="menu-item"><a href="">item</a></li>
+                                    <li class="menu-item"><a href="">item</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="">Симптомы</a></li>
+                    <li class="menu-item"><a href="">Инфо</a></li>
+                </ul>
+            </nav>
+            <a href="#site-navigation" aria-haspopup="true" tabindex="0" class="slicknav_btn slicknav_collapsed ">
+            <span>МЕНЮ</span>
+            </a>
         </header>
         <main>
             <p class="title-main home-titl">Популярные статьи</p>
@@ -459,5 +461,25 @@
                 </div>
             </div>
         </footer>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript">
+             jQuery(document).ready(function( $ ) {
+          $("#site-navigation").mmenu({
+             "slidingSubmenus": false,
+             "offCanvas": {
+                "pageSelector": "#page",
+                "inset":".sub-menu"
+             },
+             "extensions": [
+                "pagedim-black",
+                "theme-dark"
+             ]
+          }, {
+           // configuration
+           clone: true
+                });
+           });
+    </script>
+    <script src="/js/MMenu.js"></script>
     </body>
 </html>
