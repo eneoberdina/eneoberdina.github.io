@@ -261,8 +261,6 @@ figure img {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       padding: 10px; } }
-  .publication.nobackg {
-    background-color: transparent; }
   .publication > a {
     display: block;
     margin: 0 auto; }
@@ -294,6 +292,9 @@ figure img {
       margin-left: 20px; }
   .publication .pub-link {
     font-size: 16px; }
+
+.small-publicat .publication:nth-child(2n) {
+  background-color: #eff8fd; }
 
 .advert img {
   width: 100%; }
