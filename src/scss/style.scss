@@ -43,7 +43,6 @@ main ul li, ol li,
 
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
 h1,
@@ -121,11 +120,14 @@ input,
 select, 
 textarea { @include font($font-sans, $color-text); }
 
+.link-pub { color: $color-text; }
+
 body {
 
     min-height: 100vh;
     flex-direction: column;
 }
+
 .site-content {
    
     width: 1060px;
@@ -175,7 +177,7 @@ body {
     width: 90px;
     height: 90px;
     position: absolute;
-    right: 6px;
+    right: -110px;
     cursor: pointer;
     transition: 1s;
     z-index: 10;
@@ -200,11 +202,13 @@ body {
         .messag:before { margin-left: 20px; }
      }
 
+    &-span.dark { color:rgba(73, 110, 134, 0.8); }
+
     &-span { 
 
         @include pseudo(inline-block, ""); 
         @include font($font-awesome, $color-blue);
-        margin: 0 15px;
+        margin: 0 12px;
 
         &.white { color: $color-white; }
     }
@@ -285,18 +289,15 @@ body {
         
         @include pseudo;
         width: 20px;
-        border: 1px solid $color-green2;
+        border-bottom: 1px solid $color-green2;
         margin: 7px auto;
     }
 }
 
-.items-content { padding: 10px 20px;
+.items-title-articl { 
 
-    .items-title-articl { 
-
-        @include font($color: $color-text);
-        padding-top: 10px;
-    }
+    @include font($color: $color-text);
+     padding: 0 10px;  
 }
 
 .items { 
@@ -317,18 +318,15 @@ body {
 
         img { width: 100%; }
 	}
-
-    .items-title-articl { padding: 0 10px; }
 }
 
 .row-heading {
 
     background-color: #f1f9fd;
-    padding: 40px;
+    padding: 40px 15%;
 
     @media screen and (max-width: 1023px) { padding: 10px;}
 }
-
 
 .heading-item {
             
@@ -392,7 +390,7 @@ body {
         
 .pub-link { 
 
-    color: $color-blue2;
+    color: $color-blue;
 
     &:hover {color: #2aa1f0;}
 }

@@ -5,25 +5,27 @@
    
     flex-basis: 310px;
     flex-shrink: 0;
+    position: relative;
 
-    @media screen and (max-width: 1023px) { width: 100%; }
+    @media screen and (max-width: 1023px) { 
 
-     @media screen and (min-width: 1024px) and (max-width: 1240px)  { width: 100%; }
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
 
-    .items { 
-            
+    > .items { margin: 0;
+        
         &.back { 
 
             border:30px solid #eff8fd;
             margin-bottom: 30px;
 
             img { width: 100%; }
-
-            .items-content { background-color: $color-white;
         
-                &:hover  a, 
-                &:hover .meta-span { color: $color-green3; }
-            } 
+            &:hover  a, 
+            &:hover .meta-span { color: $color-green3; }
         }
 
         &.border {
@@ -33,27 +35,24 @@
             
             &:last-of-type { border-bottom: 1px solid #eff8fd; }
 
-            &:hover { background-color: $color-green3;
+            &:hover { background-color: $color-green3;}
+
+            &:hover  .items-title-articl, 
+            &:hover .meta-span { color: $color-white; }
                 
-                &:hover  a, 
-                &:hover .meta-span { color: $color-white; }
+          .items-title-articl { 
+
+                text-align: left;
+                font-size: 16px;
+                padding-top: 20px;   
             }
-            
-             .items-content { 
+
+            .meta {  
+
+                justify-content: flex-start;
+                padding: 10px 10px 0;
                 
-                a { 
-
-                    text-align: left;
-                    font-size: 16px;
-                }
-
-                .meta {  
-
-                    justify-content: flex-start;
-                    padding: 10px 10px 0;
-                    
-                    .messag { margin-left: 30px; }
-                }
+                .messag { margin-left: 30px; }
             }
         }
 
@@ -120,7 +119,7 @@
 
 .title-aside {
 
-    background-image: url(/images/background/pattern_blue.png);
+    background-image: url(/images/background/blue_sitebar.png);
     background-repeat: repeat;
     @include font($font-sansbold, $color-white, 18px);
     padding: 16px 20px;
@@ -130,10 +129,8 @@
         @include pseudo(inline-block, "");
     
         width: 20px;
-        border: 1px solid $color-white;
+        border-bottom: 1px solid $color-white;
         margin-right: 20px;
         vertical-align: middle;
     } 
 }
-
-.end-block { position: relative;}

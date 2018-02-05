@@ -6,6 +6,8 @@
 	background-color: #eef8fd;
 	padding: 40px 40px 30px 90px;
 
+	a { color: $color-text;}
+
 	@media screen and (max-width: 1023px) { padding: 10px; }
 
 	@media screen and (min-width: 1024px) and (max-width: 1240px)  {  padding: 10px; }
@@ -210,8 +212,8 @@ ul.ya-share2_list li:before { content: none; }
 
 	.title-heading {
 	    position: absolute;
-	    top: 10px;
-	    left: 0;
+	    top: 12px;
+	    left: 10px;
 	}
 
 	.items-title::after { border-color: $color-blue; }
@@ -251,6 +253,8 @@ ul.ul-commits  li { display: block;
 
 	  ul { padding-left: 60px;
 
+	  	@media screen and (max-width: 1023px) { padding-left: 10px; }
+
 	   li:before {
         
 	        @include pseudo(inline-block, "\f0da");
@@ -263,6 +267,8 @@ ul.ul-commits  li { display: block;
      
         ul { padding-left: 60px;
 
+        	@media screen and (max-width: 1023px) { padding-left: 20px; }
+
 	        li:before {
 	        
 		        @include pseudo(inline-block, "\f0da  \f0da");
@@ -270,10 +276,11 @@ ul.ul-commits  li { display: block;
 		        vertical-align: top;
 	    	}
 	    }
-    }
+    }   
 }
 
-     
+
+
 .commit-item span{ display: inline-block; }
 
 .icon {
@@ -315,6 +322,8 @@ input[type="submit"] {
 	background-color:  #eef8fd;
 	padding: 20px 40px;
 
+	@media screen and (max-width: 1023px) { padding: 10px; }
+
 	* {
 		border-radius: 5px;
 		border: 0;
@@ -326,6 +335,8 @@ input[type="submit"] {
 		flex-basis:calc(100%/2 - 30px);
 		padding: 10px;
 		margin: 15px 0;
+
+		@media screen and (max-width: 1023px) { flex-basis: 100%; }
 	}
 
 	input[type="submit"] { 

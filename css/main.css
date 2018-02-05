@@ -34,8 +34,8 @@
 
 .wrapper-discusses {
   background: url(/images/background/doctor.jpg) no-repeat;
-  -o-background-size: cover;
-  background-size: cover; }
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%; }
 
 .articles-discusses {
   width: 880px;
@@ -43,12 +43,6 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  @media screen and (max-width: 768px) {
-    .articles-discusses {
-      -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      padding: 10px; } }
   @media screen and (max-width: 1023px) {
     .articles-discusses {
       width: 100%;
@@ -97,6 +91,9 @@
     padding: 40px 0 0;
     line-height: 18px;
     text-align: left; }
+    @media screen and (max-width: 1023px) {
+      .articles-discusses .items {
+        padding: 0; } }
     .articles-discusses .items a:hover {
       color: #d0e8df; }
     @media screen and (max-width: 560px) {
@@ -211,11 +208,13 @@
   .articles-headings.home .link-article.float {
     display: inline;
     font-size: 14px;
+    color: rgba(73, 110, 134, 0.81);
     padding: 0; }
 
 .articles-headings.home .symbol-link {
   font-size: 14px;
-  padding-top: 15px; }
+  padding-top: 15px;
+  color: rgba(73, 110, 134, 0.81); }
   .articles-headings.home .symbol-link.left {
     display: inline;
     padding: 0; }

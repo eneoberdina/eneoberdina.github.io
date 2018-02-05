@@ -15,7 +15,6 @@
 
 }
 
-
 .articles-headings .content,
 .articles-publications,
 .articles-headings .heading-item {font-size: 16px; }
@@ -35,7 +34,7 @@
 .wrapper-discusses { 
     
     background: url(/images/background/doctor.jpg) no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 .articles-discusses {
@@ -43,12 +42,6 @@
     width: 880px;
     padding: 40px 20px;
     box-sizing: border-box;
-
-    @media screen and (max-width: 768px) { 
-
-        flex-wrap: wrap;
-        padding: 10px;
-    }
 
     @media screen and (max-width: 1023px) {
 
@@ -87,6 +80,8 @@
         padding: 40px 0 0; 
         line-height: 18px;
         text-align: left;
+
+         @media screen and (max-width: 1023px) { padding: 0;  }
 
         a:hover { color: #d0e8df;}
 
@@ -187,6 +182,7 @@
 
             display: inline;
             font-size: 14px;
+            color: rgba(73, 110, 134, 0.81);
             padding: 0;
         }
     }
@@ -195,6 +191,7 @@
 
         font-size: 14px;
         padding-top: 15px;
+        color: rgba(73, 110, 134, 0.81);
 
         &.left { 
 
