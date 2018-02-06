@@ -59,7 +59,7 @@
             flex-basis: 340px;
             height: 280px;
             background-image: url(/images/background/pattern_green.png);
-            @include font($font-family: $font-serifbold, $size: 24px);
+            @include font($font-family: $font-serif, $size: 24px);
             margin-right: 40px;
             padding: 100px 60px;
             font-weight: 700;
@@ -90,8 +90,9 @@
 
     .items-link {
 
-        @include font($font-family: $font-sansbold, $size: 18px);
+        @include font($font-family: $font-sans, $size: 18px);
         padding-bottom: 20px;
+         font-weight: 700;
 
     }
 
@@ -206,7 +207,7 @@
     .symbol-link.left:after { 
             
         @include pseudo(inline-block,"\f0da");
-        @include font($font-awesome, $color-blue, 12px);
+        @include font($icomoon, $color-blue, 12px);
         padding-right: 10px;
     }
 }

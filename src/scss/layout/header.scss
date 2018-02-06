@@ -170,7 +170,7 @@
    
         width: 40px;
         height: 40px;
-        @include font($font-awesome, $color-white);
+        @include font($icomoon, $color-white);
         vertical-align: top;
         border: 1px solid #eff8fd;
         background-color: $color-blue2;
@@ -198,13 +198,14 @@ body header .slicknav_btn {
     background-image: url(/images/background/pattern_blue.png);
     padding: 0.438em 0.625em 0.438em 0.625em;
     cursor: pointer;
-    @include font($font-sansbold, $color-white);
+    @include font($font-sans, $color-white);
+    font-weight: 700;
 
 
         &:before {
             
         content: "\f0c9";
-        @include font($font-awesome, $color-white);
+        @include font($icomoon, $color-white);
         padding: 0 5px;
     } 
     

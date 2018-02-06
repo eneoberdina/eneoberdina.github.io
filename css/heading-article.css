@@ -1,6 +1,6 @@
 @charset "UTF-8";
 figure {
-  font-family: "PTSerif-Regular"; }
+  font-family: "PT Serif"; }
 
 h1,
 h2,
@@ -9,10 +9,11 @@ h4,
 h5,
 h6,
 .soc-inf {
-  font: 24px "PTSerif-Bold";
+  font: 24px "PT Serif";
   color: #1d5273;
   padding: 10px 0;
-  margin: 0; }
+  margin: 0;
+  font-weight: 700; }
 
 h1 {
   font-size: 32px;
@@ -29,7 +30,10 @@ h1 {
     position: absolute;
     bottom: 0; }
 
-h3 {
+h1, h2 {
+  clear: both; }
+
+h2 {
   font-size: 20px; }
 
 h3 {
@@ -37,6 +41,12 @@ h3 {
 
 h5, h6 {
   font-size: 16px; }
+
+img {
+  height: auto;
+  max-width: 100%;
+  width: auto;
+  vertical-align: baseline; }
 
 .wrapper-content p a {
   color: #7bbfec;
@@ -61,7 +71,7 @@ p {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font: 16px "PTSans-Regular";
+  font: 16px "PT Sans";
   color: #ffffff;
   padding: 25px 25px 25px 0;
   margin: 20px 0; }
@@ -86,7 +96,8 @@ p {
       margin-top: 10px;
       padding-top: 10px; }
     .vnimanie.vn-green .critical {
-      font-family: "PTSans-Bold"; }
+      font-family: "PT Sans";
+      font-weight: 700; }
   @media screen and (max-width: 1023px) {
     .vnimanie {
       -webkit-flex-wrap: wrap;
@@ -94,55 +105,52 @@ p {
       flex-wrap: wrap;
       text-align: center; } }
 
+ul {
+  padding-left: 30px; }
+
 .main ul li {
   line-height: 22px;
   padding: 8px 0; }
   .main ul li:before {
     content: "";
     display: initial;
-    font: 14px "FontAwesome";
+    font: 14px "icomoon";
     color: #2bd081;
-    padding: 0 19px;
+    margin-right: 20px;
+    margin-left: -25px;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center; }
 
+ul .alignleft, ol .alignleft {
+  margin: 0 50px 10px 0; }
+
 .main ol {
   counter-reset: list1; }
   .main ol li {
-    padding: 8px 0; }
+    padding: 8px 10px; }
   .main ol li:before {
     content: counter(list1);
     counter-increment: list1;
     margin-right: 10px;
     color: #2bd081;
-    font-family: "PTSerif-Regular"; }
-  .main ol li li {
-    padding: 10px 0 0 0; }
+    font-family: "PT Serif"; }
   .main ol li ol {
     width: 100%;
-    margin-top: 20px; }
+    margin-left: 60px; }
   .main ol li ol li:before {
     content: "\f0da";
-    font-family: "FontAwesome";
+    font-family: "icomoon";
     margin-left: -30px; }
 
-figure img {
-  width: 100%; }
-
-.alignright, .alignleft {
-  width: 50%; }
-  @media screen and (max-width: 1023px) {
-    .alignright, .alignleft {
-      width: 100%; } }
-
-.aligncenter {
-  width: 100%; }
+img.aligncenter {
+  display: block;
+  margin: 10px auto; }
 
 .alignright {
   float: right;
-  margin: 10px 0 0 30px; }
+  margin: 0 0 10px 20px; }
   @media screen and (max-width: 1023px) {
     .alignright {
       float: none;
@@ -150,7 +158,7 @@ figure img {
 
 .alignleft {
   float: left;
-  margin: 10px 30px 0 0; }
+  margin: 0 20px 10px 0; }
   @media screen and (max-width: 1023px) {
     .alignleft {
       float: none;
@@ -160,9 +168,10 @@ figure img {
   width: 129px;
   background-image: url(/images/background/yarlik.png);
   background-repeat: no-repeat;
+  font-weight: 700;
   padding: 8px 12px;
   margin: 0 0 10px 0;
-  font: 14px "PTSerif-Bold";
+  font: 14px "PT Serif";
   color: #ffffff; }
 
 .row-heading.top {
@@ -246,8 +255,9 @@ figure img {
         border-bottom: 1px solid #7bbfec;
         margin: 10px auto; }
       .related .items .items-title-articl.bold {
-        font-family: "PTSans-Bold";
+        font-family: "PT Sans";
         font-size: 18px;
+        font-weight: 700;
         line-height: 18px;
         padding: 20px 0; }
 
@@ -269,8 +279,9 @@ figure img {
     width: 230px;
     margin: 0 20px; }
   .publication .link-pub {
-    font-family: "PTSans-Bold";
-    font-size: 24px; }
+    font-family: "PT Sans";
+    font-size: 24px;
+    font-weight: 700; }
     .publication .link-pub:hover {
       color: #77c1ee; }
     .publication .link-pub:after {

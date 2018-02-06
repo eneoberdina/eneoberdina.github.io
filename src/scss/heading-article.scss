@@ -11,9 +11,11 @@ h5,
 h6,
 .soc-inf  {
     
-    @include font($font-serifbold, $color-text2, 24px); 
+    @include font($font-serif, $color-text2, 24px); 
     padding: 10px 0;
     margin: 0;
+    font-weight: 700;
+
 }
 
 h1 { 
@@ -35,11 +37,21 @@ h1 {
     }
 }
 
-h3 { font-size: 20px; }
+h1, h2 { clear: both; }
+
+h2 { font-size: 20px; }
 
 h3 { font-size: 18px; }
 
 h5, h6 { font-size: 16px; }
+
+img { 
+
+    height: auto;
+    max-width: 100%;
+    width: auto;
+    vertical-align: baseline;
+}
 
 .wrapper-content  p a {
 
@@ -95,7 +107,10 @@ h5, h6 { font-size: 16px; }
                 padding-top: 10px;
             }
 
-            .critical { font-family: $font-sansbold; }
+            .critical {
+                 font-family: $font-sans;
+                 font-weight: 700;
+            }
         }
 
     @media screen and (max-width: 1023px) { 
@@ -105,6 +120,8 @@ h5, h6 { font-size: 16px; }
     } 
 }
 
+ul { padding-left: 30px;}
+
 .main  ul  li { 
 
     line-height: 22px;
@@ -113,15 +130,19 @@ h5, h6 { font-size: 16px; }
     &:before {
         
         @include pseudo(initial, "\f0da");
-        @include font($font-awesome, $color-green3);
-        padding: 0 19px;
+        @include font($icomoon, $color-green3);
+        margin-right: 20px;
+        margin-left: -25px;
         align-self: center;
     }
 }
+ul .alignleft, ol .alignleft {
+    margin: 0 50px 10px 0;
+} 
 
 .main ol { counter-reset: list1; 
 
-    li  { padding: 8px 0; }
+    li  { padding: 8px 10px; }
 
     li:before {
         content: counter(list1);
@@ -131,36 +152,30 @@ h5, h6 { font-size: 16px; }
         font-family: $font-serif;
     }
 
-    li li  { padding: 10px 0 0 0; }
-
     li ol { 
 
         width: 100%;
-        margin-top: 20px; 
+        margin-left: 60px;
     }
     
     li ol li:before {
         
         content:  "\f0da";
-        font-family: $font-awesome;
+        font-family: $icomoon;
         margin-left: -30px;
     }
 }
 
-figure img { width: 100%; }
+img.aligncenter  { 
 
-.alignright, .alignleft  {  width: 50%;
-
-    @media screen and (max-width: 1023px) { width: 100%; }
-
+    display: block;
+    margin: 10px auto;    
 }
-
-.aligncenter { width: 100%; }
-
+ 
 .alignright { 
 
     float: right; 
-    margin: 10px 0 0 30px;
+    margin: 0 0 10px 20px;
 
     @media screen and (max-width: 1023px) { 
 
@@ -172,7 +187,7 @@ figure img { width: 100%; }
 .alignleft { 
 
     float: left;
-    margin: 10px 30px 0 0; 
+    margin: 0 20px 10px 0; 
 
     @media screen and (max-width: 1023px) { 
 
@@ -187,9 +202,10 @@ figure img { width: 100%; }
     width: 129px;   
     background-image: url(/images/background/yarlik.png);
     background-repeat: no-repeat;
+    font-weight: 700;
     padding: 8px 12px;
     margin: 0 0 10px 0;
-    @include font($font-serifbold, $color-white);
+    @include font($font-serif, $color-white);
 }
 
 .row-heading.top { padding: 0 20px 30px;
@@ -284,8 +300,9 @@ figure img { width: 100%; }
         
             &.bold {
 
-                font-family: $font-sansbold;
+                font-family: $font-sans;
                 font-size: 18px;
+                font-weight: 700;
                 line-height: 18px;
                 padding: 20px 0
             }
@@ -322,8 +339,9 @@ figure img { width: 100%; }
 
     .link-pub {
 
-        font-family: $font-sansbold;
+        font-family: $font-sans;
         font-size: 24px;
+        font-weight: 700;
 
         &:hover { color: $color-blue3; }
 

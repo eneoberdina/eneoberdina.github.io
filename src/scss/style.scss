@@ -7,12 +7,82 @@
 @import 'heading-article.scss';
 @import 'global/article.scss';
 @import 'layout/footer.scss';
-
 @import 'global/breadcrumbs-list.scss';
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/fonts/icomoon.eot');
+  src:  url('/fonts/icomoon.eot') format('embedded-opentype'),
+    url('/fonts/icomoon.ttf') format('truetype'),
+    url('/fonts/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\f002";
+}
+.icon-home:before {
+  content: "\f015";
+}
+.icon-align-justify:before {
+  content: "\f039";
+}
+.icon-eye:before {
+  content: "\f06e";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-facebook-f:before {
+  content: "\f09a";
+}
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+.icon-caret-up:before {
+  content: "\f0d8";
+}
+.icon-caret-left:before {
+  content: "\f0d9";
+}
+.icon-caret-right:before {
+  content: "\f0da";
+}
+.icon-sort-desc:before {
+  content: "\f0dd";
+}
+.icon-sort-down:before {
+  content: "\f0dd";
+}
+.icon-vk:before {
+  content: "\f189";
+}
+.icon-odnoklassniki:before {
+  content: "\f263";
+}
+.icon-commenting-o:before {
+  content: "\f27b";
+}
+
 
 body,
 ul.menu,
-main ul li, ol li, 
 .wrapper-header,
 .header-body,
 .menu-header-top,
@@ -118,14 +188,14 @@ body,
 button,
 input, 
 select, 
-textarea { @include font($font-sans, $color-text); }
-
+textarea,
 .link-pub { color: $color-text; }
 
 body {
 
     min-height: 100vh;
     flex-direction: column;
+    font-family: $font-sans;
 }
 
 .site-content {
@@ -207,7 +277,7 @@ body {
     &-span { 
 
         @include pseudo(inline-block, ""); 
-        @include font($font-awesome, $color-blue);
+        @include font($icomoon, $color-blue);
         margin: 0 12px;
 
         &.white { color: $color-white; }
@@ -220,14 +290,14 @@ body {
 
     .messag:before {
 
-        content:"\f27a";
+        content:"\f27b";
         padding-right: 5px;
     }
 }
 
 .soclink, .soc-ico { 
 
- 	@include font($font-family: $font-awesome, $size: 16px); 
+ 	@include font($icomoon, $size: 16px); 
  	padding: 4px;
 	min-width: 50px;
 	box-sizing: border-box;
@@ -243,7 +313,7 @@ body {
 .title-articl {
 
     width: 100%;
-    @include font($font-serifbold, $size: 20px, $color: $color-text);
+    @include font($font-serif, $size: 20px, $color: $color-text);
     @include title-items; 
     padding: 0 0 20px 0;
 
@@ -254,7 +324,7 @@ body {
 
 .title-main {
     
-    @include font($font-family: font-serifbold, $size:24px, $color:$color-blue);
+    @include font($font-family: font-serif, $size:24px, $color:$color-blue);
     text-align: center;
     position: relative;
     font-weight: 700;

@@ -15,7 +15,8 @@
     .kc_title {
      	
      	display: block;
-     	@include font($font-family: $font-serifbold, $color:$color-text, $size: 20px );
+     	@include font($font-family: $font-serif, $color:$color-text, $size: 20px );
+    	font-weight: 700;
     	padding-bottom: 20px;
 	}
 
@@ -86,7 +87,8 @@
 	width: 100%;
 	background: url(/images/background/pattern_green.png) repeat;
 	text-transform: uppercase;
-	@include font($font-family: $font-serifbold, $color:$color-white);
+	@include font($font-family: $font-serif, $color:$color-white);
+	font-weight: 700;
 	padding: 13px 0;
 	margin: 20px 0;
 }
@@ -108,7 +110,8 @@
 		th {
 
 			background-color: $color-blue;
-			font-family: $font-sansbold;
+			font-family: $font-sans;
+			font-weight: 700;
 			color: $color-white;
 		}
 
@@ -230,7 +233,8 @@ ul.ya-share2_list li:before { content: none; }
 .title-commits {
 
 	background-image: url(/images/background/pattern_blue.png);
-	@include font($font-family: $font-serifbold, $size: 16px);
+	@include font($font-family: $font-serif, $size: 16px);
+	font-weight: 700;
 	border-radius: 5px;
 	line-height: 27px;
 	padding: 13px 20px;
@@ -257,8 +261,8 @@ ul.ul-commits  li { display: block;
 
 	   li:before {
         
-	        @include pseudo(inline-block, "\f0da");
-	        @include font($font-awesome, $color-blue);
+        	display: inline-block;
+	        @include font($icomoon, $color-blue);
 	        padding: 15px 10px 0 0;
 	        vertical-align: top;
     	}
@@ -271,15 +275,13 @@ ul.ul-commits  li { display: block;
 
 	        li:before {
 	        
-		        @include pseudo(inline-block, "\f0da  \f0da");
-		        @include font($font-awesome, $color-blue);
+		        display: inline-block;
+		        @include font($icomoon, $color-blue);
 		        vertical-align: top;
 	    	}
 	    }
     }   
 }
-
-
 
 .commit-item span{ display: inline-block; }
 
@@ -315,8 +317,12 @@ input[type="submit"] {
 	&:hover { background-color: #33a9f8; }
 }
 
-.comment-reply-title { @include font($font-family: $font-serifbold, $color: $color-text, $size: 16px); }
+.comment-reply-title { 
 
+	@include font($font-family: $font-serif, $color: $color-text, $size: 16px); 
+	font-weight: 700;
+}
+	
 .comment-form { 
 
 	background-color:  #eef8fd;

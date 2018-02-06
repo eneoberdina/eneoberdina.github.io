@@ -98,7 +98,7 @@ header {
         content: '•';
         display: inline-block;
         vertical-align: middle;
-        font: 12px "PTSans-Regular";
+        font: 12px "PT Sans";
         color: #ffffff; }
       .main-navigation ul.menu li.menu-item ul {
         display: none; }
@@ -111,7 +111,7 @@ header {
       .main-navigation ul.menu li.menu-item:first-of-type:before {
         color: transparent; }
     .main-navigation ul.menu a {
-      font: 16px "PTSans-Regular";
+      font: 16px "PT Sans";
       color: #ffffff;
       padding: 18px 15px; }
     .main-navigation ul.menu li ul {
@@ -146,21 +146,21 @@ header {
     background: #eff8fd;
     -webkit-border-radius: 0;
     border-radius: 0;
-    font: 14px "PTSans-Regular";
+    font: 14px "PT Sans";
     color: rgba(73, 110, 134, 0.5); }
     .search-form .searchstring::-moz-placeholder {
-      font: 14px "PTSans-Regular";
+      font: 14px "PT Sans";
       color: rgba(73, 110, 134, 0.5);
       opacity: 1; }
     .search-form .searchstring::-webkit-input-placeholder {
-      font: 14px "PTSans-Regular";
+      font: 14px "PT Sans";
       color: rgba(73, 110, 134, 0.5);
       opacity: 1; }
 
 .searchsubmit {
   width: 40px;
   height: 40px;
-  font: 14px "FontAwesome";
+  font: 14px "icomoon";
   color: #ffffff;
   vertical-align: top;
   border: 1px solid #eff8fd;
@@ -172,7 +172,7 @@ header {
     background-color: #a8d3ef; }
 
 .sign-search {
-  font: 12px "PTSans-Regular";
+  font: 12px "PT Sans";
   color: #ffffff;
   padding-top: 5px; }
   @media screen and (max-width: 768px) {
@@ -188,11 +188,12 @@ body header .slicknav_btn {
   background-image: url(/images/background/pattern_blue.png);
   padding: 0.438em 0.625em 0.438em 0.625em;
   cursor: pointer;
-  font: 14px "PTSans-Bold";
-  color: #ffffff; }
+  font: 14px "PT Sans";
+  color: #ffffff;
+  font-weight: 700; }
   body header .slicknav_btn:before {
     content: "\f0c9";
-    font: 14px "FontAwesome";
+    font: 14px "icomoon";
     color: #ffffff;
     padding: 0 5px; }
   @media screen and (max-width: 768px) {
@@ -713,18 +714,20 @@ html.mm-pagedim-black #mm-blocker {
 .row-navig {
   background-color: #eef8fd;
   border-bottom: 1px solid #ffffff;
-  font-family: "PTSans-Bold";
+  font-family: "PT Sans";
+  font-weight: 700;
   font-size: 18px;
   padding: 16px 20px;
   cursor: pointer; }
   .row-navig.opened:before {
     content: "";
-    display: inline-block; }
-  .row-navig:before {
-    content: "";
     display: inline-block;
-    font-family: "FontAwesome";
-    padding-right: 20px; }
+    font-family: "icomoon"; }
+  .row-navig:before {
+    content: "";
+    display: inline-block;
+    padding-right: 20px;
+    font-family: "icomoon"; }
 
 .row-navig:hover,
 .row-navig.opened:hover,
@@ -733,7 +736,7 @@ html.mm-pagedim-black #mm-blocker {
   color: #ffffff; }
 
 .total-number {
-  font-family: "PTSans-Regular";
+  font-family: "PT Sans";
   float: right; }
 
 .hidden-block {
@@ -741,7 +744,7 @@ html.mm-pagedim-black #mm-blocker {
   .hidden-block.opened {
     display: block; }
   .hidden-block .hidd {
-    font-family: "PTSans-Regular";
+    font-family: "PT Sans";
     padding: 16px 20px 16px 47px;
     border-top: 0; }
 
@@ -755,8 +758,9 @@ html.mm-pagedim-black #mm-blocker {
 .title-aside {
   background-image: url(/images/background/blue_sitebar.png);
   background-repeat: repeat;
-  font: 18px "PTSans-Bold";
+  font: 18px "PT Sans";
   color: #ffffff;
+  font-weight: 700;
   padding: 16px 20px; }
   .title-aside:before {
     content: "";
@@ -834,7 +838,7 @@ html.mm-pagedim-black #mm-blocker {
     flex-basis: 340px;
     height: 280px;
     background-image: url(/images/background/pattern_green.png);
-    font: 24px "PTSerif-Bold";
+    font: 24px "PT Serif";
     color: #ffffff;
     margin-right: 40px;
     padding: 100px 60px;
@@ -869,12 +873,13 @@ html.mm-pagedim-black #mm-blocker {
         -ms-flex-preferred-size: 100%;
         flex-basis: 100%; } }
     .articles-discusses .items .items-link {
-      font: 18px "PTSans-Bold";
+      font: 18px "PT Sans";
       color: #ffffff;
-      padding-bottom: 20px; }
+      padding-bottom: 20px;
+      font-weight: 700; }
     .articles-discusses .items .items-link-discus,
     .articles-discusses .items .items-text {
-      font: 14px "PTSans-Regular";
+      font: 14px "PT Sans";
       color: #ffffff; }
     .articles-discusses .items .items-link-discus:after {
       content: "";
@@ -992,7 +997,7 @@ html.mm-pagedim-black #mm-blocker {
 .articles-headings.home .symbol-link.left:after {
   content: "";
   display: inline-block;
-  font: 12px "FontAwesome";
+  font: 12px "icomoon";
   color: #7bbfec;
   padding-right: 10px; }
 
@@ -1105,14 +1110,14 @@ html.mm-pagedim-black #mm-blocker {
         padding-right: 0; }
       .question-wrapper ul a {
         display: block;
-        font: 16px "PTSans-Regular";
+        font: 16px "PT Sans";
         color: #496e86;
         padding-bottom: 15px; }
         .question-wrapper ul a:hover {
           color: #00d381; }
 
 figure {
-  font-family: "PTSerif-Regular"; }
+  font-family: "PT Serif"; }
 
 h1,
 h2,
@@ -1121,10 +1126,11 @@ h4,
 h5,
 h6,
 .soc-inf {
-  font: 24px "PTSerif-Bold";
+  font: 24px "PT Serif";
   color: #1d5273;
   padding: 10px 0;
-  margin: 0; }
+  margin: 0;
+  font-weight: 700; }
 
 h1 {
   font-size: 32px;
@@ -1141,7 +1147,10 @@ h1 {
     position: absolute;
     bottom: 0; }
 
-h3 {
+h1, h2 {
+  clear: both; }
+
+h2 {
   font-size: 20px; }
 
 h3 {
@@ -1149,6 +1158,12 @@ h3 {
 
 h5, h6 {
   font-size: 16px; }
+
+img {
+  height: auto;
+  max-width: 100%;
+  width: auto;
+  vertical-align: baseline; }
 
 .wrapper-content p a {
   color: #7bbfec;
@@ -1173,7 +1188,7 @@ p {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font: 16px "PTSans-Regular";
+  font: 16px "PT Sans";
   color: #ffffff;
   padding: 25px 25px 25px 0;
   margin: 20px 0; }
@@ -1198,7 +1213,8 @@ p {
       margin-top: 10px;
       padding-top: 10px; }
     .vnimanie.vn-green .critical {
-      font-family: "PTSans-Bold"; }
+      font-family: "PT Sans";
+      font-weight: 700; }
   @media screen and (max-width: 1023px) {
     .vnimanie {
       -webkit-flex-wrap: wrap;
@@ -1206,55 +1222,52 @@ p {
       flex-wrap: wrap;
       text-align: center; } }
 
+ul {
+  padding-left: 30px; }
+
 .main ul li {
   line-height: 22px;
   padding: 8px 0; }
   .main ul li:before {
     content: "";
     display: initial;
-    font: 14px "FontAwesome";
+    font: 14px "icomoon";
     color: #2bd081;
-    padding: 0 19px;
+    margin-right: 20px;
+    margin-left: -25px;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center; }
 
+ul .alignleft, ol .alignleft {
+  margin: 0 50px 10px 0; }
+
 .main ol {
   counter-reset: list1; }
   .main ol li {
-    padding: 8px 0; }
+    padding: 8px 10px; }
   .main ol li:before {
     content: counter(list1);
     counter-increment: list1;
     margin-right: 10px;
     color: #2bd081;
-    font-family: "PTSerif-Regular"; }
-  .main ol li li {
-    padding: 10px 0 0 0; }
+    font-family: "PT Serif"; }
   .main ol li ol {
     width: 100%;
-    margin-top: 20px; }
+    margin-left: 60px; }
   .main ol li ol li:before {
     content: "\f0da";
-    font-family: "FontAwesome";
+    font-family: "icomoon";
     margin-left: -30px; }
 
-figure img {
-  width: 100%; }
-
-.alignright, .alignleft {
-  width: 50%; }
-  @media screen and (max-width: 1023px) {
-    .alignright, .alignleft {
-      width: 100%; } }
-
-.aligncenter {
-  width: 100%; }
+img.aligncenter {
+  display: block;
+  margin: 10px auto; }
 
 .alignright {
   float: right;
-  margin: 10px 0 0 30px; }
+  margin: 0 0 10px 20px; }
   @media screen and (max-width: 1023px) {
     .alignright {
       float: none;
@@ -1262,7 +1275,7 @@ figure img {
 
 .alignleft {
   float: left;
-  margin: 10px 30px 0 0; }
+  margin: 0 20px 10px 0; }
   @media screen and (max-width: 1023px) {
     .alignleft {
       float: none;
@@ -1272,9 +1285,10 @@ figure img {
   width: 129px;
   background-image: url(/images/background/yarlik.png);
   background-repeat: no-repeat;
+  font-weight: 700;
   padding: 8px 12px;
   margin: 0 0 10px 0;
-  font: 14px "PTSerif-Bold";
+  font: 14px "PT Serif";
   color: #ffffff; }
 
 .row-heading.top {
@@ -1358,8 +1372,9 @@ figure img {
         border-bottom: 1px solid #7bbfec;
         margin: 10px auto; }
       .related .items .items-title-articl.bold {
-        font-family: "PTSans-Bold";
+        font-family: "PT Sans";
         font-size: 18px;
+        font-weight: 700;
         line-height: 18px;
         padding: 20px 0; }
 
@@ -1381,8 +1396,9 @@ figure img {
     width: 230px;
     margin: 0 20px; }
   .publication .link-pub {
-    font-family: "PTSans-Bold";
-    font-size: 24px; }
+    font-family: "PT Sans";
+    font-size: 24px;
+    font-weight: 700; }
     .publication .link-pub:hover {
       color: #77c1ee; }
     .publication .link-pub:after {
@@ -1424,8 +1440,9 @@ figure img {
       padding: 10px; } }
   .contents-wrap .kc_title {
     display: block;
-    font: 20px "PTSerif-Bold";
+    font: 20px "PT Serif";
     color: #496e86;
+    font-weight: 700;
     padding-bottom: 20px; }
   .contents-wrap .contents {
     height: 118px;
@@ -1456,7 +1473,7 @@ figure img {
     border: 1px solid #ffffff;
     margin: 20px 0 30px; }
   .contents-wrap .expand {
-    font: 13px "PTSans-Regular";
+    font: 13px "PT Sans";
     color: #ffffff;
     background-color: #2bd081;
     padding: 6px 24px;
@@ -1496,8 +1513,9 @@ figure img {
   width: 100%;
   background: url(/images/background/pattern_green.png) repeat;
   text-transform: uppercase;
-  font: 14px "PTSerif-Bold";
+  font: 14px "PT Serif";
   color: #ffffff;
+  font-weight: 700;
   padding: 13px 0;
   margin: 20px 0; }
 
@@ -1510,7 +1528,8 @@ figure img {
     padding: 3px 10px; }
   .table-block table th {
     background-color: #7bbfec;
-    font-family: "PTSans-Bold";
+    font-family: "PT Sans";
+    font-weight: 700;
     color: #ffffff; }
   .table-block table tr:nth-child(odd) {
     background-color: #eef7fd; }
@@ -1544,7 +1563,7 @@ ul.ya-share2_list li:before {
     white-space: nowrap; }
   .soc-ico .counter {
     font-size: 14px;
-    font-family: "PTSans-Regular";
+    font-family: "PT Sans";
     padding-left: 5px; }
 
 .commits {
@@ -1600,14 +1619,15 @@ ul.ya-share2_list li:before {
 .link-append,
 .answer {
   float: right;
-  font: 14px "PTSans-Regular";
+  font: 14px "PT Sans";
   color: #ffffff;
   padding: 4px 10px; }
 
 .title-commits {
   background-image: url(/images/background/pattern_blue.png);
-  font: 16px "PTSerif-Bold";
+  font: 16px "PT Serif";
   color: #ffffff;
+  font-weight: 700;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   line-height: 27px;
@@ -1616,7 +1636,7 @@ ul.ya-share2_list li:before {
   .title-commits .count {
     padding: 0 10px; }
   .title-commits .link-append {
-    font: 14px "PTSans-Regular";
+    font: 14px "PT Sans";
     color: rgba(73, 110, 134, 0.7);
     background-color: #eef8fd; }
     .title-commits .link-append:hover {
@@ -1632,9 +1652,8 @@ ul.ul-commits li {
       ul.ul-commits li ul {
         padding-left: 10px; } }
     ul.ul-commits li ul li:before {
-      content: "";
       display: inline-block;
-      font: 14px "FontAwesome";
+      font: 14px "icomoon";
       color: #7bbfec;
       padding: 15px 10px 0 0;
       vertical-align: top; }
@@ -1646,9 +1665,8 @@ ul.ul-commits li {
         ul.ul-commits li ul ul {
           padding-left: 20px; } }
       ul.ul-commits li ul ul li:before {
-        content: " ";
         display: inline-block;
-        font: 14px "FontAwesome";
+        font: 14px "icomoon";
         color: #7bbfec;
         vertical-align: top; }
 
@@ -1682,8 +1700,9 @@ input[type="submit"] {
     background-color: #33a9f8; }
 
 .comment-reply-title {
-  font: 16px "PTSerif-Bold";
-  color: #496e86; }
+  font: 16px "PT Serif";
+  color: #496e86;
+  font-weight: 700; }
 
 .comment-form {
   background-color: #eef8fd;
@@ -1747,7 +1766,7 @@ footer {
       display: none; } }
   .menu-footer ul.menu-footer a {
     display: inline-block;
-    font: 16px "PTSans-Regular";
+    font: 16px "PT Sans";
     color: #ffffff;
     padding-bottom: 7px;
     -webkit-transition: 1s;
@@ -1807,7 +1826,7 @@ footer {
       .breadcrumblist > ul li:last-of-type span:hover {
         text-decoration: none; }
   .breadcrumblist > ul li span {
-    font: 13px "PTSans-Regular";
+    font: 13px "PT Sans";
     color: #7bbfec; }
     .breadcrumblist > ul li span:hover {
       text-decoration: underline; }
@@ -1816,9 +1835,74 @@ footer {
     color: #7bbfec;
     padding: 3px 10px; }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("/fonts/icomoon.eot");
+  src: url("/fonts/icomoon.eot") format("embedded-opentype"), url("/fonts/icomoon.ttf") format("truetype"), url("/fonts/icomoon.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-search:before {
+  content: "\f002"; }
+
+.icon-home:before {
+  content: "\f015"; }
+
+.icon-align-justify:before {
+  content: "\f039"; }
+
+.icon-eye:before {
+  content: "\f06e"; }
+
+.icon-twitter:before {
+  content: "\f099"; }
+
+.icon-facebook:before {
+  content: "\f09a"; }
+
+.icon-facebook-f:before {
+  content: "\f09a"; }
+
+.icon-google-plus:before {
+  content: "\f0d5"; }
+
+.icon-caret-up:before {
+  content: "\f0d8"; }
+
+.icon-caret-left:before {
+  content: "\f0d9"; }
+
+.icon-caret-right:before {
+  content: "\f0da"; }
+
+.icon-sort-desc:before {
+  content: "\f0dd"; }
+
+.icon-sort-down:before {
+  content: "\f0dd"; }
+
+.icon-vk:before {
+  content: "\f189"; }
+
+.icon-odnoklassniki:before {
+  content: "\f263"; }
+
+.icon-commenting-o:before {
+  content: "\f27b"; }
+
 body,
 ul.menu,
-main ul li, ol li,
 .wrapper-header,
 .header-body,
 .menu-header-top,
@@ -1940,10 +2024,7 @@ body,
 button,
 input,
 select,
-textarea {
-  font: 14px "PTSans-Regular";
-  color: #496e86; }
-
+textarea,
 .link-pub {
   color: #496e86; }
 
@@ -1955,7 +2036,8 @@ body {
   -moz-box-orient: vertical;
   -moz-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  font-family: "PT Sans"; }
 
 .site-content {
   width: 1060px;
@@ -2045,7 +2127,7 @@ body {
   .meta-span {
     content: "";
     display: inline-block;
-    font: 14px "FontAwesome";
+    font: 14px "icomoon";
     color: #7bbfec;
     margin: 0 12px; }
     .meta-span.white {
@@ -2054,11 +2136,11 @@ body {
     content: "\f06e";
     padding-right: 5px; }
   .meta .messag:before {
-    content: "\f27a";
+    content: "\f27b";
     padding-right: 5px; }
 
 .soclink, .soc-ico {
-  font: 16px "FontAwesome";
+  font: 16px "icomoon";
   color: #ffffff;
   padding: 4px;
   min-width: 50px;
@@ -2074,7 +2156,7 @@ body {
 
 .title-articl {
   width: 100%;
-  font: 20px "PTSerif-Bold";
+  font: 20px "PT Serif";
   color: #496e86;
   padding: 0 0 20px 0; }
   .title-articl:after {
@@ -2089,7 +2171,7 @@ body {
     border-color: #7bbfec; }
 
 .title-main {
-  font: 24px font-serifbold;
+  font: 24px font-serif;
   color: #7bbfec;
   text-align: center;
   position: relative;
@@ -2110,7 +2192,7 @@ body {
     margin: 10px auto 0; }
 
 .items-title {
-  font: 14px "PTSans-Regular";
+  font: 14px "PT Sans";
   color: #00d381; }
   .items-title.white {
     color: #ffffff; }
@@ -2124,7 +2206,7 @@ body {
     margin: 7px auto; }
 
 .items-title-articl {
-  font: 14px "PTSans-Regular";
+  font: 14px "PT Sans";
   color: #496e86;
   padding: 0 10px; }
 
@@ -2187,7 +2269,7 @@ body {
   background-position: center;
   -o-background-size: cover;
   background-size: cover;
-  font: 14px "PTSerif-Regular";
+  font: 14px "PT Serif";
   color: #1d5273;
   padding: 0 18px;
   -webkit-box-sizing: border-box;

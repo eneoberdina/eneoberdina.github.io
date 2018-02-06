@@ -67,7 +67,7 @@
     flex-basis: 340px;
     height: 280px;
     background-image: url(/images/background/pattern_green.png);
-    font: 24px "PTSerif-Bold";
+    font: 24px "PT Serif";
     color: #ffffff;
     margin-right: 40px;
     padding: 100px 60px;
@@ -102,12 +102,13 @@
         -ms-flex-preferred-size: 100%;
         flex-basis: 100%; } }
     .articles-discusses .items .items-link {
-      font: 18px "PTSans-Bold";
+      font: 18px "PT Sans";
       color: #ffffff;
-      padding-bottom: 20px; }
+      padding-bottom: 20px;
+      font-weight: 700; }
     .articles-discusses .items .items-link-discus,
     .articles-discusses .items .items-text {
-      font: 14px "PTSans-Regular";
+      font: 14px "PT Sans";
       color: #ffffff; }
     .articles-discusses .items .items-link-discus:after {
       content: "";
@@ -225,7 +226,7 @@
 .articles-headings.home .symbol-link.left:after {
   content: "";
   display: inline-block;
-  font: 12px "FontAwesome";
+  font: 12px "icomoon";
   color: #7bbfec;
   padding-right: 10px; }
 
@@ -338,7 +339,7 @@
         padding-right: 0; }
       .question-wrapper ul a {
         display: block;
-        font: 16px "PTSans-Regular";
+        font: 16px "PT Sans";
         color: #496e86;
         padding-bottom: 15px; }
         .question-wrapper ul a:hover {
