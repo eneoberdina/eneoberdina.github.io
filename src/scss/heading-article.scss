@@ -65,7 +65,7 @@ img {
     }  
 }
 
-.post,
+.inform-picture,
 .advert,
 .row-heading.top,
 .soc-list,
@@ -120,7 +120,7 @@ img {
     } 
 }
 
-ul { padding-left: 30px;}
+ul:not.menu { padding-left: 30px;}
 
 .main  ul  li { 
 

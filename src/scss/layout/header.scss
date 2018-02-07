@@ -74,7 +74,7 @@
 
     @media screen and (max-width: 1023px) { display: none; }
 
-    ul.menu { width: 1060px; 
+    ul.menu {  width: 1060px;
 
         @media screen and (min-width: 1024px) and (max-width: 1240px)  {width: 100%;}
     
@@ -90,7 +90,9 @@
                 content: '•';
                 display: inline-block;
                 vertical-align: middle;
-                @include font($size: 12px); 
+                @include font($size: 12px);
+
+                @media screen and (max-width: 1023px) { content: none; }
                 
             }
 
@@ -197,19 +199,20 @@ body header .slicknav_btn {
     display: none;
     background-image: url(/images/background/pattern_blue.png);
     padding: 0.438em 0.625em 0.438em 0.625em;
+    text-align: center;
     cursor: pointer;
     @include font($font-sans, $color-white);
     font-weight: 700;
-
 
         &:before {
             
         content: "\f0c9";
         @include font($icomoon, $color-white);
         padding: 0 5px;
+        float: left;
     } 
     
-    @media screen and (max-width: 768px) { display: block; }
+    @media screen and (max-width: 1023px) { display: block; }
 }
 
 .mm-opened.mm-blocking.mm-background.mm-pagedim-black.mm-theme-dark.mm-opening body header a.slicknav_btn.slicknav_collapsed  {transform: translate3d(80%, 0, 0); }
@@ -270,7 +273,7 @@ html.mm-blocking,html.mm-blocking body{overflow:hidden}
 html.mm-background .mm-page{background:inherit}
 #mm-blocker{background:rgba(3,2,1,0);display:none;width:100%;height:100%;position:fixed;top:0;left:0;z-index:2}
 html.mm-blocking #mm-blocker{display:block}
-.mm-menu.mm-offcanvas{z-index:0;display:none;position:fixed;width:80%;min-width:140px;max-width:440px}
+.mm-menu.mm-offcanvas{z-index:10;display:none;position:fixed;width:80%;min-width:140px;max-width:440px}
 .mm-menu.mm-offcanvas.mm-current{display:block}
 .mm-menu.mm-offcanvas.mm-no-csstransforms.mm-current.mm-opened{z-index:10}
 html.mm-opening .mm-slideout{-webkit-transform:translate(80%,0);-ms-transform:translate(80%,0);transform:translate(80%,0);-webkit-transform:translate3d(80%,0,0);transform:translate3d(80%,0,0)}
@@ -281,10 +284,10 @@ html.mm-opening .mm-slideout{-webkit-transform:translate(80%,0);-ms-transform:tr
 
 /*style progastromed*/
 .menu.mm-listview.mm-vertical { display: initial;}
-.main-navigation ul.menu li.menu-item::before { content: none; }
+.menu-item.mm-vertical.mm-opened::before {
+    content: none;}
+//.main-navigation ul.menu li.menu-item::before { content: none; }
 .mm-vertical li.mm-opened > .mm-panel, li.mm-vertical.mm-opened  .mm-panel .main-navigation ul.menu li.menu-item ul { display: block; }
-.main-navigation ul.menu li.menu-item.mm-vertical:hover,
-.main-navigation ul.menu li.menu-item:hover {background-color: transparent; }
 .menu-item .mm-vertical .mm-opened .sub-menu.mm-listview.mm-vertical { display: block; }
 .main-navigation ul.menu li.menu-item.mm-vertical ul { display: block;background-color: transparent;}
 .main-navigation ul.menu li.menu-item.mm-vertical ul { position: relative; left: 0; }

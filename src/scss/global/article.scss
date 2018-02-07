@@ -21,27 +21,20 @@
 	}
 
 	.contents  { 
- 		
- 		height: 118px;
-   		overflow: hidden;
-		flex-wrap: wrap;
 
-		@media screen and (max-width: 1023px) { height: 114px; }
+		.sub-contents { padding-left: 26px; }
 
-		&.opened { height: auto;
+		&.third-level li:nth-last-child(n+2) ~ li { display: none;}
 
-			.top .sub-contents { opacity: 1; }
-		 }
+		&.third-level.opened { li:nth-last-child(n+2) ~ li { display: block;} }
 
-		.top{ flex-wrap: wrap; 
+		&.second-level  li:nth-last-child(3) ~ li { display: none;}
+
+		&.second-level.opened { li:nth-last-child(3) ~ li { display: block;} }
+
+		.top { flex-wrap: wrap; 
 
 			@media screen and (max-width: 1023px) { display: inline-block; }
-
-			.sub-contents  { 
-
-				opacity: .5; 
-				padding-left: 25px;
-			}
 		}
 
 		.top:before { color: $color-blue3; }

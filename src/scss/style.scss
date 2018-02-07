@@ -1,13 +1,13 @@
 
 @import 'global/vars.scss';
 @import 'global/mixin.scss';
-@import 'layout/header.scss';
 @import 'global/sidebar.scss';
 @import 'main.scss';
 @import 'heading-article.scss';
 @import 'global/article.scss';
 @import 'layout/footer.scss';
 @import 'global/breadcrumbs-list.scss';
+@import 'layout/header.scss';
 
 @font-face {
   font-family: 'icomoon';
@@ -37,9 +37,10 @@
 .icon-home:before {
   content: "\f015";
 }
-.icon-align-justify:before {
-  content: "\f039";
+.icon-bars:before {
+  content: "\f0c9";
 }
+
 .icon-eye:before {
   content: "\f06e";
 }

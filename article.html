@@ -99,44 +99,38 @@
         </header>
         <div class="site-content">
             <main class="main article">
-                <div class="breadcrumblist"> 
-                    <ul itemscope itemtype="http://schema.org/BreadcrumbList"> 
-                        <li itemprop="itemListElement" itemscope 
-                        itemtype="http://schema.org/ListItem"> 
-                            <a itemscope itemtype="http://schema.org/Thing" 
-                            itemprop="item" href="http://.ru"> 
-                            <span itemprop="name">Главная</span></a> 
-                            <meta itemprop="position" content="1" /> 
-                        </li> 
-                        <li itemprop="itemListElement" itemscope 
-                        itemtype="http://schema.org/ListItem"> 
-                            <a itemscope itemtype="http://schema.org/Thing" 
-                            itemprop="item" href="http://.ru/news"> 
-                            <span itemprop="name">Симптомы</span></a> 
-                            <meta itemprop="position" content="2" /> 
-                        </li>
-                        <li itemprop="itemListElement" itemscope 
-                        itemtype="http://schema.org/ListItem"> 
-                            <a itemscope itemtype="http://schema.org/Thing" 
-                            itemprop="item" href="http://.ru/news"> 
-                            <span itemprop="name">Lorem ipsum dolor sit</span></a> 
-                            <meta itemprop="position" content="3" /> 
-                        </li>  
-                    </ul> 
-                </div>
+                <p id="breadcrumbs">
+                    <span xmlns:v="">
+                        <span typeof="v:Breadcrumb">
+                            <a href="" rel="v:url" property="v:title">
+                               Главная
+                            </a> 
+                            <span rel="v:child" typeof="v:Breadcrumb">
+                                <a href="" rel="v:url" property="v:title">Симптомы
+                                </a> 
+                                <strong class="breadcrumb_last">
+                                 H1  Lorem ipsum dolor sit amet, consectetur adipisicing elitlorem
+                                </strong>
+                            </span>
+                        </span>
+                    </span>
+                </p>
                 <div class="wrapper-content">
                     <h1>H1  Lorem ipsum dolor sit amet, consectetur adipisicing elitlorem
                     </h1>
                     <div class="contents-wrap">
                         <span class="kc_title">Cодержание статьи</span>
-                        <ul class="contents" id="hidden-ul">
+                        <ul class="contents one-level second-level" id="hidden-ul">
                             <li class="top">
                                 <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</a>
+                               
                             </li>
                             <li class="top">
                                 <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 </a>
-                                <ul class="sub-contents">
+                                 <ul class="sub-contents">
+                                    <li class="top">
+                                        <a href="">Lorem ipsum dolor sit amet, consectetur</a>
                                     <li class="top">
                                         <a href="">Lorem ipsum dolor sit amet, consectetur</a>
                                     </li>
