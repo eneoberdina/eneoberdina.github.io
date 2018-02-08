@@ -155,7 +155,8 @@ ul .alignleft, ol .alignleft {
     li ol { 
 
         width: 100%;
-        margin-left: 60px;
+        padding-left: 60px;
+        box-sizing: border-box;
     }
     
     li ol li:before {
@@ -166,7 +167,7 @@ ul .alignleft, ol .alignleft {
     }
 }
 
-img.aligncenter  { 
+.aligncenter  { 
 
     display: block;
     margin: 10px auto;    

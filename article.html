@@ -120,15 +120,33 @@
                     </h1>
                     <div class="contents-wrap">
                         <span class="kc_title">Cодержание статьи</span>
-                        <ul class="contents one-level second-level" id="hidden-ul">
+                        <ul class="contents" id="hidden-ul">
                             <li class="top">
-                                <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</a>
-                               
+                                <a href="">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                </a> 
+                                <ul class="sub-contents">
+                                    <li class="top">
+                                        <a href="">Lorem ipsum dolor sit amet, consectetur</a>
+                                            <ul class="sub-contents">
+                                                <li class="top">
+                                                    <a href="">Lorem ipsum dolor sit amet, consectetur</a>
+                                                </li class="top">
+                                                <li class="top">
+                                                    <a href="">Lorem ipsum dolor sit amet, consectetur</a>
+                                                </li class="top">   
+                                            </ul>
+                                    </li class="top">
+                                    <li class="top">
+                                        <a href="">Lorem ipsum dolor sit amet, consectetur</a>
+                                    </li class="top">   
+                                </ul> 
                             </li>
                             <li class="top">
-                                <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                <a href="">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
                                 </a>
-                                 <ul class="sub-contents">
+                                <ul class="sub-contents">
                                     <li class="top">
                                         <a href="">Lorem ipsum dolor sit amet, consectetur</a>
                                     <li class="top">
@@ -143,25 +161,26 @@
                                 </ul>
                             </li>
                             <li class="top">
-                                <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</a>
+                                <a href="">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                </a>  
                             </li>
                             <li class="top">
-                                <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</a>
-                                <ul class="top">
+                                <a href="">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                </a>  
+                                 <ul class="sub-contents">
                                     <li class="top">
                                         <a href="">Lorem ipsum dolor sit amet, consectetur</a>
-                                    </li>
+                                    </li class="top">
                                     <li class="top">
                                         <a href="">Lorem ipsum dolor sit amet, consectetur</a>
-                                    </li>
-                                    <li class="top">
-                                        <a href="">Lorem ipsum dolor sit amet, consectetur</a>
-                                    </li>
+                                    </li class="top">   
                                 </ul>
                             </li>
                         </ul>
                         <hr />
-                        <button class="expand" onclick="StateToggle('#hidden-ul');">развернуть</button>
+                        <button class="expand" id="expand" onclick="StateToggle('#hidden-ul'), StateToggle('#expand');">развернуть</button>
                     </div>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -839,43 +858,45 @@
                     </div>
                  </article>
                  <span class="title-aside">Свежие публикации</span>
-                 <article class="items border">
-                    <div class="items-content">
-                        <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
-                        <div class="meta">
-                            <span class="meta-span views"> 10000</span>
-                            <span class="meta-span messag"> 100</span>
-                        </div>
-                    </div>       
-                 </article>
-                 <article class="items border">
-                    <div class="items-content">
-                        <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
-                        <div class="meta">
-                            <span class="meta-span views"> 10000</span>
-                            <span class="meta-span messag"> 100</span>
-                        </div>
-                    </div>       
-                 </article>
-                 <article class="items border">
-                    <div class="items-content">
-                        <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
-                        <div class="meta">
-                            <span class="meta-span views"> 10000</span>
-                            <span class="meta-span messag"> 100</span>
-                        </div>
-                    </div>       
-                 </article>
-                 <article class="items border">
-                    <div class="items-content">
-                        <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
-                        <div class="meta">
-                            <span class="meta-span views"> 10000</span>
-                            <span class="meta-span messag"> 100</span>
-                        </div>
-                    </div>       
-                 </article>
-                    <div class="top-buttom"></div>
+                 <section class="list-article">
+                     <article class="items border">
+                        <div class="items-content">
+                            <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
+                            <div class="meta">
+                                <span class="meta-span views"> 10000</span>
+                                <span class="meta-span messag"> 100</span>
+                            </div>
+                        </div>       
+                     </article>
+                     <article class="items border">
+                        <div class="items-content">
+                            <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
+                            <div class="meta">
+                                <span class="meta-span views"> 10000</span>
+                                <span class="meta-span messag"> 100</span>
+                            </div>
+                        </div>       
+                     </article>
+                     <article class="items border">
+                        <div class="items-content">
+                            <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
+                            <div class="meta">
+                                <span class="meta-span views"> 10000</span>
+                                <span class="meta-span messag"> 100</span>
+                            </div>
+                        </div>       
+                     </article>
+                     <article class="items border">
+                        <div class="items-content">
+                            <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
+                            <div class="meta">
+                                <span class="meta-span views"> 10000</span>
+                                <span class="meta-span messag"> 100</span>
+                            </div>
+                        </div>       
+                     </article>
+                </section>
+                <div class="top-buttom"></div>
                 <a class="asadvert-aside end-block" href="">
                     <img class="picture-aside"  src="images/background/reclama2.jpeg" alt="">
                 </a>

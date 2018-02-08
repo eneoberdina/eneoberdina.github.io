@@ -20,24 +20,39 @@
     	padding-bottom: 20px;
 	}
 
-	.contents  { 
+	ul  { 
 
-		.sub-contents { padding-left: 26px; }
-
-		&.third-level li:nth-last-child(n+2) ~ li { display: none;}
-
-		&.third-level.opened { li:nth-last-child(n+2) ~ li { display: block;} }
-
-		&.second-level  li:nth-last-child(3) ~ li { display: none;}
-
-		&.second-level.opened { li:nth-last-child(3) ~ li { display: block;} }
-
-		.top { flex-wrap: wrap; 
-
-			@media screen and (max-width: 1023px) { display: inline-block; }
-		}
+		li:nth-child(n+3) ~ li { display: none; }
+		ul, li ul li ul { display: none; }
+		li:nth-child(3) a { color: #7b9bb2; }
 
 		.top:before { color: $color-blue3; }
+
+		&.opened { 
+			li, li ul,  li ul li ul { display: block;} 
+			li:nth-child(3) a { color: inherit; }
+			ul, li ul { display: block; }
+			li, li ul,  li ul li ul  { padding-left: 26px; }
+		}
+
+		//для li ul li li (class one-list)
+		&.one-list {
+			li:nth-child(1) ul li:nth-child(n+3) ~ li { display: none; }
+			li:nth-child(2) { display: none; }
+			&.one-list.opened { li {display: block; } 
+		}
+
+		li:nth-child(n+3) ~ li { display: block;} 
+
+		li:nth-child(3) a { color: inherit; }
+
+		ul, li ul { display: block; }
+	}
+
+	.top { flex-wrap: wrap; 
+
+			@media screen and (max-width: 1023px) { padding-left: 30px; }
+		}	
 	}
 
 	hr {
@@ -52,9 +67,27 @@
 	    padding: 6px 24px;
 	    cursor: pointer;
 
+	    &.hidden { display: none; }
+
 	    &:hover { background-color: #93e3bd; }
+
+	    &.opened {
+
+	    	color: transparent;
+	    	position: relative;
+
+			&:before {
+				content: "свернуть";
+				position: absolute;
+				color: $color-white;
+				left: 0;
+				right: 0;
+
+			}
+	    }
 	}
 }
+
 .article .articles-popularin {
 
 	width: 100%;

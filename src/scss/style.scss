@@ -208,12 +208,8 @@ body {
        
         width: 100%;
         display: block;
-
-        img { 
-
-            max-width: 300px;
-            margin: 0 auto;
-        }
+        padding: 10px;
+        box-sizing: border-box;
     }
 
     @media screen and (min-width: 1024px) and (max-width: 1240px)  {
@@ -237,8 +233,8 @@ body {
        
         width: 100%;
         flex-direction: column;
-        padding: 0 10px;
         margin: 0 auto;
+        padding: 0;
         box-sizing: border-box;
     }
 }
@@ -254,6 +250,8 @@ body {
     z-index: 10;
 
     &:hover { transform: rotate(720deg); }
+
+    @media screen and (max-width: 1023px) { right: 10px; }
     
 }
 
@@ -386,8 +384,6 @@ body {
 	    
 	    display: block;
 	    margin-bottom: 10px;
-
-        img { width: 100%; }
 	}
 }
 

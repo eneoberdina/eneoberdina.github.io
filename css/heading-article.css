@@ -138,13 +138,16 @@ ul .alignleft, ol .alignleft {
     font-family: "PT Serif"; }
   .main ol li ol {
     width: 100%;
-    margin-left: 60px; }
+    padding-left: 60px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
   .main ol li ol li:before {
     content: "\f0da";
     font-family: "icomoon";
     margin-left: -30px; }
 
-img.aligncenter {
+.aligncenter {
   display: block;
   margin: 10px auto; }
 

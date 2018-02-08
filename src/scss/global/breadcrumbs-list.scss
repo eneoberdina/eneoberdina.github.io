@@ -5,12 +5,13 @@
 
     font: 13px "PT Sans";
   
-    &:before {
+    span > span:nth-child(1):before {
 
         content:"\f015";
         @include font($icomoon, $color-blue, 13px);
-        vertical-align: text-bottom;
+        vertical-align: middle;
         margin-right: 5px;
+        padding-bottom: 1px;
     }
 
     a { color: #7bbfec;
