@@ -96,31 +96,22 @@
 		</header>
 		<div class="site-content">
 			<main class="main">
-				 <div class="breadcrumblist"> 
-                    <ul itemscope itemtype="http://schema.org/BreadcrumbList"> 
-                        <li itemprop="itemListElement" itemscope 
-                        itemtype="http://schema.org/ListItem"> 
-                            <a itemscope itemtype="http://schema.org/Thing" 
-                            itemprop="item" href="http://.ru"> 
-                            <span itemprop="name">Главная</span></a> 
-                            <meta itemprop="position" content="1" /> 
-                        </li> 
-                        <li itemprop="itemListElement" itemscope 
-                        itemtype="http://schema.org/ListItem"> 
-                            <a itemscope itemtype="http://schema.org/Thing" 
-                            itemprop="item" href="http://.ru/news"> 
-                            <span itemprop="name">Симптомы</span></a> 
-                            <meta itemprop="position" content="2" /> 
-                        </li>
-                        <li itemprop="itemListElement" itemscope 
-                        itemtype="http://schema.org/ListItem"> 
-                            <a itemscope itemtype="http://schema.org/Thing" 
-                            itemprop="item" href="http://.ru/news"> 
-                            <span itemprop="name">Lorem ipsum dolor sit</span></a> 
-                            <meta itemprop="position" content="3" /> 
-                        </li>  
-                    </ul> 
-                </div>
+				<p id="breadcrumbs">
+                    <span xmlns:v="">
+                        <span typeof="v:Breadcrumb">
+                            <a href="" rel="v:url" property="v:title">
+                               Главная
+                            </a> 
+                            <span rel="v:child" typeof="v:Breadcrumb">
+                                <a href="" rel="v:url" property="v:title">Симптомы
+                                </a> 
+                                <strong class="breadcrumb_last">
+                                 H1  Lorem ipsum dolor sit amet, consectetur adipisicing elitlorem
+                                </strong>
+                            </span>
+                        </span>
+                    </span>
+                </p>
 				<h1>Симптомы</h1>
 				<hr class="blue"></hr>
 				<div class="row-heading top">
@@ -134,7 +125,7 @@
 						<a class="heading-item" href="">Запах изо рта</a>
 					</div>
 				</div>
-				<div class="related">
+					<section class="related">
 					<article class="items">
 						<a class="items-picture" href="">
 							<img src="/images/background/ps1.jpeg" alt="">
@@ -151,8 +142,10 @@
 						<a class="items-title-articl bold" href="">
 						Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet
 						</a>
-           	 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-           	 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,	
+						<p>
+           	 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+           	 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+           	 			</p>	
 						<div class="meta">
 	                 		<span class="meta-span dark views"> 10000</span>
 	                 		<span class="meta-span dark messag"> 100</span>
@@ -171,11 +164,9 @@
 	                 		<span class="meta-span messag"> 100</span>
 	               	 	</div>    
        			 	</article>
-				</div>
+				</section>
 				<article class="publication">
-					<a href="">
-						<img class="picture" src="/images/background/pop1.jpeg" alt="">
-					</a>
+					<img class="picture" src="/images/background/pop1.jpeg" alt="">
 					<div class="publication-content">
 						<a href="" class="link-pub">
 							Lorem ipsum dolor sit amet, consectetur
@@ -193,7 +184,7 @@
 						<a href="" class="pub-link">Читать...</a>
 					</div>		
 				</article>
-				<div class="related">
+					<section class="related">
 					<article class="items">
 						<a class="items-picture" href="">
 							<img src="/images/background/ps1.jpeg" alt="">
@@ -210,8 +201,10 @@
 						<a class="items-title-articl bold" href="">
 						Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet
 						</a>
-           	 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-           	 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,	
+						<p>
+           	 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+           	 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+           	 			</p>	
 						<div class="meta">
 	                 		<span class="meta-span dark views"> 10000</span>
 	                 		<span class="meta-span dark messag"> 100</span>
@@ -230,11 +223,9 @@
 	                 		<span class="meta-span messag"> 100</span>
 	               	 	</div>    
        			 	</article>
-				</div>
+				</section>
 				<article class="publication">
-					<span>
-						<img class="picture" src="/images/background/pop1.jpeg" alt="">
-					</span>
+					<img class="picture" src="/images/background/pop1.jpeg" alt="">
 					<div class="publication-content">
 						<a href="" class="link-pub">
 							Lorem ipsum dolor sit amet, consectetur
@@ -262,97 +253,99 @@
 	                <a class="link-navigation link-next" href="">></a>
 				</div>
 			</main>
-			<aside class="widget-area">
-				<div class="short-navig">
-					<div class="row-navig">item
-						<span class="total-number">12</span>
-					</div>
-					<div class="row-navig">item
-						<span class="total-number">12</span>
-					</div>
-					<div class="row-navig" id="active" onclick="StateToggle('#hidd-block1'); StateToggle('#active');">item
-						<span class="total-number">12</span>
-					</div>
-					<div class="hidden-block" id="hidd-block1">
-						<div class="hidd">item
-							<span class="total-number">12</span>
-						</div>
-						<div class=" hidd">item
-							<span class="total-number">12</span>
-						</div>
-						<div class="hidd">item
-							<span class="total-number">12</span>
-						</div>
-					</div>
-					<div class="row-navig open">item
-						<span class="total-number">12</span>
-					</div>
-					<div class="row-navig">item
-						<span class="total-number">12</span>
-					</div>
-					<div class="row-navig">item
-						<span class="total-number">12</span>
-					</div>
-				</div>
-				<a class="asadvert-aside" href="">
-					<img src="images/background/reclama2.jpeg" class="picture-aside"  alt="">
-				</a>
-				<span class="title-aside">Свежие публикации</span>
-				<article class="items back">
-						<a class="items-picture" href="">
-							<img class="picture-aside" src="/images/background/pop1.jpeg" alt="">
-						</a>
-						<div class="items-content">
-							<a class="items-title title-rubric" href="">Питание</a>
-							<a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
-							<div class="meta">
-		                 		<span class="meta-span views"> 10000</span>
-		                 		<span class="meta-span messag"> 100</span>
-		           	 		</div>
-           	 		</div>
-       			 </article>
-       			 <span class="title-aside">Свежие публикации</span>
-       			 <article class="items border">
-					<div class="items-content">
-						<a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
-						<div class="meta">
-	                 		<span class="meta-span views"> 10000</span>
-	                 		<span class="meta-span messag"> 100</span>
-               	 		</div>
-					</div>       
-       			 </article>
-       			 <article class="items border">
-					<div class="items-content">
-						<a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
-						<div class="meta">
-	                 		<span class="meta-span views"> 10000</span>
-	                 		<span class="meta-span messag"> 100</span>
-               	 		</div>
-					</div>       
-       			 </article>
-       			 <article class="items border">
-					<div class="items-content">
-						<a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
-						<div class="meta">
-	                 		<span class="meta-span views"> 10000</span>
-	                 		<span class="meta-span messag"> 100</span>
-               	 		</div>
-					</div>       
-       			 </article>
-       			 <article class="items border">
-					<div class="items-content">
-						<a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
-						<div class="meta">
-	                 		<span class="meta-span views"> 10000</span>
-	                 		<span class="meta-span messag"> 100</span>
-               	 		</div>
-					</div>       
-       			 </article>
-       			 	<div class="top-buttom"></div>
-				<a class="asadvert-aside end-block" href="">
-					<img class="picture-aside"  src="images/background/reclama2.jpeg" alt="">
-				</a>
-			</aside>	
+			 <aside class="widget-area">
+                <div class="short-navig">
+                    <div class="row-navig">item
+                        <span class="total-number">12</span>
+                    </div>
+                    <div class="row-navig">item
+                        <span class="total-number">12</span>
+                    </div>
+                    <div class="row-navig" id="active" onclick="StateToggle('#hidd-block1'); StateToggle('#active');">item
+                        <span class="total-number">12</span>
+                    </div>
+                    <div class="hidden-block" id="hidd-block1">
+                        <div class="hidd">item
+                            <span class="total-number">12</span>
+                        </div>
+                        <div class=" hidd">item
+                            <span class="total-number">12</span>
+                        </div>
+                        <div class="hidd">item
+                            <span class="total-number">12</span>
+                        </div>
+                    </div>
+                    <div class="row-navig open">item
+                        <span class="total-number">12</span>
+                    </div>
+                    <div class="row-navig">item
+                        <span class="total-number">12</span>
+                    </div>
+                    <div class="row-navig">item
+                        <span class="total-number">12</span>
+                    </div>
+                </div>
+                <a class="asadvert-aside" href="">
+                    <img src="images/background/reclama2.jpeg" class="picture-aside"  alt="">
+                </a>
+                <span class="title-aside">Свежие публикации</span>
+                <article class="items back">
+                        <a class="items-picture" href="">
+                            <img class="picture-aside" src="/images/background/pop1.jpeg" alt="">
+                        </a>
+                        <div class="items-content">
+                            <a class="items-title title-rubric" href="">Питание</a>
+                            <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
+                            <div class="meta">
+                                <span class="meta-span views"> 10000</span>
+                                <span class="meta-span messag"> 100</span>
+                            </div>
+                    </div>
+                 </article>
+                 <span class="title-aside">Свежие публикации</span>
+                 <section class="list-article">
+                     <article class="items border">
+                        <div class="items-content">
+                            <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
+                            <div class="meta">
+                                <span class="meta-span views"> 10000</span>
+                                <span class="meta-span messag"> 100</span>
+                            </div>
+                        </div>       
+                     </article>
+                     <article class="items border">
+                        <div class="items-content">
+                            <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
+                            <div class="meta">
+                                <span class="meta-span views"> 10000</span>
+                                <span class="meta-span messag"> 100</span>
+                            </div>
+                        </div>       
+                     </article>
+                     <article class="items border">
+                        <div class="items-content">
+                            <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
+                            <div class="meta">
+                                <span class="meta-span views"> 10000</span>
+                                <span class="meta-span messag"> 100</span>
+                            </div>
+                        </div>       
+                     </article>
+                     <article class="items border">
+                        <div class="items-content">
+                            <a class="items-title-articl" href="">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</a>
+                            <div class="meta">
+                                <span class="meta-span views"> 10000</span>
+                                <span class="meta-span messag"> 100</span>
+                            </div>
+                        </div>       
+                     </article>
+                </section>
+                <div class="top-buttom"></div>
+                <a class="asadvert-aside end-block" href="">
+                    <img class="picture-aside"  src="images/background/reclama2.jpeg" alt="">
+                </a>
+            </aside>
 		</div>
 		<div class="row-heading bottom">
 				<a class="heading-item" href="">Симптомы</a>

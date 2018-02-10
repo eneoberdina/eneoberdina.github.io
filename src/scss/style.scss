@@ -183,14 +183,19 @@ figure  { text-align: center;}
 .link-append,
 .answer
 .icon,
-.comment-form {border-radius: 5px; }
+.comment-form,
+.question-wrapper .title-main,
+.question,
+.vnimanie,
+.answer {border-radius: 5px; }
 
 body,
 button,
 input, 
 select, 
 textarea,
-.link-pub { color: $color-text; }
+.link-pub,
+.link-navigation { color: $color-text; }
 
 body {
 
@@ -240,11 +245,12 @@ body {
 }
 .top-buttom {
 
-    background-image: url(/images/control/up.svg);
-    width: 90px;
-    height: 90px;
+    background: url(/images/control/up.svg) no-repeat center;
+    background-size: contain;
+    width: 70px;
+    height: 70px;
     position: absolute;
-    right: -110px;
+    right: -80px;
     cursor: pointer;
     transition: 1s;
     z-index: 10;
@@ -277,7 +283,7 @@ body {
 
         @include pseudo(inline-block, ""); 
         @include font($icomoon, $color-blue);
-        margin: 0 12px;
+        margin: 0 10px;
 
         &.white { color: $color-white; }
     }

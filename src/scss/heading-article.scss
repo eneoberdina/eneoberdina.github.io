@@ -74,12 +74,26 @@ img {
 
 .vnimanie {
    
-   background-color: $color-blue4;
-   border: 10px solid #eef8fd;
+   background-color: #eef8fd;
    align-items: center;
    @include font($size: 16px);
    padding: 25px 25px 25px 0;
    margin: 20px 0;
+   position: relative;
+   z-index: 1;
+
+   &:after {
+        
+        content: "";
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        right: 10px;
+        top: 10px;
+        background-color: #55a8de;
+        border-radius: 5px;
+        z-index: -1;
+    }
 
    &:before {
 
@@ -92,10 +106,12 @@ img {
         @media screen and (max-width: 1023px) { margin: 0 auto 10px; }
     }
 
-       &.vn-green {
+       &.vn-green { background-color: #d9ffed;
 
-            background-color: #2bd081;
-            border-color: #d9ffed;
+            &:after {
+
+                background-color: #2bd081;
+            }
 
             &:before { background:url(/images/control/bv_vajno.png) no-repeat center; }
 
@@ -209,7 +225,7 @@ ul .alignleft, ol .alignleft {
     @include font($font-serif, $color-white);
 }
 
-.row-heading.top { padding: 0 20px 30px;
+.row-heading.top { 
 
      @media screen and (max-width: 1023px) { padding: 0 5px 20px; }
 
@@ -217,8 +233,8 @@ ul .alignleft, ol .alignleft {
 
     width: 95px;
     height: 95px;
-    font-size: 13px;
-    line-height: 13px;
+    font-size: 11px;
+    line-height: 12px;
     margin: 10px auto;
 
         &:after { margin-top: 5px; }
@@ -241,11 +257,10 @@ ul .alignleft, ol .alignleft {
     }
 }
 
-.related { padding: 20px 0;
+.related { padding: 20px 0 0 0;
 
     .items { 
 
-        height: 280px;
         flex-basis: calc(100%/3 - 20px);
         background-color: $color-back;
         border: transparent;
@@ -283,11 +298,20 @@ ul .alignleft, ol .alignleft {
                     margin: 15px 0 0;
                 }
             }
+
+            > p {
+
+                padding: 0;
+                height: 127px;
+                overflow: hidden;
+            }
+
         }
 
-        img { width: 100%; }
+        .items-title-articl { 
 
-        .items-title-articl { color: $color-text;
+            height: 55px;
+            overflow: hidden;
 
             &:hover { color: $color-blue;}
 
@@ -312,12 +336,17 @@ ul .alignleft, ol .alignleft {
     }     
 }
 
+.publication-content .meta  { padding: 20px 0;
+    
+    .meta-span { margin: 0;}
+}
 
 .publication {
 
     border: 1px solid #f1f9fd;
-    padding: 20px 0;
-    margin: 20px 0;
+    margin: 30px 0;
+    padding: 20px;
+
 
     @media screen and (max-width: 641px) { 
 
@@ -325,17 +354,10 @@ ul .alignleft, ol .alignleft {
         padding: 10px;
     }
 
-    > a { 
+    > img { 
 
-        display: block;
-        margin: 0 auto;
-     }
-    
-    .picture {
-
-        height: 200px;
-        width: 230px;
-        margin: 0 20px;
+        flex-shrink: 0;
+        margin: 0 20px 0 0;
     }
 
     .link-pub {
@@ -370,5 +392,3 @@ ul .alignleft, ol .alignleft {
 }
 
 .small-publicat .publication:nth-child(2n) { background-color: #eff8fd;}
-
-.advert img { width: 100%; }

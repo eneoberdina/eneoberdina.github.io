@@ -13,20 +13,19 @@
         padding: 10px;
         box-sizing: border-box;
     }
+
+    .items.back { 
+
+            border: 20px solid #eff8fd;
+            margin: 0 0  30px 0;
+        
+            &:hover * { color: #00d381;}
+
+            img { width: 100%;}
+    }
     
     .list-article .items { margin: 0;
         
-        &.back { 
-
-            border:30px solid #eff8fd;
-            margin-bottom: 30px;
-
-            img { width: 100%; }
-        
-            &:hover  a, 
-            &:hover .meta-span { color: $color-green3; }
-        }
-
         &.border {
 
             border-left: 1px solid #eff8fd;
@@ -34,7 +33,11 @@
             
             &:last-of-type { border-bottom: 1px solid #eff8fd; }
 
-            &:hover { background-color: $color-green3;}
+            &:hover { 
+
+                background-color: $color-green3;
+                border-color: transparent;
+            }
 
             &:hover  .items-title-articl, 
             &:hover .meta-span { color: $color-white; }
