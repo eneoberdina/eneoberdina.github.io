@@ -31,7 +31,7 @@ h1 {
 
         @include pseudo;
         width: 160px;
-        border: 3px solid #57a7dc;
+        border-bottom: 3px solid #57a7dc;
         position: absolute;
         bottom: 0;
     }
@@ -82,9 +82,19 @@ img {
    position: relative;
    z-index: 1;
 
+
+
    .vnimanie-block {
         display: inline-block;
         width: calc(100% - 130px);
+        text-align: left;
+
+        @media screen and (max-width: 768px) { 
+
+            display: block;
+            width: 100%;
+            padding-left: 30px;
+        }
     }
 
     &:before {
@@ -198,8 +208,9 @@ ul .alignleft, ol .alignleft {
     float: right; 
     margin: 0 0 10px 20px;
 
-    @media screen and (max-width: 1023px) { 
+    @media screen and (max-width: 641px) { 
 
+        display: block;
         float: none;
         margin: 10px 0 0;
     }
@@ -210,8 +221,9 @@ ul .alignleft, ol .alignleft {
     float: left;
     margin: 0 20px 10px 0; 
 
-    @media screen and (max-width: 1023px) { 
+    @media screen and (max-width: 641px) { 
 
+        display: block;
         float: none;
         margin: 10px 0 0;
 
@@ -259,6 +271,9 @@ ul .alignleft, ol .alignleft {
             width: 96px;
             height: 96px;
             margin: 10px auto;
+            padding: 36px 17px 0;
+            font-size: 12px;
+            line-height: 11px;
         }
     }
 }
@@ -274,10 +289,11 @@ ul .alignleft, ol .alignleft {
         padding: 0;
         overflow: hidden;
 
-        @media screen and (max-width: 641px) { 
+        @media screen and (max-width: 568px) { 
 
             flex-basis: 100%;
             height: auto;
+            margin-bottom: 10px;
         }
 
         &.nopicture {

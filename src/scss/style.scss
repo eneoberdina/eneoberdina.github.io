@@ -111,7 +111,8 @@ ul.menu,
 .display-flex, 
 .row-heading,
 .comment-form,
-.group-link {
+.group-link,
+.related {
 
     flex-wrap: wrap;
     justify-content: space-between;
@@ -210,27 +211,31 @@ body {
     width: 1060px;
     padding: 30px 0;
 
-    @media screen and (max-width: 1023px) { 
-       
+    @media screen and (max-width: 1240px) { 
+
         width: 100%;
-        display: block;
         padding: 10px;
         box-sizing: border-box;
     }
 
+    @media screen and (max-width: 1023px) { 
+       
+        display: block;
+        padding: 10px;
+        
+    }
+
     @media screen and (min-width: 1024px) and (max-width: 1240px)  {
 
-        width: 100%;
         padding: 20px 10px;
-        box-sizing: border-box;
+     
     }
 }   
 
 .main { 
 
     flex: 1 1 0;
-    max-width: 700px;
-    padding-right: 50px;
+    padding-right: 30px;
     line-height: 24px;
 
     &.article, .wrapper-content{ font-size: 16px; }
@@ -259,7 +264,9 @@ body {
     &:hover { transform: rotate(720deg); }
 
     @media screen and (max-width: 1023px) { right: 10px; }
-    
+
+    @media screen and (min-width: 1023px) and (max-width: 1240px) { right: 3px; }
+
 }
 
 .logo-img {
@@ -271,7 +278,7 @@ body {
 .meta {
     
     justify-content: center;
-    padding: 20px 10px;
+    padding: 20px 0;
 
     &.meta-white { justify-content: flex-start;
 
@@ -352,7 +359,7 @@ body {
     }
 }
 
-.items-title {
+.items-title { display: block;
 
     @include font($color: $color-green2);
     
@@ -381,13 +388,18 @@ body {
     flex-basis: calc(100%/4 - 20px);
     line-height: 16px;
     padding: 0 0 10px;
-    margin: 10px;
 
      @media screen and (max-width: 641px) {  flex-basis: 100%;}
 
     @media screen and (min-width: 642px) and (max-width: 1023px)  {  flex-basis: calc(100%/2 - 20px); }
 
-    img { margin-bottom: 10px; }
+    img { 
+
+        margin-bottom: 10px;
+        width: 100%;
+
+        @media screen and (max-width: 641px) {  width: auto;}
+    }
 }
 
 .row-heading {
@@ -395,29 +407,28 @@ body {
     background-color: #f1f9fd;
     padding: 40px 15%;
 
-    @media screen and (max-width: 1023px) { padding: 10px;}
+    @media screen and (max-width: 1240px) { padding: 10px;}
 }
 
 .heading-item {
             
     height: 155px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    margin: 10px auto;
+    padding: 60px 20px 0 20px;
     border-radius: 50%;
     position: relative;
     z-index: 1;
     @include background-image(url(/images/background/pop1.jpeg));
     @include font($font-family:$font-serif, $color:$color-text2);
     @include title-items;
-    padding: 0 18px;
     box-sizing: border-box;
     transition: .5s;
 
      &:after { 
 
         border-color:  $color-text2; 
-        margin-top: 15px;
+        margin: 7px auto 0;
      }
 
     &:hover  { 

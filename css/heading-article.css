@@ -26,7 +26,7 @@ h1 {
     content: "";
     display: block;
     width: 160px;
-    border: 3px solid #57a7dc;
+    border-bottom: 3px solid #57a7dc;
     position: absolute;
     bottom: 0; }
 
@@ -80,7 +80,13 @@ p {
     display: inline-block;
     width: -webkit-calc(100% - 130px);
     width: -moz-calc(100% - 130px);
-    width: calc(100% - 130px); }
+    width: calc(100% - 130px);
+    text-align: left; }
+    @media screen and (max-width: 768px) {
+      .vnimanie .vnimanie-block {
+        display: block;
+        width: 100%;
+        padding-left: 30px; } }
   .vnimanie:before {
     content: "";
     display: inline-block;
@@ -171,16 +177,18 @@ ul .alignleft, ol .alignleft {
 .alignright {
   float: right;
   margin: 0 0 10px 20px; }
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 641px) {
     .alignright {
+      display: block;
       float: none;
       margin: 10px 0 0; } }
 
 .alignleft {
   float: left;
   margin: 0 20px 10px 0; }
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 641px) {
     .alignleft {
+      display: block;
       float: none;
       margin: 10px 0 0; } }
 
@@ -220,7 +228,10 @@ ul .alignleft, ol .alignleft {
       .row-heading.bottom .heading-item {
         width: 96px;
         height: 96px;
-        margin: 10px auto; } }
+        margin: 10px auto;
+        padding: 36px 17px 0;
+        font-size: 12px;
+        line-height: 11px; } }
 
 .related {
   padding: 20px 0 0 0; }
@@ -234,12 +245,13 @@ ul .alignleft, ol .alignleft {
     position: relative;
     padding: 0;
     overflow: hidden; }
-    @media screen and (max-width: 641px) {
+    @media screen and (max-width: 568px) {
       .related .items {
         -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-        height: auto; } }
+        height: auto;
+        margin-bottom: 10px; } }
     .related .items.nopicture {
       background-color: transparent;
       text-align: left;

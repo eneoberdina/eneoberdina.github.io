@@ -23,6 +23,8 @@
 
     .items {
 
+        img { width: 100%; }
+
         background-color: rgba(239, 248, 253, 0.9);
         
         &:hover  * {color :$color-green2; }
@@ -35,19 +37,15 @@
     
     background: url(/images/background/doctor.jpg) no-repeat;
     background-size: 100% 100%;
+    padding: 30px 10px 30px;
 }
 
-.articles-discusses {
-   
-    width: 880px;
-    padding: 40px 20px;
-    box-sizing: border-box;
-
+.articles-discusses { width: 880px;
+  
     @media screen and (max-width: 1023px) {
 
         width: 100%;
         flex-wrap: wrap;
-        padding: 10px;
     }
 
     @media screen and (min-width: 1024px) and (max-width: 1240px)  {  width: 100%; }
@@ -56,17 +54,17 @@
        
             flex-grow: 0;
             flex-shrink: 0;
-            flex-basis: 340px;
-            height: 280px;
+            flex-basis: 33%;
+            height: 240px;
             background-image: url(/images/background/pattern_green.png);
             @include font($font-family: $font-serif, $size: 24px);
             margin-right: 40px;
-            padding-top: 4em;
+            padding-top: 3.5em;
             font-weight: 700;
             line-height: 30px;
             box-sizing: border-box;
 
-            @media screen and (max-width: 1023px) { 
+            @media screen and (max-width: 700px) { 
 
                 flex-basis: 100%;
                 height: auto;
@@ -74,26 +72,30 @@
             }
         }
 
-        .wrapper-articles { flex-grow : 1;}
+        .wrapper-articles { 
+            
+            @media screen and (min-width: 701px) { flex-basis: 61%; }
+        }
 
     .items { 
 
         flex-basis: calc(100%/2 - 20px);
-        padding: 40px 0 0; 
-        line-height: 18px;
+        padding: 20px 0 0; 
         text-align: left;
+        margin: 0;
 
-         @media screen and (max-width: 1023px) { padding: 0;  }
+        .items-text { padding: 0; }
 
-        a:hover { color: #d0e8df;}
-
+        @media screen and (min-width: 561px) and (max-width: 1023px) { padding: 10px;  }
 
         @media screen and (max-width: 560px) {  flex-basis: 100%;}
+
+        a:hover { color: #d0e8df;}
 
     .items-link {
 
         @include font($font-family: $font-sans, $size: 18px);
-        padding-bottom: 20px;
+        padding-bottom: 10px;
          font-weight: 700;
 
     }
@@ -107,7 +109,7 @@
             @include pseudo;
             width: 20px;
             border: 1px solid $color-green2;
-            margin: 20px 0;
+            margin: 10px 0;
         }
     }
 }
@@ -145,6 +147,8 @@
 
      > .row-item { padding: 0 0 18px 0;}
 
+     >  .heading-item { padding: 0; }
+        
     }
 
     .row-heading {
@@ -161,16 +165,17 @@
 
        .heading-item { 
        
-       flex-basis: 170px;
-       height: 170px;
-       padding: 0;
+           flex-basis: 170px;
+           height: 170px;
 
-        @media screen and (max-width: 1023px) {
+            @media screen and (max-width: 1023px) {
 
-            flex-basis: 120px;
-            height: 120px;
-            margin: 10px auto;
-        }
+                flex-basis: 120px;
+                height: 120px;
+                font-size: 14px;
+                padding: 40px 20px 0 20px;
+                margin: 10px auto;
+            }
     } 
 
         > .title-articl.right { padding: 20px 0 0 10px; }
@@ -235,8 +240,14 @@
         color: $color-white;
         padding: 39px  20px 0;
         line-height: 24px;
+        box-sizing: border-box;
 
-        @media screen and (max-width: 1023px) { height: 200px; }
+        @media screen and (max-width: 641px) {
+
+         width: 100%;
+         height: 220px;
+
+        }
 
         .title { color: $color-white;
             
@@ -254,6 +265,8 @@
 
         padding: 0 0 30px 0;
         margin: 20px auto;
+
+         @media screen and (max-width: 641px) { display: block;}
     
         .title-main { 
 
