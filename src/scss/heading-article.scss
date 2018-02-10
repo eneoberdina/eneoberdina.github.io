@@ -82,6 +82,23 @@ img {
    position: relative;
    z-index: 1;
 
+   .vnimanie-block {
+        display: inline-block;
+        width: calc(100% - 130px);
+    }
+
+    &:before {
+
+        @include pseudo(inline-block, "");
+            width: 128px;
+            height: 70px;
+            background:url(/images/control/bv_osnovnoi.png) no-repeat top;
+            margin: 0 0 0 20px;
+
+            @media screen and (max-width: 1023px) { margin: 0 auto 10px; }
+        }
+
+
    &:after {
         
         content: "";
@@ -95,17 +112,7 @@ img {
         z-index: -1;
     }
 
-   &:before {
-
-        @include pseudo(inline-block, "");
-        width: 128px;
-        height: 70px;
-        background:url(/images/control/bv_osnovnoi.png) no-repeat center;
-        margin: 0 40px 0 40px;
-
-        @media screen and (max-width: 1023px) { margin: 0 auto 10px; }
-    }
-
+  
        &.vn-green { background-color: #d9ffed;
 
             &:after {
@@ -115,17 +122,14 @@ img {
 
             &:before { background:url(/images/control/bv_vajno.png) no-repeat center; }
 
-            .vnimanie-block { 
-
-                display: block;
-                border-top: 1px solid rgba(255, 255, 255, 0.25);
-                margin-top: 10px;
-                padding-top: 10px;
-            }
-
             .critical {
-                 font-family: $font-sans;
-                 font-weight: 700;
+                font-family: $font-sans;
+                font-weight: 700; 
+                display: block;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+                margin-bottom: 5px;
+                padding-bottom: 5px;
+              
             }
         }
 
@@ -233,11 +237,13 @@ ul .alignleft, ol .alignleft {
 
     width: 95px;
     height: 95px;
-    font-size: 11px;
-    line-height: 12px;
+    display: block;
+    font-size: 10px;
+    line-height: 11px;
     margin: 10px auto;
+    padding: 35px  20px 0 20px;
 
-        &:after { margin-top: 5px; }
+        &:after { margin: 5px auto; }
     }
 }
 

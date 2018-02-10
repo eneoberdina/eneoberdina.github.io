@@ -94,21 +94,22 @@ ul.menu,
 .publication-columns,
 .articles-discusses,
 .articles-headings, 
-.display-flex, 
+.display-flex,
+.vnimanie, 
 .meta,
 .row-heading, 
+.related,
 .heading-item,
-.vnimanie,
 .search-form,
 .wrapper-footer,
 .menu-footer,
 .comment-form,
+.ya-share2,
 .ya-share2_list { display: flex; }
 
 .site-content, 
 .display-flex, 
 .row-heading,
-.related,
 .comment-form,
 .group-link {
 
@@ -386,11 +387,7 @@ body {
 
     @media screen and (min-width: 642px) and (max-width: 1023px)  {  flex-basis: calc(100%/2 - 20px); }
 
-    .items-picture {
-	    
-	    display: block;
-	    margin-bottom: 10px;
-	}
+    img { margin-bottom: 10px; }
 }
 
 .row-heading {
@@ -456,7 +453,7 @@ body {
     .link-piblicat {
 
         color: $color-text;
-        padding: 5px 5px 15px 5px;
+        padding: 5px 15px 15px 5px;
 
         &:hover { color: $color-blue3;}
     }

@@ -76,6 +76,21 @@ p {
   margin: 20px 0;
   position: relative;
   z-index: 1; }
+  .vnimanie .vnimanie-block {
+    display: inline-block;
+    width: -webkit-calc(100% - 130px);
+    width: -moz-calc(100% - 130px);
+    width: calc(100% - 130px); }
+  .vnimanie:before {
+    content: "";
+    display: inline-block;
+    width: 128px;
+    height: 70px;
+    background: url(/images/control/bv_osnovnoi.png) no-repeat top;
+    margin: 0 0 0 20px; }
+    @media screen and (max-width: 1023px) {
+      .vnimanie:before {
+        margin: 0 auto 10px; } }
   .vnimanie:after {
     content: "";
     position: absolute;
@@ -87,30 +102,19 @@ p {
     -webkit-border-radius: 5px;
     border-radius: 5px;
     z-index: -1; }
-  .vnimanie:before {
-    content: "";
-    display: inline-block;
-    width: 128px;
-    height: 70px;
-    background: url(/images/control/bv_osnovnoi.png) no-repeat center;
-    margin: 0 40px 0 40px; }
-    @media screen and (max-width: 1023px) {
-      .vnimanie:before {
-        margin: 0 auto 10px; } }
   .vnimanie.vn-green {
     background-color: #d9ffed; }
     .vnimanie.vn-green:after {
       background-color: #2bd081; }
     .vnimanie.vn-green:before {
       background: url(/images/control/bv_vajno.png) no-repeat center; }
-    .vnimanie.vn-green .vnimanie-block {
-      display: block;
-      border-top: 1px solid rgba(255, 255, 255, 0.25);
-      margin-top: 10px;
-      padding-top: 10px; }
     .vnimanie.vn-green .critical {
       font-family: "PT Sans";
-      font-weight: 700; }
+      font-weight: 700;
+      display: block;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      margin-bottom: 5px;
+      padding-bottom: 5px; }
   @media screen and (max-width: 1023px) {
     .vnimanie {
       -webkit-flex-wrap: wrap;
@@ -197,11 +201,13 @@ ul .alignleft, ol .alignleft {
 .row-heading.top .heading-item {
   width: 95px;
   height: 95px;
-  font-size: 11px;
-  line-height: 12px;
-  margin: 10px auto; }
+  display: block;
+  font-size: 10px;
+  line-height: 11px;
+  margin: 10px auto;
+  padding: 35px  20px 0 20px; }
   .row-heading.top .heading-item:after {
-    margin-top: 5px; }
+    margin: 5px auto; }
 
 .row-heading.bottom {
   -webkit-flex-basis: 100%;

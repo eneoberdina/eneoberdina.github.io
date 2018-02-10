@@ -70,7 +70,7 @@
     font: 24px "PT Serif";
     color: #ffffff;
     margin-right: 40px;
-    padding: 100px 60px;
+    padding-top: 4em;
     font-weight: 700;
     line-height: 30px;
     -webkit-box-sizing: border-box;
@@ -83,6 +83,12 @@
         flex-basis: 100%;
         height: auto;
         padding: 20px  10px; } }
+  .articles-discusses .wrapper-articles {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -moz-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1; }
   .articles-discusses .items {
     -webkit-flex-basis: -webkit-calc(100%/2 - 20px);
     -ms-flex-preferred-size: calc(100%/2 - 20px);
@@ -168,10 +174,10 @@
 
 .articles-headings.home .row-heading {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 520px;
+  -webkit-flex: 0 0 500px;
   -moz-box-flex: 0;
-  -ms-flex: 0 0 520px;
-  flex: 0 0 520px;
+  -ms-flex: 0 0 500px;
+  flex: 0 0 500px;
   background-color: transparent;
   border: 10px #f3fafe solid;
   -webkit-box-sizing: border-box;
@@ -192,7 +198,8 @@
     -webkit-flex-basis: 170px;
     -ms-flex-preferred-size: 170px;
     flex-basis: 170px;
-    height: 170px; }
+    height: 170px;
+    padding: 0; }
     @media screen and (max-width: 1023px) {
       .articles-headings.home .row-heading .heading-item {
         -webkit-flex-basis: 120px;
@@ -232,7 +239,11 @@
 
 .wrapper-publications {
   background-color: #f3fafe;
-  padding: 0 10px; }
+  padding: 0 10px;
+  margin: 30px auto; }
+  .wrapper-publications > .title-main {
+    display: block;
+    padding: 20px 0; }
   .wrapper-publications .social-link-column {
     width: 250px;
     height: 270px;
@@ -251,7 +262,8 @@
     .wrapper-publications .social-link-column .title-social-link {
       padding: 10px 0 23px; }
   .wrapper-publications .articles-publications {
-    padding: 50px 0; }
+    padding: 0 0 30px 0;
+    margin: 20px auto; }
     .wrapper-publications .articles-publications .title-main {
       width: 100%;
       text-align: left;
@@ -321,6 +333,7 @@
       padding: 29px 0;
       margin-bottom: 40px; }
       .question-wrapper .title-main:after {
+        background-color: #fff;
         background-image: -webkit-linear-gradient(left, #fff, #ffffff, #fff);
         background-image: -moz-linear-gradient(left, #fff, #ffffff, #fff);
         background-image: -o-linear-gradient(left, #fff, #ffffff, #fff); }
