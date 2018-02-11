@@ -245,7 +245,7 @@ ul .alignleft, ol .alignleft {
     position: relative;
     padding: 0;
     overflow: hidden; }
-    @media screen and (max-width: 568px) {
+    @media screen and (max-width: 641px) {
       .related .items {
         -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;

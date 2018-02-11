@@ -123,7 +123,7 @@
 
             li.menu-item:hover { background-color: #2f8fc8; }
             
-            li.menu-item::before { font-size: 0; }
+            li.menu-item::before { content: none; }
 
             li ul { 
                 
@@ -233,7 +233,7 @@ body header .slicknav_btn {
 .mm-vertical .mm-panel{-webkit-transform:none!important;-ms-transform:none!important;transform:none!important}
 .mm-listview .mm-vertical .mm-panel .mm-listview>li:last-child:after,.mm-vertical .mm-listview .mm-panel .mm-listview>li:last-child:after{border-color:transparent}
 .mm-vertical li.mm-opened>.mm-panel,li.mm-vertical.mm-opened>.mm-panel{display:block}
-.mm-listview>li.mm-vertical>.mm-next:after,.mm-vertical .mm-listview>li>.mm-next:after{top:16px;bottom:auto}
+.mm-listview>li.mm-vertical>.mm-next:after,.mm-vertical .mm-listview>li>.mm-next:after{top:25px;bottom:auto}
 .mm-listview>li.mm-vertical.mm-opened>.mm-next:after,.mm-vertical .mm-listview>li.mm-opened>.mm-next:after{-webkit-transform:rotate(225deg);-ms-transform:rotate(225deg);transform:rotate(225deg);right:19px}
 .mm-btn{width:40px;height:40px;position:absolute;top:0}
 .mm-clear:after,.mm-clear:before,.mm-close:after,.mm-close:before{content:'';border:2px solid transparent;display:block;width:5px;height:5px;margin:auto;position:absolute;top:0;bottom:0;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}
@@ -245,13 +245,10 @@ body header .slicknav_btn {
 .mm-listview{font:inherit;font-size:14px;line-height:20px}
 .mm-listview>li{position:relative}
 .mm-listview>li,.mm-listview>li .mm-next,.mm-listview>li .mm-next:before,.mm-listview>li:after{border-color:inherit}
-.mm-listview>li>a,.mm-listview>li>span{color:inherit;display:block;padding:10px 10px 10px 20px;margin:0}
 .mm-listview .mm-next{background:rgba(3,2,1,0);width:50px;padding:0;position:absolute;right:0;top:0;bottom:0;z-index:2}
-.mm-listview .mm-next:before{border-left-width:1px;border-left-style:solid;display:block;position:absolute;top:0;left:0}
-.mm-listview .mm-next+a,.mm-listview .mm-next+span{margin-right:50px}
+//.mm-listview .mm-next:before{border-left-width:1px;border-left-style:solid;display:block;position:absolute;top:0;left:0}
 .mm-listview .mm-next.mm-fullsubopen{width:100%}
 .mm-listview .mm-next.mm-fullsubopen:before{border-left:none}
-.mm-listview .mm-next.mm-fullsubopen+a,.mm-listview .mm-next.mm-fullsubopen+span{padding-right:50px;margin-right:0}
 .mm-panels>.mm-panel>.mm-listview{margin:20px -20px}
 .mm-panels>.mm-panel>.mm-listview:first-child,.mm-panels>.mm-panel>.mm-navbar+.mm-listview{margin-top:-20px}
 .mm-listview .mm-inset{list-style:disc inside;padding:0 10px 15px 40px;margin:0}
@@ -326,8 +323,14 @@ html.mm-pagedim-black #mm-blocker{
     -webkit-transform:rotate(135deg);
     -ms-transform:rotate(135deg);transform:rotate(135deg);right:0;left:0}
 .mm-menu.mm-theme-dark .mm-divider, .mm-menu.mm-theme-dark .mm-fixeddivider span, .mm-menu.mm-theme-dark .mm-listview > li.mm-opened.mm-vertical > .mm-panel, .mm-menu.mm-theme-dark .mm-listview > li.mm-opened.mm-vertical > a.mm-next, .mm-menu.mm-theme-dark.mm-vertical .mm-listview > li.mm-opened > .mm-panel, .mm-menu.mm-theme-dark.mm-vertical .mm-listview > li.mm-opened > a.mm-next {background: rgba(141, 195, 228, 0.27); }
-.mm-listview>li.mm-vertical>.mm-next,.mm-vertical .mm-listview>li>.mm-next{height:27px;bottom:auto}
+.mm-listview>li.mm-vertical>.mm-next,.mm-vertical .mm-listview>li>.mm-next{height:22px;bottom:auto; width: 46px;}
+.mm-listview>li.mm-vertical>.mm-next,.mm-vertical .mm-listview>li>a.mm-next:before{border-left: 1px solid #c0e1f8;position: absolute;top: 0;right: 0;}
 .mm-panels > .mm-panel::after, .mm-panels > .mm-panel::before {content: none;}
 .mm-listview .mm-vertical .mm-panel,.mm-vertical .mm-listview .mm-panel{display:none;}
 .mm-panels > .mm-panel > .mm-listview:first-child, .mm-panels > .mm-panel > .mm-navbar + .mm-listview { margin: 0;}
-.menu-item.mm-vertical.mm-opened a:not(.mm-next) { width: calc(100% - 90px); padding-left: 25px;}
+//.menu-item.mm-vertical.mm-opened a:not(.mm-next) { width: calc(100% - 90px); padding-left: 25px;}
+.mm-listview > li > a, .mm-listview > li > span.menu-link {display: block; width: calc(100% - 75px);}
+.mm-listview > li > a, .mm-listview > li > span.menu-link > a {
+    display: block; width: calc(100% - 29px);
+    text-overflow:ellipsis;white-space:nowrap;overflow:hidden;
+}

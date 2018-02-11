@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Progastromed</title>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700&amp;subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/fonts.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>	
@@ -392,6 +393,39 @@
 				});
 		   });
 	</script>
+    <script type="text/javascript">
+     jQuery(document).ready(function( $ ) {
+      $ jQuery(document).ready(function( $ ) {
+      $("#site-navigation").mmenu({
+         "slidingSubmenus": false,
+         "offCanvas": {
+            "pageSelector": "#page",
+            "inset":".sub-menu"
+         },
+         "extensions": [ 
+            "pagedim-black",
+            "theme-dark"
+         ],
+          "navbars": [ 
+            {
+               "position": "top",
+               "height":2, //ЭТО ШАГ ВЫБОРА ВЫСОТЫ, ТЕБЕ НАВЕРНОЕ НУЖНО ЗНАЧЕНИЕ 3-4
+               "content": "<div class=\"mmenu-brending\"><a href=\"http://"+window.location.hostname+"/\" title=\"На главную страницу сайта\">Главная страница</a></div>" 
+            }, 
+            {
+               "position": "bottom",
+               "content": [
+                  "<a class='fa fa-envelope' href='#/'></a>",
+                  "<a class='fa fa-twitter' href='#/'></a>"
+               ]
+            }
+         ]
+      }, {
+   // configuration
+   clone: true
+});
+   });
+    </script>
     <script src="/js/MMenu.js"></script>
 	</body>
 </html>
