@@ -177,7 +177,7 @@ ul .alignleft, ol .alignleft {
 .alignright {
   float: right;
   margin: 0 0 10px 20px; }
-  @media screen and (max-width: 641px) {
+  @media screen and (max-width: 568px) {
     .alignright {
       display: block;
       float: none;
@@ -186,7 +186,7 @@ ul .alignleft, ol .alignleft {
 .alignleft {
   float: left;
   margin: 0 20px 10px 0; }
-  @media screen and (max-width: 641px) {
+  @media screen and (max-width: 568px) {
     .alignleft {
       display: block;
       float: none;

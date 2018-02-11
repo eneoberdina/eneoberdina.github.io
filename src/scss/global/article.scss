@@ -4,20 +4,18 @@
 .contents-wrap {
 
 	background-color: #eef8fd;
-	padding: 40px 40px 30px 90px;
+	padding: 40px 40px 30px 40px;
+
+	 @media screen and (max-width: 641px) { padding: 15px 35px 20px 10px; }
 
 	a { color: $color-text;}
-
-	@media screen and (max-width: 1023px) { padding: 10px; }
-
-	@media screen and (min-width: 1024px) and (max-width: 1240px)  {  padding: 10px; }
 
     .kc_title {
      	
      	display: block;
      	@include font($font-family: $font-serif, $color:$color-text, $size: 20px );
     	font-weight: 700;
-    	padding-bottom: 20px;
+    	padding: 0 0 20px 10px;
 	}
 
 	ul  { 
@@ -36,23 +34,19 @@
 		}
 
 		//для li ul li li (class one-list)
-		&.one-list {
-			li:nth-child(1) ul li:nth-child(n+3) ~ li { display: none; }
-			li:nth-child(2) { display: none; }
-			&.one-list.opened { li {display: block; } 
+			&.one-list {
+				li:nth-child(1) ul li:nth-child(n+3) ~ li { display: none; }
+				li:nth-child(2) { display: none; }
+				&.one-list.opened { li {display: block; } 
+			}
+
+			li:nth-child(n+3) ~ li { display: block;} 
+
+			li:nth-child(3) a { color: inherit; }
+
+			ul, li ul { display: block; }
 		}
 
-		li:nth-child(n+3) ~ li { display: block;} 
-
-		li:nth-child(3) a { color: inherit; }
-
-		ul, li ul { display: block; }
-	}
-
-	.top { flex-wrap: wrap; 
-
-			@media screen and (max-width: 1023px) { padding-left: 30px; }
-		}	
 	}
 
 	hr {
@@ -160,7 +154,8 @@ ul.ya-share2_list li:before { content: none; }
 .soc-inf { 
 
 	font-size: 16px;
-	padding-right: 20px;
+	padding: 9px 30px 7px 0;
+
 }
 
 .soc-ico {

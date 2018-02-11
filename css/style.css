@@ -662,7 +662,7 @@ ul .alignleft, ol .alignleft {
 .alignright {
   float: right;
   margin: 0 0 10px 20px; }
-  @media screen and (max-width: 641px) {
+  @media screen and (max-width: 568px) {
     .alignright {
       display: block;
       float: none;
@@ -671,7 +671,7 @@ ul .alignleft, ol .alignleft {
 .alignleft {
   float: left;
   margin: 0 20px 10px 0; }
-  @media screen and (max-width: 641px) {
+  @media screen and (max-width: 568px) {
     .alignleft {
       display: block;
       float: none;
@@ -832,21 +832,18 @@ ul .alignleft, ol .alignleft {
 
 .contents-wrap {
   background-color: #eef8fd;
-  padding: 40px 40px 30px 90px; }
+  padding: 40px 40px 30px 40px; }
+  @media screen and (max-width: 641px) {
+    .contents-wrap {
+      padding: 15px 35px 20px 10px; } }
   .contents-wrap a {
     color: #496e86; }
-  @media screen and (max-width: 1023px) {
-    .contents-wrap {
-      padding: 10px; } }
-  @media screen and (min-width: 1024px) and (max-width: 1240px) {
-    .contents-wrap {
-      padding: 10px; } }
   .contents-wrap .kc_title {
     display: block;
     font: 20px "PT Serif";
     color: #496e86;
     font-weight: 700;
-    padding-bottom: 20px; }
+    padding: 0 0 20px 10px; }
   .contents-wrap ul li:nth-child(n+3) ~ li {
     display: none; }
   .contents-wrap ul ul, .contents-wrap ul li ul li ul {
@@ -875,13 +872,6 @@ ul .alignleft, ol .alignleft {
     color: inherit; }
   .contents-wrap ul.one-list ul, .contents-wrap ul.one-list li ul {
     display: block; }
-  .contents-wrap ul .top {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-    @media screen and (max-width: 1023px) {
-      .contents-wrap ul .top {
-        padding-left: 30px; } }
   .contents-wrap hr {
     border: 1px solid #ffffff;
     margin: 20px 0 30px; }
@@ -974,7 +964,7 @@ ul.ya-share2_list li:before {
 
 .soc-inf {
   font-size: 16px;
-  padding-right: 20px; }
+  padding: 9px 30px 7px 0; }
 
 .soc-ico {
   background-color: #338ec7;
@@ -2166,6 +2156,11 @@ body {
   line-height: 24px; }
   .main.article, .main .wrapper-content {
     font-size: 16px; }
+    .main.article ul:not(.ya-share2_list), .main .wrapper-content ul:not(.ya-share2_list) {
+      padding: 0 0 0 40px; }
+      @media screen and (max-width: 641px) {
+        .main.article ul:not(.ya-share2_list), .main .wrapper-content ul:not(.ya-share2_list) {
+          padding: 0 0 0 25px; } }
   @media screen and (max-width: 1023px) {
     .main {
       width: 100%;
