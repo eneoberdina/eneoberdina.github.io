@@ -1,4 +1,4 @@
-
+@import 'global/normalize.scss';
 @import 'global/vars.scss';
 @import 'global/mixin.scss';
 @import 'global/sidebar.scss';
@@ -80,7 +80,6 @@
 .icon-commenting-o:before {
   content: "\f27b";
 }
-
 
 body,
 ul.menu,
