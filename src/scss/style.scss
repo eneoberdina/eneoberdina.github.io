@@ -316,7 +316,7 @@ body {
 .soclink, .soc-ico { 
 
  	@include font($icomoon, $size: 16px); 
- 	padding: 4px;
+ 	padding: 4px 7px;
 	min-width: 50px;
 	box-sizing: border-box;
 }
@@ -333,6 +333,7 @@ body {
     width: 100%;
     @include font($font-serif, $size: 20px, $color: $color-text);
     @include title-items; 
+    font-weight: 700;
     padding: 0 0 20px 0;
 
     &.right { padding: 20px 0 0 70px; }
@@ -366,19 +367,19 @@ body {
 
 .items-title { display: block;
 
-    @include font($color: $color-green2);
+    @include font($color: $color-green3);
     
     &.white { color: $color-white; 
 
-        &:after { margin: 20px 0; }
+        &:after { margin: 19px 0; }
     }
 
     &:after {
         
         @include pseudo;
         width: 20px;
-        border-bottom: 1px solid $color-green2;
-        margin: 7px auto;
+        border-bottom: 1px solid $color-green3;
+        margin: 9px auto;
     }
 }
 
@@ -425,7 +426,7 @@ body {
     position: relative;
     z-index: 1;
     @include background-image(url(/images/background/pop1.jpeg));
-    @include font($font-family:$font-serif, $color:$color-text2);
+    @include font($font-family:$font-serif, $color:#1d5273);
     @include title-items;
     box-sizing: border-box;
     transition: .5s;
@@ -476,7 +477,7 @@ body {
         
 .pub-link { 
 
-    color: $color-blue;
+    color: #78c1ed;
 
     &:hover {color: #2aa1f0;}
 }

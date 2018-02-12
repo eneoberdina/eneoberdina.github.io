@@ -11,12 +11,20 @@ h5,
 h6,
 .soc-inf  {
     
-    @include font($font-serif, $color-text2, 24px); 
+    font-family:$font-serif;
+    color: $color-text2; 
     padding: 10px 0;
     margin: 0;
     font-weight: 700;
 
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { padding: 36px 0; }
 
 h1 { 
 
@@ -69,8 +77,7 @@ img {
 .advert,
 .row-heading.top,
 .soc-list,
-.comment-reply-title,
- p { padding: 10px 0; }
+.comment-reply-title { padding: 10px 0; }
 
 .vnimanie {
    
@@ -78,7 +85,7 @@ img {
    align-items: center;
    @include font($size: 16px);
    padding: 25px 25px 25px 0;
-   margin: 20px 0;
+   margin: 25px 0;
    position: relative;
    z-index: 1;
 
@@ -163,16 +170,17 @@ ul:not.menu { padding-left: 30px;}
         @include font($icomoon, $color-green3);
         margin-right: 20px;
         margin-left: -25px;
-        align-self: center;
     }
 }
-ul .alignleft, ol .alignleft {
-    margin: 0 50px 10px 0;
-} 
+
+ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; } 
 
 .main ol { counter-reset: list1; 
 
-    li  { padding: 8px 10px; }
+    li  { padding: 8px 10px; 
+
+        @media screen and (max-width: 641px) { padding: 8px 0; }
+    }
 
     li:before {
         content: counter(list1);
@@ -215,6 +223,7 @@ ul .alignleft, ol .alignleft {
         margin: 10px 0 0;
     }
 }
+
 
 .alignleft { 
 
@@ -323,9 +332,16 @@ ul .alignleft, ol .alignleft {
 
             > p {
 
+                font-size: 14px;
                 padding: 0;
                 height: 127px;
                 overflow: hidden;
+
+                @media screen and (max-width: 641px) { 
+
+                    height: auto;
+                    overflow: initial;
+                }
             }
 
         }
@@ -358,7 +374,7 @@ ul .alignleft, ol .alignleft {
     }     
 }
 
-.publication-content .meta  { padding: 20px 0;
+.publication-content .meta  { padding: 15px 0 25px;
     
     .meta-span { margin: 0;}
 }
@@ -369,7 +385,6 @@ ul .alignleft, ol .alignleft {
     margin: 30px 0;
     padding: 20px;
 
-
     @media screen and (max-width: 641px) { 
 
         flex-wrap: wrap; 
@@ -378,8 +393,10 @@ ul .alignleft, ol .alignleft {
 
     > img { 
 
+        width: 230px;
+        height: 200px;
         flex-shrink: 0;
-        margin: 0 20px 0 0;
+        margin: 0 20px 20px 0;
     }
 
     .link-pub {
@@ -403,11 +420,12 @@ ul .alignleft, ol .alignleft {
 
         line-height: 18px;
         color: rgba(73, 110, 134, 0.8);
+        font-size: 14px;
     }
 
     .meta { justify-content: flex-start;
         
-        .messag { margin-left: 20px; }
+        .messag { margin-left: 30px; }
     }
 
     .pub-link { font-size: 16px;}

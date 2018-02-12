@@ -9,11 +9,19 @@ h4,
 h5,
 h6,
 .soc-inf {
-  font: 24px "PT Serif";
+  font-family: "PT Serif";
   color: #1d5273;
   padding: 10px 0;
   margin: 0;
   font-weight: 700; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 36px 0; }
 
 h1 {
   font-size: 32px;
@@ -59,8 +67,7 @@ img {
 .advert,
 .row-heading.top,
 .soc-list,
-.comment-reply-title,
-p {
+.comment-reply-title {
   padding: 10px 0; }
 
 .vnimanie {
@@ -73,7 +80,7 @@ p {
   font: 16px "PT Sans";
   color: #ffffff;
   padding: 25px 25px 25px 0;
-  margin: 20px 0;
+  margin: 25px 0;
   position: relative;
   z-index: 1; }
   .vnimanie .vnimanie-block {
@@ -140,11 +147,7 @@ ul:not.menu {
     font: 14px "icomoon";
     color: #2bd081;
     margin-right: 20px;
-    margin-left: -25px;
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center; }
+    margin-left: -25px; }
 
 ul .alignleft, ol .alignleft {
   margin: 0 50px 10px 0; }
@@ -153,6 +156,9 @@ ul .alignleft, ol .alignleft {
   counter-reset: list1; }
   .main ol li {
     padding: 8px 10px; }
+    @media screen and (max-width: 641px) {
+      .main ol li {
+        padding: 8px 0; } }
   .main ol li:before {
     content: counter(list1);
     counter-increment: list1;
@@ -275,9 +281,14 @@ ul .alignleft, ol .alignleft {
         border-bottom: 1px solid #7bbfec;
         margin: 15px 0 0; }
       .related .items.nopicture > p {
+        font-size: 14px;
         padding: 0;
         height: 127px;
         overflow: hidden; }
+        @media screen and (max-width: 641px) {
+          .related .items.nopicture > p {
+            height: auto;
+            overflow: initial; } }
     .related .items .items-title-articl {
       height: 55px;
       overflow: hidden; }
@@ -297,7 +308,7 @@ ul .alignleft, ol .alignleft {
         padding: 20px 0; }
 
 .publication-content .meta {
-  padding: 20px 0; }
+  padding: 15px 0 25px; }
   .publication-content .meta .meta-span {
     margin: 0; }
 
@@ -312,10 +323,12 @@ ul .alignleft, ol .alignleft {
       flex-wrap: wrap;
       padding: 10px; } }
   .publication > img {
+    width: 230px;
+    height: 200px;
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    margin: 0 20px 0 0; }
+    margin: 0 20px 20px 0; }
   .publication .link-pub {
     font-family: "PT Sans";
     font-size: 24px;
@@ -330,7 +343,8 @@ ul .alignleft, ol .alignleft {
       margin: 10px 0; }
   .publication .piblicat {
     line-height: 18px;
-    color: rgba(73, 110, 134, 0.8); }
+    color: rgba(73, 110, 134, 0.8);
+    font-size: 14px; }
   .publication .meta {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -338,7 +352,7 @@ ul .alignleft, ol .alignleft {
     -ms-flex-pack: start;
     justify-content: flex-start; }
     .publication .meta .messag {
-      margin-left: 20px; }
+      margin-left: 30px; }
   .publication .pub-link {
     font-size: 16px; }
 
