@@ -27,7 +27,7 @@ h1 {
   font-size: 32px;
   line-height: 44px;
   border-bottom: 1px solid  #57a7dc;
-  padding: 20px 0 10px;
+  padding: 40px 0 28px;
   margin: 0 0 40px;
   position: relative; }
   h1:after {
@@ -79,7 +79,7 @@ img {
   align-items: center;
   font: 16px "PT Sans";
   color: #ffffff;
-  padding: 25px 25px 25px 0;
+  padding: 49px 25px 44px 0;
   margin: 25px 0;
   position: relative;
   z-index: 1; }
@@ -144,7 +144,7 @@ ul:not.menu {
   .main ul li:before {
     content: "";
     display: initial;
-    font: 14px "icomoon";
+    font: 16px "icomoon";
     color: #2bd081;
     margin-right: 20px;
     margin-left: -25px; }
@@ -160,11 +160,11 @@ ul .alignleft, ol .alignleft {
       .main ol li {
         padding: 8px 0; } }
   .main ol li:before {
-    content: counter(list1);
+    content: counter(list1) ".";
     counter-increment: list1;
     margin-right: 10px;
-    color: #2bd081;
-    font-family: "PT Serif"; }
+    font: 16px "PT Serif";
+    color: #2bd081; }
   .main ol li ol {
     width: 100%;
     padding-left: 60px;
@@ -203,7 +203,7 @@ ul .alignleft, ol .alignleft {
   background-image: url(/images/background/yarlik.png);
   background-repeat: no-repeat;
   font-weight: 700;
-  padding: 8px 12px;
+  padding: 10px 12px;
   margin: 0 0 10px 0;
   font: 14px "PT Serif";
   color: #ffffff; }

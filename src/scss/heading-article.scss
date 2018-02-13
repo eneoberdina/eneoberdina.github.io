@@ -31,7 +31,7 @@ h1 {
     font-size: 32px;
     line-height: 44px;
     border-bottom: 1px solid  #57a7dc;
-    padding: 20px 0 10px;
+    padding: 40px 0 28px;
     margin: 0 0 40px;
     position: relative;
 
@@ -84,12 +84,10 @@ img {
    background-color: #eef8fd;
    align-items: center;
    @include font($size: 16px);
-   padding: 25px 25px 25px 0;
+   padding: 49px 25px 44px 0;
    margin: 25px 0;
    position: relative;
    z-index: 1;
-
-
 
    .vnimanie-block {
         display: inline-block;
@@ -167,7 +165,7 @@ ul:not.menu { padding-left: 30px;}
     &:before {
         
         @include pseudo(initial, "\f0da");
-        @include font($icomoon, $color-green3);
+        @include font($icomoon, $color-green3,16px);
         margin-right: 20px;
         margin-left: -25px;
     }
@@ -183,11 +181,11 @@ ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; }
     }
 
     li:before {
-        content: counter(list1);
+        content: counter(list1) ".";
         counter-increment: list1;
         margin-right:10px;
-        color: $color-green3;
-        font-family: $font-serif;
+        @include font($font-serif, $color-green3,16px);
+
     }
 
     li ol { 
@@ -245,7 +243,7 @@ ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; }
     background-image: url(/images/background/yarlik.png);
     background-repeat: no-repeat;
     font-weight: 700;
-    padding: 8px 12px;
+    padding: 10px 12px;
     margin: 0 0 10px 0;
     @include font($font-serif, $color-white);
 }

@@ -3,7 +3,7 @@
 
 .widget-area {
    
-    flex-basis: 30%;
+    flex-basis: 310px;
     flex-shrink: 0;
     position: relative;
 
@@ -16,12 +16,16 @@
 
     .items.back { 
 
-        border: 20px solid #eff8fd;
+        border: 30px solid #eff8fd;
         margin: 0 0  30px 0;
     
         &:hover * { color: #00d381;}
 
-        img { width: 100%;
+        img { 
+
+            width: 100%;
+            height: 180px;
+            margin-bottom: 20px;
 
             @media screen and (max-width: 1023px) { width: auto; }
 
@@ -34,7 +38,7 @@
 
             border-left: 1px solid #eff8fd;
             border-right: 1px solid #eff8fd;
-            padding: 13px 0 13px;
+            padding: 13px 10px;
 
             &:first-of-type { padding-top: 30px; }
             
@@ -57,6 +61,7 @@
 
                 text-align: left;
                 font-size: 16px;
+                line-height: 16px
             }
 
             .meta {  
@@ -111,6 +116,8 @@
 .total-number {
 
     font-family: $font-sans;
+    font-weight: 400;
+    font-size: 16px;
     float: right;
 }
 
@@ -122,7 +129,8 @@
        
         font-family: $font-sans;
         padding: 16px 20px 16px 47px;
-        border-top: 0;
+        border: 0.5px solid #eef8fd;
+        border-top:0;
     }
 }
 

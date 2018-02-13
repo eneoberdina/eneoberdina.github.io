@@ -77,8 +77,8 @@
 .icon-odnoklassniki:before {
   content: "\f263";
 }
-.icon-commenting-o:before {
-  content: "\f27b";
+.icon-commenting:before {
+  content: "\f27a";
 }
 
 body,
@@ -170,14 +170,12 @@ figure  { text-align: center;}
 .heading-item,
 .expand { margin: 0 auto;}
 
-.hidden-block .hidd,
 .related .items.nopicture,
 .commits,
 .articles-popularin.read-block .items { border: 1px solid #eef8fd; }
 
 .article .articles-popularin,
 .expand,
-.table-block,
 .soc-ico,
 .commits,
 .columns-right,
@@ -208,7 +206,7 @@ body {
 .site-content {
    
     width: 1060px;
-    padding: 30px 0;
+    padding: 30px 0 40px;
 
     @media screen and (max-width: 1240px) { 
 
@@ -234,7 +232,7 @@ body {
 .main { 
 
     flex: 1 1 0;
-    padding-right: 30px;
+    padding-right: 50px;
     line-height: 24px;
 
     &.article, .wrapper-content { font-size: 16px;
@@ -308,7 +306,7 @@ body {
 
     .messag:before {
 
-        content:"\f27b";
+        content:"\f27a";
         padding-right: 5px;
     }
 }
@@ -379,7 +377,7 @@ body {
         @include pseudo;
         width: 20px;
         border-bottom: 1px solid $color-green3;
-        margin: 9px auto;
+        margin: 10px auto;
     }
 }
 
