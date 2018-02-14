@@ -820,8 +820,7 @@ img {
 .inform-picture,
 .advert,
 .row-heading.top,
-.soc-list,
-.comment-reply-title {
+.soc-list {
   padding: 10px 0; }
 
 .vnimanie {
@@ -894,7 +893,7 @@ ul:not.menu {
 
 .main ul li {
   line-height: 22px;
-  padding: 8px 0; }
+  padding: 10px 0; }
   .main ul li:before {
     content: "";
     display: initial;
@@ -966,14 +965,17 @@ ul .alignleft, ol .alignleft {
   .row-heading.top {
     padding: 0 5px 20px; } }
 
+.row-heading.top .group-link {
+  padding: 0 25px; }
+
 .row-heading.top .heading-item {
-  width: 95px;
-  height: 95px;
+  width: 100px;
+  height: 100px;
   display: block;
-  font-size: 10px;
-  line-height: 11px;
+  font-size: 14px;
+  line-height: 1.14;
   margin: 10px auto;
-  padding: 35px  20px 0 20px; }
+  padding: 35px 10px 0 10px; }
   .row-heading.top .heading-item:after {
     margin: 5px auto; }
 
@@ -982,8 +984,8 @@ ul .alignleft, ol .alignleft {
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%; }
   .row-heading.bottom .heading-item {
-    width: 140px;
-    height: 140px; }
+    width: 150px;
+    height: 150px; }
     @media screen and (max-width: 1023px) {
       .row-heading.bottom .heading-item {
         width: 96px;
@@ -1043,9 +1045,18 @@ ul .alignleft, ol .alignleft {
           .related .items.nopicture > p {
             height: auto;
             overflow: initial; } }
+      .related .items.nopicture .meta {
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -moz-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start; }
+        .related .items.nopicture .meta .meta-span.dark.views {
+          margin-left: 0; }
     .related .items .items-title-articl {
       height: 55px;
-      overflow: hidden; }
+      overflow: hidden;
+      line-height: 0.98; }
       .related .items .items-title-articl:hover {
         color: #7bbfec; }
       .related .items .items-title-articl:before {
@@ -1058,7 +1069,7 @@ ul .alignleft, ol .alignleft {
         font-family: "PT Sans";
         font-size: 18px;
         font-weight: 700;
-        line-height: 18px;
+        line-height: 1;
         padding: 20px 0; }
 
 .publication-content .meta {
@@ -1069,7 +1080,7 @@ ul .alignleft, ol .alignleft {
 .publication {
   border: 1px solid #f1f9fd;
   margin: 30px 0;
-  padding: 20px; }
+  padding: 40px 20px 20px; }
   @media screen and (max-width: 641px) {
     .publication {
       -webkit-flex-wrap: wrap;
@@ -1094,7 +1105,7 @@ ul .alignleft, ol .alignleft {
       display: block;
       width: 20px;
       border-bottom: 1px solid #7bbfec;
-      margin: 10px 0; }
+      margin: 9px 0 14px; }
   .publication .piblicat {
     line-height: 18px;
     color: rgba(73, 110, 134, 0.8);
@@ -1110,7 +1121,7 @@ ul .alignleft, ol .alignleft {
   .publication .pub-link {
     font-size: 16px; }
 
-.small-publicat .publication:nth-child(2n) {
+.small-publicat .publication:nth-child(2n+1) {
   background-color: #eff8fd; }
 
 .contents-wrap {
@@ -1129,10 +1140,10 @@ ul .alignleft, ol .alignleft {
     font: 20px "PT Serif";
     color: #496e86;
     font-weight: 700;
-    padding: 0 0 20px 0; }
+    padding: 0 0 26px 0; }
   .contents-wrap ul > li {
     line-height: 16px;
-    padding: 0 0 14px; }
+    padding: 14px 0 0; }
     .contents-wrap ul > li:before {
       font-size: 14px;
       margin-left: -40px;
@@ -1296,15 +1307,21 @@ ul.ya-share2_list li:before {
     padding-left: 5px; }
 
 .articles-headings.home.commits .row-item {
-  -webkit-flex-basis: -webkit-calc(100%/2 - 25px);
-  -ms-flex-preferred-size: calc(100%/2 - 25px);
-  flex-basis: -moz-calc(100%/2 - 25px);
-  flex-basis: calc(100%/2 - 25px); }
+  -webkit-flex-basis: 160px;
+  -ms-flex-preferred-size: 160px;
+  flex-basis: 160px;
+  padding: 0 0 30px 0; }
+
+.articles-headings.home.commits .columns-right .row-item {
+  padding: 0; }
 
 .commits {
   width: 100%;
-  padding: 0 20px 0 50px;
-  line-height: 16px; }
+  padding: 20px 20px 10px 50px;
+  line-height: 16px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   @media screen and (max-width: 768px) {
     .commits {
       -webkit-flex-wrap: wrap;
@@ -1312,32 +1329,42 @@ ul.ya-share2_list li:before {
       flex-wrap: wrap;
       padding: 0; } }
   .commits.articles-headings.home > .columns-left {
-    padding-right: 70px; }
+    padding-right: 90px; }
   .commits .content {
     padding-bottom: 10px; }
   .commits .title-articl {
-    padding: 30px 0 0;
-    color: #7bbfec; }
+    padding: 20px 0 0;
+    color: #7bbfec;
+    line-height: 1.2; }
     .commits .title-articl:after {
       margin: 20px 0; }
   .commits .columns-right {
     width: 200px;
     display: block;
     background-image: url(/images/background/pattern_blue.png);
-    margin: 20px 0;
-    padding: 10px 20px;
+    line-height: 1.2;
+    padding: 20px 20px 0 20px;
+    margin-bottom: 10px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
     @media screen and (max-width: 768px) {
       .commits .columns-right {
         width: 100%; } }
+    .commits .columns-right .row-item {
+      padding: 0; }
     .commits .columns-right *, .commits .columns-right .link-article {
       color: #ffffff; }
+    .commits .columns-right .link-article {
+      line-height: 1; }
+    .commits .columns-right .title-articl.blue {
+      padding-top: 0;
+      display: block; }
     .commits .columns-right .symbol-link {
       color: rgba(255, 255, 255, 0.7);
       font-size: 14px;
-      padding: 10px 0 30px; }
+      padding: 10px 0 30px;
+      line-height: 1.14; }
   .commits .columns-left {
     width: 65%; }
     .commits .columns-left .link-article.float {
@@ -1358,10 +1385,12 @@ ul.ya-share2_list li:before {
 
 .link-append,
 .answer {
-  float: right;
+  width: 70px;
   font: 14px "PT Sans";
   color: #ffffff;
-  padding: 4px 10px; }
+  padding: 6px 0;
+  float: right;
+  text-align: center; }
 
 .title-commits {
   background-image: url(/images/background/pattern_blue.png);
@@ -1372,43 +1401,50 @@ ul.ya-share2_list li:before {
   border-radius: 5px;
   line-height: 27px;
   padding: 13px 20px;
-  margin-bottom: 20px; }
+  margin-bottom: 25px; }
   .title-commits .count {
-    padding: 0 10px; }
+    padding: 0 10px;
+    opacity: 0.8; }
   .title-commits .link-append {
-    font: 14px "PT Sans";
+    font-size: 14px;
     color: rgba(73, 110, 134, 0.7);
     background-color: #eef8fd; }
     .title-commits .link-append:hover {
       background-color: #a4d9f6; }
 
+ul.ul-commits {
+  padding: 0; }
+
 ul.ul-commits li {
   display: block; }
   ul.ul-commits li:before {
     content: none; }
-  ul.ul-commits li ul {
+  @media screen and (max-width: 1023px) {
+    ul.ul-commits li ul {
+      padding-left: 10px; } }
+  ul.ul-commits li ul li:before {
+    content: "\f0da";
+    display: inline-block;
+    font: 14px "icomoon";
+    color: #7bbfec;
+    padding: 15px 0 0 0;
+    margin-left: 0;
+    margin-right: 20px;
+    vertical-align: top; }
+  ul.ul-commits li ul .text-commit {
+    padding: 10px 10px 10px 20px; }
+  ul.ul-commits li ul ul {
     padding-left: 60px; }
     @media screen and (max-width: 1023px) {
-      ul.ul-commits li ul {
-        padding-left: 10px; } }
-    ul.ul-commits li ul li:before {
+      ul.ul-commits li ul ul {
+        padding-left: 20px; } }
+    ul.ul-commits li ul ul > li:before {
+      content: "\f0da \f0da";
       display: inline-block;
       font: 14px "icomoon";
       color: #7bbfec;
-      padding: 15px 10px 0 0;
-      vertical-align: top; }
-    ul.ul-commits li ul .text-commit {
-      padding: 10px 10px 10px 20px; }
-    ul.ul-commits li ul ul {
-      padding-left: 60px; }
-      @media screen and (max-width: 1023px) {
-        ul.ul-commits li ul ul {
-          padding-left: 20px; } }
-      ul.ul-commits li ul ul li:before {
-        display: inline-block;
-        font: 14px "icomoon";
-        color: #7bbfec;
-        vertical-align: top; }
+      vertical-align: top;
+      letter-spacing: 4px; }
 
 .commit-item span {
   display: inline-block; }
@@ -1429,12 +1465,15 @@ ul.ul-commits li {
 .text-commit {
   border-bottom: 1px solid #eef8fd;
   font-size: 14px;
-  padding: 10px 10px 10px 0; }
+  padding: 10px 10px 0 0;
+  margin-bottom: 20px; }
 
 .answer,
 input[type="submit"] {
   background-color: #7bbfec;
-  margin: 20px 0; }
+  margin: 15px 0 15px auto;
+  padding: 4px 0;
+  float: none; }
   .answer:hover,
   input[type="submit"]:hover {
     background-color: #33a9f8; }
@@ -1442,7 +1481,8 @@ input[type="submit"] {
 .comment-reply-title {
   font: 16px "PT Serif";
   color: #496e86;
-  font-weight: 700; }
+  font-weight: 700;
+  padding: 0 0 15px 0; }
 
 .comment-form {
   background-color: #eef8fd;
@@ -2750,5 +2790,19 @@ body {
       background-color: #f1f9fd; }
   .wp-pagenavi .dott {
     margin: 0 2px; }
+
+.site-content .main.article ul.ul-commits,
+.site-content .main.article ul.ul-commits li {
+  padding: 0; }
+
+.site-content .main.article ul.ul-commits li ul {
+  padding-left: 62px; }
+  .site-content .main.article ul.ul-commits li ul .text-commit {
+    padding: 10px 10px 0 28px; }
+
+.site-content .main.article ul.ul-commits li ul li ul {
+  padding-left: 74px; }
+  .site-content .main.article ul.ul-commits li ul li ul .text-commit {
+    padding: 10px 10px 0 40px; }
 
 /*# sourceMappingURL=maps/style.css.map */

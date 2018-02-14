@@ -76,8 +76,7 @@ img {
 .inform-picture,
 .advert,
 .row-heading.top,
-.soc-list,
-.comment-reply-title { padding: 10px 0; }
+.soc-list { padding: 10px 0; }
 
 .vnimanie {
    
@@ -160,7 +159,7 @@ ul:not.menu { padding-left: 30px;}
 .main  ul  li { 
 
     line-height: 22px;
-    padding: 8px 0;
+    padding: 10px 0;
 
     &:before {
         
@@ -252,15 +251,17 @@ ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; }
 
      @media screen and (max-width: 1023px) { padding: 0 5px 20px; }
 
+    .group-link { padding: 0 25px; }
+
 .heading-item {
 
-    width: 95px;
-    height: 95px;
+    width: 100px;
+    height: 100px;
     display: block;
-    font-size: 10px;
-    line-height: 11px;
+    font-size: 14px;
+    line-height: 1.14;
     margin: 10px auto;
-    padding: 35px  20px 0 20px;
+    padding: 35px 10px 0 10px;
 
         &:after { margin: 5px auto; }
     }
@@ -270,8 +271,8 @@ ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; }
     
     .heading-item {
 
-        width: 140px;
-        height: 140px;
+        width: 150px;
+        height: 150px;
 
         @media screen and (max-width: 1023px) { 
             
@@ -342,12 +343,18 @@ ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; }
                 }
             }
 
+            .meta {justify-content: flex-start;
+
+                .meta-span.dark.views { margin-left: 0;}
+            }
+
         }
 
         .items-title-articl { 
 
             height: 55px;
             overflow: hidden;
+            line-height: 0.98;
 
             &:hover { color: $color-blue;}
 
@@ -364,7 +371,7 @@ ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; }
                 font-family: $font-sans;
                 font-size: 18px;
                 font-weight: 700;
-                line-height: 18px;
+                line-height: 1;
                 padding: 20px 0
             }
         
@@ -381,7 +388,7 @@ ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; }
 
     border: 1px solid #f1f9fd;
     margin: 30px 0;
-    padding: 20px;
+    padding: 40px 20px 20px;
 
     @media screen and (max-width: 641px) { 
 
@@ -410,7 +417,7 @@ ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; }
             @include pseudo;
             width: 20px;
             border-bottom: 1px solid $color-blue;
-            margin: 10px 0;
+            margin: 9px 0 14px;
         }
     }
 
@@ -429,4 +436,4 @@ ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; }
     .pub-link { font-size: 16px;}
 }
 
-.small-publicat .publication:nth-child(2n) { background-color: #eff8fd;}
+.small-publicat .publication:nth-child(2n+1) { background-color: #eff8fd;}

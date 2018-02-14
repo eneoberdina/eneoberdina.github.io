@@ -21,7 +21,7 @@
      	display: block;
      	@include font($font-family: $font-serif, $color:$color-text, $size: 20px );
     	font-weight: 700;
-    	padding: 0 0 20px 0;
+    	padding: 0 0 26px 0;
 	}
 
 	ul  { 
@@ -29,7 +29,7 @@
 		> li { 
 
 			line-height: 16px;
-			padding: 0 0 14px;
+			padding: 14px 0 0;
 
 			&:before {
 			
@@ -233,13 +233,22 @@ ul.ya-share2_list li:before { content: none; }
 	}
 }
 
-.articles-headings.home.commits .row-item { flex-basis: calc(100%/2 - 25px); }
+.articles-headings.home.commits .row-item {  
+
+	flex-basis: 160px;
+	padding: 0 0 30px 0;
+
+}
+
+.articles-headings.home.commits .columns-right .row-item {  padding: 0; }
+
 
 .commits {
 
 	width: 100%;
-	padding: 0 20px 0 50px;
+	padding: 20px 20px 10px 50px;
 	line-height: 16px;
+	box-sizing: border-box;
 
 	@media screen and (max-width: 768px) { 
 		
@@ -247,35 +256,48 @@ ul.ya-share2_list li:before { content: none; }
 		padding: 0;
 	}
 
-	&.articles-headings.home > .columns-left { padding-right: 70px;}
+	&.articles-headings.home > .columns-left { padding-right: 90px;}
 
 	.content { padding-bottom: 10px; }
 
 	.title-articl { 
 
-		padding: 30px 0 0; 
+		padding: 20px 0 0; 
 		color: $color-blue;
+		line-height: 1.2;
 
 		&:after { margin: 20px 0;}
 	}
 
 	.columns-right {
 
-    	 width: 200px;
-    	 display: block;
-    	 background-image: url(/images/background/pattern_blue.png);
-    	 margin: 20px 0;
-    	 padding: 10px 20px;
-    	 box-sizing: border-box;
+    	width: 200px;
+    	display: block;
+    	background-image: url(/images/background/pattern_blue.png);
+    	line-height: 1.2;
+    	padding: 20px 20px 0 20px;
+    	margin-bottom: 10px;
+    	box-sizing: border-box;
 
     	 @media screen and (max-width: 768px) { width: 100%; }
 
+    	 .row-item { padding: 0; }
+
     	*, .link-article { color: $color-white;}
+
+    	.link-article { line-height: 1; }
+
+		.title-articl.blue {
+		   
+		    padding-top: 0;
+		    display: block;
+		}
 
     	.symbol-link { 
     		color: rgba(255, 255, 255, 0.7);
     		font-size: 14px;
     		padding: 10px 0 30px;
+    		line-height: 1.14;
 		}
     }
 
@@ -305,9 +327,11 @@ ul.ya-share2_list li:before { content: none; }
 .link-append,
 .answer {
 	
-	    float: right;
-	    @include font($color: $color-white);
-	    padding: 4px 10px;
+	width: 70px;
+    @include font($color: $color-white);
+    padding: 6px 0;
+    float: right;
+	text-align: center
 }
 
 .title-commits {
@@ -318,32 +342,42 @@ ul.ya-share2_list li:before { content: none; }
 	border-radius: 5px;
 	line-height: 27px;
 	padding: 13px 20px;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 
-	.count { padding: 0 10px; }
+	.count { 
+
+		padding: 0 10px;
+		opacity: 0.8;
+	}
 
 	.link-append {
 
-	    @include font($color: rgba(73, 110, 134, 0.7 ));
+		font-size: 14px;
+	    color: rgba(73, 110, 134, 0.7 );
 	 	background-color: #eef8fd;
 
 		&:hover { background-color: #a4d9f6;}
 	}
 }
 
+ul.ul-commits { padding: 0;}
+
 ul.ul-commits  li { display: block;
 
 	&:before { content: none;}
 
-	  ul { padding-left: 60px;
+	  ul { 
 
 	  	@media screen and (max-width: 1023px) { padding-left: 10px; }
 
-	   li:before {
-        
+	    li:before {
+
+			content: "\f0da";        
         	display: inline-block;
 	        @include font($icomoon, $color-blue);
-	        padding: 15px 10px 0 0;
+	        padding: 15px 0 0 0;
+	        margin-left: 0;
+	        margin-right: 20px;
 	        vertical-align: top;
     	}
 
@@ -353,17 +387,19 @@ ul.ul-commits  li { display: block;
 
         	@media screen and (max-width: 1023px) { padding-left: 20px; }
 
-	        li:before {
-	        
+	       > li:before {
+	        	
+	        	content: "\f0da \f0da";    
 		        display: inline-block;
 		        @include font($icomoon, $color-blue);
 		        vertical-align: top;
+		        letter-spacing: 4px;
 	    	}
 	    }
     }   
 }
 
-.commit-item span{ display: inline-block; }
+.commit-item span { display: inline-block; }
 
 .icon {
 
@@ -385,14 +421,17 @@ ul.ul-commits  li { display: block;
 
 	border-bottom: 1px solid #eef8fd;
 	font-size: 14px;
-    padding: 10px 10px 10px 0;
+    padding: 10px 10px 0 0;
+	margin-bottom: 20px;
 }
 
 .answer,
 input[type="submit"] {
 
 	background-color: $color-blue; 
-	margin: 20px 0;
+	margin: 15px 0 15px auto;
+	padding: 4px 0;
+	float: none;
 	
 	&:hover { background-color: #33a9f8; }
 }
@@ -401,8 +440,9 @@ input[type="submit"] {
 
 	@include font($font-family: $font-serif, $color: $color-text, $size: 16px); 
 	font-weight: 700;
+	padding: 0 0 15px 0;
 }
-	
+ 
 .comment-form { 
 
 	background-color:  #eef8fd;

@@ -66,8 +66,7 @@ img {
 .inform-picture,
 .advert,
 .row-heading.top,
-.soc-list,
-.comment-reply-title {
+.soc-list {
   padding: 10px 0; }
 
 .vnimanie {
@@ -140,7 +139,7 @@ ul:not.menu {
 
 .main ul li {
   line-height: 22px;
-  padding: 8px 0; }
+  padding: 10px 0; }
   .main ul li:before {
     content: "";
     display: initial;
@@ -212,14 +211,17 @@ ul .alignleft, ol .alignleft {
   .row-heading.top {
     padding: 0 5px 20px; } }
 
+.row-heading.top .group-link {
+  padding: 0 25px; }
+
 .row-heading.top .heading-item {
-  width: 95px;
-  height: 95px;
+  width: 100px;
+  height: 100px;
   display: block;
-  font-size: 10px;
-  line-height: 11px;
+  font-size: 14px;
+  line-height: 1.14;
   margin: 10px auto;
-  padding: 35px  20px 0 20px; }
+  padding: 35px 10px 0 10px; }
   .row-heading.top .heading-item:after {
     margin: 5px auto; }
 
@@ -228,8 +230,8 @@ ul .alignleft, ol .alignleft {
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%; }
   .row-heading.bottom .heading-item {
-    width: 140px;
-    height: 140px; }
+    width: 150px;
+    height: 150px; }
     @media screen and (max-width: 1023px) {
       .row-heading.bottom .heading-item {
         width: 96px;
@@ -289,9 +291,18 @@ ul .alignleft, ol .alignleft {
           .related .items.nopicture > p {
             height: auto;
             overflow: initial; } }
+      .related .items.nopicture .meta {
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -moz-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start; }
+        .related .items.nopicture .meta .meta-span.dark.views {
+          margin-left: 0; }
     .related .items .items-title-articl {
       height: 55px;
-      overflow: hidden; }
+      overflow: hidden;
+      line-height: 0.98; }
       .related .items .items-title-articl:hover {
         color: #7bbfec; }
       .related .items .items-title-articl:before {
@@ -304,7 +315,7 @@ ul .alignleft, ol .alignleft {
         font-family: "PT Sans";
         font-size: 18px;
         font-weight: 700;
-        line-height: 18px;
+        line-height: 1;
         padding: 20px 0; }
 
 .publication-content .meta {
@@ -315,7 +326,7 @@ ul .alignleft, ol .alignleft {
 .publication {
   border: 1px solid #f1f9fd;
   margin: 30px 0;
-  padding: 20px; }
+  padding: 40px 20px 20px; }
   @media screen and (max-width: 641px) {
     .publication {
       -webkit-flex-wrap: wrap;
@@ -340,7 +351,7 @@ ul .alignleft, ol .alignleft {
       display: block;
       width: 20px;
       border-bottom: 1px solid #7bbfec;
-      margin: 10px 0; }
+      margin: 9px 0 14px; }
   .publication .piblicat {
     line-height: 18px;
     color: rgba(73, 110, 134, 0.8);
@@ -356,7 +367,7 @@ ul .alignleft, ol .alignleft {
   .publication .pub-link {
     font-size: 16px; }
 
-.small-publicat .publication:nth-child(2n) {
+.small-publicat .publication:nth-child(2n+1) {
   background-color: #eff8fd; }
 
 /*# sourceMappingURL=maps/heading-article.css.map */

@@ -501,3 +501,16 @@ body {
 
     .dott { margin: 0 2px; }
 }
+
+.site-content .main.article ul.ul-commits, 
+.site-content .main.article ul.ul-commits li { padding: 0; }
+
+.site-content .main.article ul.ul-commits  li ul { padding-left: 62px;
+
+    .text-commit { padding: 10px 10px 0 28px; }
+}
+
+.site-content .main.article ul.ul-commits  li ul li ul { padding-left: 74px; 
+       
+    .text-commit {padding: 10px 10px 0 40px;}
+}
