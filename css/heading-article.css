@@ -1,6 +1,6 @@
 @charset "UTF-8";
 figure {
-  font-family: "PT Serif"; }
+  font-family: "PT+Serif"; }
 
 h1,
 h2,
@@ -9,7 +9,7 @@ h4,
 h5,
 h6,
 .soc-inf {
-  font-family: "PT Serif";
+  font-family: "PT+Serif";
   color: #1d5273;
   padding: 10px 0;
   margin: 0;
@@ -76,7 +76,7 @@ img {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font: 16px "PT Sans";
+  font: 16px "PT+Sans";
   color: #ffffff;
   padding: 49px 25px 44px 0;
   margin: 25px 0;
@@ -121,7 +121,7 @@ img {
     .vnimanie.vn-green:before {
       background: url(/images/control/bv_vajno.png) no-repeat center; }
     .vnimanie.vn-green .critical {
-      font-family: "PT Sans";
+      font-family: "PT+Sans";
       font-weight: 700;
       display: block;
       border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -162,7 +162,7 @@ ul .alignleft, ol .alignleft {
     content: counter(list1) ".";
     counter-increment: list1;
     margin-right: 10px;
-    font: 16px "PT Serif";
+    font: 16px "PT+Serif";
     color: #2bd081; }
   .main ol li ol {
     width: 100%;
@@ -204,7 +204,7 @@ ul .alignleft, ol .alignleft {
   font-weight: 700;
   padding: 10px 12px;
   margin: 0 0 10px 0;
-  font: 14px "PT Serif";
+  font: 14px "PT+Serif";
   color: #ffffff; }
 
 @media screen and (max-width: 1023px) {
@@ -225,13 +225,17 @@ ul .alignleft, ol .alignleft {
   .row-heading.top .heading-item:after {
     margin: 5px auto; }
 
+.wrapper-head-bootom {
+  background-color: #f1f9fd; }
+
 .row-heading.bottom {
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%; }
+  width: 1060px;
+  padding: 40px 0;
+  margin: 0 auto; }
   .row-heading.bottom .heading-item {
     width: 150px;
-    height: 150px; }
+    height: 150px;
+    font-size: 16px; }
     @media screen and (max-width: 1023px) {
       .row-heading.bottom .heading-item {
         width: 96px;
@@ -312,7 +316,7 @@ ul .alignleft, ol .alignleft {
         border-bottom: 1px solid #7bbfec;
         margin: 10px auto; }
       .related .items .items-title-articl.bold {
-        font-family: "PT Sans";
+        font-family: "PT+Sans";
         font-size: 18px;
         font-weight: 700;
         line-height: 1;
@@ -341,7 +345,7 @@ ul .alignleft, ol .alignleft {
     flex-shrink: 0;
     margin: 0 20px 20px 0; }
   .publication .link-pub {
-    font-family: "PT Sans";
+    font-family: "PT+Sans";
     font-size: 24px;
     font-weight: 700; }
     .publication .link-pub:hover {

@@ -351,14 +351,10 @@ body {
     &:after {
         
         @include pseudo;
-        width: 200px;
+        width: 170px;
         height: 3px;
-        border-radius: 50%;
-        background: rgba(29, 82, 115, 0.3);
-        background-image: -webkit-linear-gradient(left, #fff, rgba(29, 82, 115, 0.3), #fff);
-        background-image: -moz-linear-gradient(left, #fff,rgba(29, 82, 115, 0.3), #fff);
-        background-image: -ms-linear-gradient(left, #fff, rgba(29, 82, 115, 0.3), #fff);
-        background-image: -o-linear-gradient(left, #fff, rgba(29, 82, 115, 0.3), #fff);
+        background-image: url(/images/control/line_grey.svg);
+        opacity: 0.3;
         margin: 10px auto 0;
     }
 }
@@ -391,32 +387,24 @@ body {
 
     flex-basis: calc(100%/4 - 20px);
     line-height: 16px;
-    padding: 0 0 10px;
 
      @media screen and (max-width: 641px) {  flex-basis: 100%;}
 
     @media screen and (min-width: 642px) and (max-width: 1023px)  {  flex-basis: calc(100%/2 - 20px); }
 
-    img { 
-
-        margin-bottom: 10px;
-        width: 100%;
+    img { margin-bottom: 20px;
 
         @media screen and (max-width: 641px) {  width: auto;}
     }
 }
 
-.row-heading {
-
-    background-color: #f1f9fd;
-    padding: 40px 15%;
+.row-heading { background-color: #f1f9fd;
 
     @media screen and (max-width: 1240px) { padding: 10px;}
 }
 
 .heading-item {
             
-    height: 155px;
     display: block;
     margin: 10px auto;
     padding: 60px 0 0 0;
@@ -503,7 +491,7 @@ body {
 }
 
 .site-content .main.article ul.ul-commits, 
-.site-content .main.article ul.ul-commits li { padding: 0; }
+.site-content .main.article ul.ul-commits l{ padding: 0; }
 
 .site-content .main.article ul.ul-commits  li ul { padding-left: 62px;
 
