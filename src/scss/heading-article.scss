@@ -98,6 +98,8 @@ img {
             display: block;
             width: 100%;
             padding-left: 30px;
+            padding-top: 30px;
+            text-align: center;
         }
     }
 
@@ -109,7 +111,12 @@ img {
             background:url(/images/control/bv_osnovnoi.png) no-repeat top;
             margin: 0 0 0 20px;
 
-            @media screen and (max-width: 1023px) { margin: 0 auto 10px; }
+            @media screen and (max-width: 768px) { 
+
+                width: 100%;
+                background-position: center;
+                margin: 0 0 10px 30px;
+             }
         }
 
 
@@ -141,8 +148,8 @@ img {
                 font-weight: 700; 
                 display: block;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-                margin-bottom: 5px;
-                padding-bottom: 5px;
+                margin-bottom: 15px;
+                padding-bottom: 15px;
               
             }
         }
@@ -170,7 +177,11 @@ ul:not.menu { padding-left: 30px;}
     }
 }
 
-ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; } 
+ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; 
+
+    @media screen and (max-width: 768px) { margin: 10px auto 10px 0; } 
+
+} 
 
 .main ol { counter-reset: list1; 
 
@@ -213,11 +224,11 @@ ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; }
     float: right; 
     margin: 0 0 10px 20px;
 
-    @media screen and (max-width: 568px) { 
+    @media screen and (max-width: 768px) { 
 
         display: block;
         float: none;
-        margin: 10px 0 0;
+        margin: 10px auto;
     }
 }
 
@@ -227,12 +238,11 @@ ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; }
     float: left;
     margin: 0 20px 10px 0; 
 
-    @media screen and (max-width: 568px) { 
+    @media screen and (max-width: 768px) { 
 
         display: block;
         float: none;
-        margin: 10px 0 0;
-
+        margin: 10px auto;;
     }
 }
 
@@ -273,23 +283,14 @@ ul .alignleft, ol .alignleft { margin: 0 50px 10px 0; }
 
     width: 1060px;
     padding: 40px 0;
-    margin: 0 auto;
+
+     @media screen and (max-width: 1024px) { width: 100%; }
     
     .heading-item {
 
         width: 150px;
         height: 150px;
         font-size: 16px;
-
-        @media screen and (max-width: 1023px) { 
-            
-            width: 96px;
-            height: 96px;
-            margin: 10px auto;
-            padding: 36px 17px 0;
-            font-size: 12px;
-            line-height: 11px;
-        }
     }
 }
 

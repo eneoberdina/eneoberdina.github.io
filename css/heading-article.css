@@ -1,6 +1,6 @@
 @charset "UTF-8";
 figure {
-  font-family: "PT+Serif"; }
+  font-family: "PT Serif"; }
 
 h1,
 h2,
@@ -9,7 +9,7 @@ h4,
 h5,
 h6,
 .soc-inf {
-  font-family: "PT+Serif";
+  font-family: "PT Serif";
   color: #1d5273;
   padding: 10px 0;
   margin: 0;
@@ -76,7 +76,7 @@ img {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font: 16px "PT+Sans";
+  font: 16px "PT Sans";
   color: #ffffff;
   padding: 49px 25px 44px 0;
   margin: 25px 0;
@@ -92,7 +92,9 @@ img {
       .vnimanie .vnimanie-block {
         display: block;
         width: 100%;
-        padding-left: 30px; } }
+        padding-left: 30px;
+        padding-top: 30px;
+        text-align: center; } }
   .vnimanie:before {
     content: "";
     display: inline-block;
@@ -100,9 +102,11 @@ img {
     height: 70px;
     background: url(/images/control/bv_osnovnoi.png) no-repeat top;
     margin: 0 0 0 20px; }
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 768px) {
       .vnimanie:before {
-        margin: 0 auto 10px; } }
+        width: 100%;
+        background-position: center;
+        margin: 0 0 10px 30px; } }
   .vnimanie:after {
     content: "";
     position: absolute;
@@ -121,12 +125,12 @@ img {
     .vnimanie.vn-green:before {
       background: url(/images/control/bv_vajno.png) no-repeat center; }
     .vnimanie.vn-green .critical {
-      font-family: "PT+Sans";
+      font-family: "PT Sans";
       font-weight: 700;
       display: block;
       border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-      margin-bottom: 5px;
-      padding-bottom: 5px; }
+      margin-bottom: 15px;
+      padding-bottom: 15px; }
   @media screen and (max-width: 1023px) {
     .vnimanie {
       -webkit-flex-wrap: wrap;
@@ -150,6 +154,9 @@ ul:not.menu {
 
 ul .alignleft, ol .alignleft {
   margin: 0 50px 10px 0; }
+  @media screen and (max-width: 768px) {
+    ul .alignleft, ol .alignleft {
+      margin: 10px auto 10px 0; } }
 
 .main ol {
   counter-reset: list1; }
@@ -162,7 +169,7 @@ ul .alignleft, ol .alignleft {
     content: counter(list1) ".";
     counter-increment: list1;
     margin-right: 10px;
-    font: 16px "PT+Serif";
+    font: 16px "PT Serif";
     color: #2bd081; }
   .main ol li ol {
     width: 100%;
@@ -182,20 +189,20 @@ ul .alignleft, ol .alignleft {
 .alignright {
   float: right;
   margin: 0 0 10px 20px; }
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 768px) {
     .alignright {
       display: block;
       float: none;
-      margin: 10px 0 0; } }
+      margin: 10px auto; } }
 
 .alignleft {
   float: left;
   margin: 0 20px 10px 0; }
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 768px) {
     .alignleft {
       display: block;
       float: none;
-      margin: 10px 0 0; } }
+      margin: 10px auto; } }
 
 .title-heading {
   width: 129px;
@@ -204,7 +211,7 @@ ul .alignleft, ol .alignleft {
   font-weight: 700;
   padding: 10px 12px;
   margin: 0 0 10px 0;
-  font: 14px "PT+Serif";
+  font: 14px "PT Serif";
   color: #ffffff; }
 
 @media screen and (max-width: 1023px) {
@@ -230,20 +237,14 @@ ul .alignleft, ol .alignleft {
 
 .row-heading.bottom {
   width: 1060px;
-  padding: 40px 0;
-  margin: 0 auto; }
+  padding: 40px 0; }
+  @media screen and (max-width: 1024px) {
+    .row-heading.bottom {
+      width: 100%; } }
   .row-heading.bottom .heading-item {
     width: 150px;
     height: 150px;
     font-size: 16px; }
-    @media screen and (max-width: 1023px) {
-      .row-heading.bottom .heading-item {
-        width: 96px;
-        height: 96px;
-        margin: 10px auto;
-        padding: 36px 17px 0;
-        font-size: 12px;
-        line-height: 11px; } }
 
 .related {
   padding: 20px 0 0 0; }
@@ -316,7 +317,7 @@ ul .alignleft, ol .alignleft {
         border-bottom: 1px solid #7bbfec;
         margin: 10px auto; }
       .related .items .items-title-articl.bold {
-        font-family: "PT+Sans";
+        font-family: "PT Sans";
         font-size: 18px;
         font-weight: 700;
         line-height: 1;
@@ -345,7 +346,7 @@ ul .alignleft, ol .alignleft {
     flex-shrink: 0;
     margin: 0 20px 20px 0; }
   .publication .link-pub {
-    font-family: "PT+Sans";
+    font-family: "PT Sans";
     font-size: 24px;
     font-weight: 700; }
     .publication .link-pub:hover {

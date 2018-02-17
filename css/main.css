@@ -73,9 +73,9 @@
     flex-basis: 320px;
     height: 280px;
     background-image: url(/images/background/pattern_green.png);
-    font: 24px "PT+Serif";
+    font: 24px "PT Serif";
     color: #ffffff;
-    margin: 0 40px 10px 10px;
+    margin: 0 40px 10px 0;
     padding-top: 4.125em;
     font-weight: 700;
     line-height: 30px;
@@ -120,7 +120,7 @@
     .articles-discusses .items a:hover {
       color: #d0e8df; }
     .articles-discusses .items .items-link {
-      font: 18px "PT+Sans";
+      font: 18px "PT Sans";
       color: #ffffff;
       padding: 40px 0;
       font-weight: 700;
@@ -140,7 +140,7 @@
       margin: 0; }
     .articles-discusses .items .items-link-discus,
     .articles-discusses .items .items-text {
-      font: 14px "PT+Sans";
+      font: 14px "PT Sans";
       color: #ffffff; }
     .articles-discusses .items .items-link-discus:after {
       content: "";
@@ -151,7 +151,6 @@
 
 @media screen and (max-width: 1023px) {
   .articles-headings.home {
-    padding: 0 10px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -170,11 +169,7 @@
   width: 247px; }
   @media screen and (max-width: 641px) {
     .articles-headings.home .row-item {
-      -webkit-box-flex: 100%;
-      -webkit-flex: 100%;
-      -moz-box-flex: 100%;
-      -ms-flex: 100%;
-      flex: 100%; } }
+      width: 200px; } }
   .articles-headings.home .row-item a:hover {
     color: #77c1ee; }
 
@@ -206,7 +201,7 @@
       -webkit-column-width: 247px;
       -moz-column-width: 247px;
       column-width: 247px;
-      height: 40px;
+      height: 39px;
       overflow: hidden;
       line-height: 1; }
   .articles-headings.home > .columns-left > .heading-item {
@@ -424,7 +419,7 @@
         padding-right: 0; }
       .question-wrapper ul a {
         display: block;
-        font: 16px "PT+Sans";
+        font: 16px "PT Sans";
         color: #496e86;
         padding-bottom: 15px;
         line-height: 1; }

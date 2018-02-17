@@ -4,6 +4,8 @@
 #breadcrumbs  { 
 
     font: 13px "PT Sans";
+
+    @media screen and (max-width: 768px) { padding-top: 20px; }
   
     span > span:nth-child(1):before {
 

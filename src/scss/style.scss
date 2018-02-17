@@ -237,10 +237,7 @@ body {
 
     &.article, .wrapper-content { font-size: 16px;
 
-        ul:not(.ya-share2_list) { padding: 0 0 0 40px;
-
-            @media screen and (max-width: 641px) { padding: 0 0 0 25px;}
-        }
+        ul:not(.ya-share2_list) { padding: 0 0 0 40px; }
      }
 
     @media screen and (max-width: 1023px) { 
@@ -317,6 +314,9 @@ body {
  	padding: 4px 7px;
 	min-width: 50px;
 	box-sizing: border-box;
+
+    @media screen and (max-width: 641px) { min-width: auto; }
+
 }
 
 .soclink:hover {
@@ -495,10 +495,14 @@ body {
 
 .site-content .main.article ul.ul-commits  li ul { padding-left: 62px;
 
+     @media screen and (max-width: 768px) { padding-left: 35px; }
+
     .text-commit { padding: 10px 10px 0 28px; }
 }
 
 .site-content .main.article ul.ul-commits  li ul li ul { padding-left: 74px; 
-       
+
+     @media screen and (max-width: 768px) { padding-left: 55px; }
+    
     .text-commit {padding: 10px 10px 0 40px;}
 }
