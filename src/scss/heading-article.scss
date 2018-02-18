@@ -93,7 +93,7 @@ img {
         width: calc(100% - 130px);
         text-align: left;
 
-        @media screen and (max-width: 768px) { 
+        @media screen and (max-width: 1023px) { 
 
             display: block;
             width: 100%;
@@ -111,7 +111,7 @@ img {
             background:url(/images/control/bv_osnovnoi.png) no-repeat top;
             margin: 0 0 0 20px;
 
-            @media screen and (max-width: 768px) { 
+            @media screen and (max-width: 1023px) { 
 
                 width: 100%;
                 background-position: center;

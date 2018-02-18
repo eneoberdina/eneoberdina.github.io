@@ -103,7 +103,7 @@
         -webkit-flex-basis: 300px;
         -ms-flex-preferred-size: 300px;
         flex-basis: 300px;
-        margin: 40px auto 0; } }
+        margin: 0 auto; } }
   .articles-discusses .items {
     -webkit-flex-basis: -webkit-calc(100%/2 - 20px);
     -ms-flex-preferred-size: calc(100%/2 - 20px);

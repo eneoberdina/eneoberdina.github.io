@@ -88,7 +88,7 @@ img {
     width: -moz-calc(100% - 130px);
     width: calc(100% - 130px);
     text-align: left; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1023px) {
       .vnimanie .vnimanie-block {
         display: block;
         width: 100%;
@@ -102,7 +102,7 @@ img {
     height: 70px;
     background: url(/images/control/bv_osnovnoi.png) no-repeat top;
     margin: 0 0 0 20px; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1023px) {
       .vnimanie:before {
         width: 100%;
         background-position: center;
