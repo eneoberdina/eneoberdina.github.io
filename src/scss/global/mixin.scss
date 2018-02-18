@@ -13,7 +13,7 @@
 
  @mixin size($size: 1060px) {
 
-    width: $size;
+    max-width: $size;
     margin: 0 auto;
  }
 

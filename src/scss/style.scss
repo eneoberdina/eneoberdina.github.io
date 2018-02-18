@@ -149,6 +149,15 @@ h1,
 ul.menu-top a,
 ul.menu a { display: inline-block;}
 
+.display-flex.center {
+
+    @media screen and (max-width: 1024px){
+        justify-content: center;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+}
+
 ul.menu-top,
 .articles-discusses-popular,
 .float-right,
@@ -337,6 +346,8 @@ body {
     &.right { padding: 20px 0 0 70px; }
     
     &:after { border-color:  $color-blue; }
+
+    @media screen and (max-width: 768px) { width: 250px; }
 }
 
 .title-main {
@@ -359,7 +370,14 @@ body {
     }
 }
 
-.items-title { display: block;
+.items-title { 
+
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 178px;
+    margin: 0 auto;
+    overflow: hidden;
 
     @include font($color: $color-green3);
     
@@ -380,7 +398,10 @@ body {
 .items-title-articl { 
 
     @include font($color: $color-text);
-     padding: 0 10px;  
+     padding: 0 17px; 
+    column-width: 178px;
+     height: 40px;
+     overflow: hidden; 
 }
 
 .items { 
@@ -388,9 +409,7 @@ body {
     flex-basis: calc(100%/4 - 20px);
     line-height: 16px;
 
-     @media screen and (max-width: 641px) {  flex-basis: 100%;}
-
-    @media screen and (min-width: 642px) and (max-width: 1023px)  {  flex-basis: calc(100%/2 - 20px); }
+     @media screen and (max-width: 800px) {  flex-basis: 250px;}
 
     img { margin-bottom: 20px;
 
@@ -445,18 +464,14 @@ body {
         z-index: -1;
     }
 }
-    
-.pub-picture { 
-
-        width: 70px;
-        height: 70px;
-        margin-right: 20px;
-    }
 
     .link-piblicat {
 
         color: $color-text;
         padding: 5px 15px 15px 5px;
+        column-width: 250px;
+        height: 33px;
+        overflow: hidden;
 
         &:hover { color: $color-blue3;}
     }
@@ -502,7 +517,7 @@ body {
 
 .site-content .main.article ul.ul-commits  li ul li ul { padding-left: 74px; 
 
-     @media screen and (max-width: 768px) { padding-left: 55px; }
+     @media screen and (max-width: 768px) { padding-left: 40px; }
     
     .text-commit {padding: 10px 10px 0 40px;}
 }
