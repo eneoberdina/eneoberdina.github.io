@@ -77,7 +77,7 @@
 	hr {
 
 		border-bottom: 1px solid $color-white;
-		margin: 20px 0 30px;
+		margin: 30px 0 30px;
 	}
 
 	.expand {
@@ -167,13 +167,13 @@ figcaption {
 	
 	table { 
 
-		td, th {
+		td {
 
 			border: 0.5px solid #cde7f8;
 		 	padding: 14px 10px 16px; 
 		 }
 	
-		th {
+		thead tr td {
 
 			
 			background-color: $color-blue;
@@ -186,7 +186,11 @@ figcaption {
 	}
 }
 
-.ya-share2 { flex-wrap: wrap;}
+.ya-share2 { 
+
+	flex-wrap: wrap;
+	margin: 30px 0;
+}
 
 ul.ya-share2_list li:before { content: none; }
 
@@ -262,7 +266,10 @@ ul.ya-share2_list li:before { content: none; }
 		padding: 0;
 	}
 
-	&.articles-headings.home > .columns-left { padding-right: 90px;
+	&.articles-headings.home > .columns-left { 
+
+		padding-right: 90px;
+		padding-top: 0;
 		
 		@media screen and (max-width: 768px) { padding-right: 0; }
 

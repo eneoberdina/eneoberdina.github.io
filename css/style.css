@@ -862,8 +862,8 @@ h1 {
   font-size: 32px;
   line-height: 44px;
   border-bottom: 1px solid  #57a7dc;
-  padding: 40px 0 28px;
-  margin: 0 0 40px;
+  padding: 0 0 25px;
+  margin: 40px 0 40px;
   position: relative; }
   h1:after {
     content: "";
@@ -1003,19 +1003,21 @@ ul .alignleft, ol .alignleft {
   .main ol li:before {
     content: counter(list1) ".";
     counter-increment: list1;
-    margin-right: 10px;
+    margin-right: 14px;
     font: 16px "PT Serif";
-    color: #2bd081; }
+    color: #2bd081;
+    font-weight: bold; }
   .main ol li ol {
     width: 100%;
-    padding-left: 60px;
+    padding-left: 48px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-  .main ol li ol li:before {
+  .main ol li ol > li:before {
     content: "\f0da";
     font-family: "icomoon";
-    margin-left: -30px; }
+    margin-left: -30px;
+    font-weight: normal; }
 
 .aligncenter {
   display: block;
@@ -1291,7 +1293,7 @@ ul .alignleft, ol .alignleft {
     display: block; }
   .contents-wrap hr {
     border-bottom: 1px solid #ffffff;
-    margin: 20px 0 30px; }
+    margin: 30px 0 30px; }
   .contents-wrap .expand {
     font: 13px "PT Sans";
     color: #ffffff;
@@ -1371,10 +1373,10 @@ figcaption {
   @media screen and (max-width: 1024px) {
     .table-block {
       overflow: auto; } }
-  .table-block table td, .table-block table th {
+  .table-block table td {
     border: 0.5px solid #cde7f8;
     padding: 14px 10px 16px; }
-  .table-block table th {
+  .table-block table thead tr td {
     background-color: #7bbfec;
     font-family: "PT Sans";
     font-weight: 700;
@@ -1385,7 +1387,8 @@ figcaption {
 .ya-share2 {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin: 30px 0; }
 
 ul.ya-share2_list li:before {
   content: none; }
@@ -1450,7 +1453,8 @@ ul.ya-share2_list li:before {
       flex-wrap: wrap;
       padding: 0; } }
   .commits.articles-headings.home > .columns-left {
-    padding-right: 90px; }
+    padding-right: 90px;
+    padding-top: 0; }
     @media screen and (max-width: 768px) {
       .commits.articles-headings.home > .columns-left {
         padding-right: 0; } }
@@ -2725,7 +2729,7 @@ body {
   -moz-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 20px 0; }
+  padding: 15px 0 20px; }
   .meta.meta-white {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
