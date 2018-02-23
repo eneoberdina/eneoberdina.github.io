@@ -505,7 +505,13 @@ body {
 }
 
 .site-content .main.article ul.ul-commits, 
-.site-content .main.article ul.ul-commits l{ padding: 0; }
+.site-content .main.article ul.ul-commits { padding: 0; }
+
+.site-content .main.article ul.ul-commits > li { 
+
+    @media screen and (max-width: 768px) { padding-left: 10px; }
+
+ }
 
 .site-content .main.article ul.ul-commits  li ul { padding-left: 62px;
 

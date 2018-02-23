@@ -6,6 +6,8 @@
     width: 310px;
     position: relative;
 
+     @media screen and (max-width: 1023px) { display: none; }
+
     .items.back { 
 
         border: 30px solid #eff8fd;

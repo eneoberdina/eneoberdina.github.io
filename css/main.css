@@ -71,7 +71,7 @@
     min-width: 500px; }
     @media screen and (max-width: 1024px) {
       .articles-discusses .wrapper-articles {
-        min-width: auto; } }
+        min-width: 300px; } }
   @media screen and (max-width: 768px) {
     .articles-discusses .wrapper-articles .items .meta {
       padding-bottom: 0; } }
@@ -102,8 +102,7 @@
       .articles-discusses-popular {
         -webkit-flex-basis: 300px;
         -ms-flex-preferred-size: 300px;
-        flex-basis: 300px;
-        margin: 0 auto; } }
+        flex-basis: 300px; } }
   .articles-discusses .items {
     -webkit-flex-basis: -webkit-calc(100%/2 - 20px);
     -ms-flex-preferred-size: calc(100%/2 - 20px);
@@ -142,6 +141,9 @@
       -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
       overflow: hidden; }
+      @media screen and (max-width: 800px) {
+        .articles-discusses .items .items-link-discus {
+          width: 205px; } }
     .articles-discusses .items .meta-span {
       margin: 0; }
     .articles-discusses .items .items-link-discus,
@@ -398,7 +400,7 @@
       -ms-flex-preferred-size: calc(100%/2 - 10px);
       flex-basis: -moz-calc(100%/2 - 10px);
       flex-basis: calc(100%/2 - 10px);
-      padding: 0 0 30px 0;
+      padding: 0 0 10px 0;
       margin: 0;
       line-height: 16px; }
       @media screen and (max-width: 768px) {

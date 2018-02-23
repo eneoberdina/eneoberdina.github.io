@@ -10,6 +10,12 @@
  	@include size;
 
  	@media screen and (max-width: 1240px) { width: 100%; }
+
+ 	@media screen and (min-width: 642px) and (max-width: 768px) { 
+
+ 		flex-wrap: wrap;
+ 		justify-content: center;
+ 	}
 }
 
 .menu-footer { 
@@ -22,7 +28,9 @@
 		padding: 0 30px;
 		margin: 0;
 
-		@media screen and (max-width: 1023px) { display: none; }
+		@media screen and (max-width: 641px) { display: none; }
+
+		@media screen and (min-width: 642px) and (max-width: 1024px) { padding: 10px 10px 0; }
 
 		a {
 		
@@ -31,6 +39,8 @@
 			padding-bottom: 7px;
 			transition: 1s;
 			position: relative;
+
+			@media screen and (min-width: 642px) and (max-width: 1024px) { font-size: 14px; }
 			
 			&:after {
 

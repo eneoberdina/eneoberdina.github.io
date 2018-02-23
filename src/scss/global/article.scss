@@ -526,22 +526,25 @@ input[type="submit"] {
 		padding: 10px;
 	}
 
-	::-webkit-input-placeholder {
+	input::-webkit-input-placeholder,
+	textarea::-webkit-input-placeholder {
 		
-		color:$color-text;
+		color: rgba(73, 110, 134, 0.5);
 		font: 14px $font-sans;
 	}
 
 	::-moz-placeholder       {
 
-		color:$color-text;
+		color: $color-text;
 		font: 14px $font-sans;
+		opacity: .5;
 	}
 
 	:-ms-input-placeholder  {
 
 		color:$color-text;
 		font: 14px $font-sans;
+		opacity: .5;
 
 	}
 }
