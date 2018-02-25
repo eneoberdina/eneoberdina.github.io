@@ -25,7 +25,8 @@
     "gulp-plumber": "^1.1.0",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^3.1.0",
-    "gulp-watch": "^4.3.11"
+    "gulp-watch": "^4.3.11",
+    "pixel-glass": "^1.0.13"
   },
   "dependencies": {
     "normalize.css": "^7.0.0"

@@ -868,7 +868,7 @@ h1 {
   line-height: 44px;
   border-bottom: 1px solid  #57a7dc;
   padding: 0 0 25px;
-  margin: 40px 0 40px;
+  margin: 24px 0 40px;
   position: relative; }
   h1:after {
     content: "";
@@ -2705,6 +2705,8 @@ body {
   line-height: 24px; }
   .main.article, .main .wrapper-content {
     font-size: 16px; }
+    .main.article p, .main .wrapper-content p {
+      padding: 12px 0; }
     .main.article ul:not(.ya-share2_list), .main .wrapper-content ul:not(.ya-share2_list) {
       padding: 0 0 0 40px; }
   @media screen and (max-width: 1023px) {
