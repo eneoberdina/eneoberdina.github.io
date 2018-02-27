@@ -1741,7 +1741,7 @@ footer {
       top: 100%;
       left: 0;
       width: 100%;
-      border-bottom: 0.5px solid #ffffff;
+      border-bottom: 1px solid #ffffff;
       opacity: 0;
       -webkit-transition: opacity .3s,-webkit-transform .3s;
       transition: opacity .3s,-webkit-transform .3s;
@@ -1842,7 +1842,7 @@ header {
         top: 100%;
         left: 0;
         width: 100%;
-        border-bottom: 0.5px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
         opacity: 0;
         -webkit-transition: opacity .3s,-webkit-transform .3s;
         transition: opacity .3s,-webkit-transform .3s;
@@ -2705,7 +2705,7 @@ body {
   line-height: 24px; }
   .main.article, .main .wrapper-content {
     font-size: 16px; }
-    .main.article p, .main .wrapper-content p {
+    .main.article p:not(#breadcrumbs), .main .wrapper-content p:not(#breadcrumbs) {
       padding: 12px 0; }
     .main.article ul:not(.ya-share2_list), .main .wrapper-content ul:not(.ya-share2_list) {
       padding: 0 0 0 40px; }
